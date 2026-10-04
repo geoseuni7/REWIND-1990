@@ -464,7 +464,7 @@ function s2Value(a){return s2Price(a)*(Number(a?.multiplier)||1)}
 function s2MyQty(id){return Number(S2.me.positions?.[id]||0)}
 function s2TurnMine(){return !!S2.playerId&&S2.turnPlayerId===S2.playerId}
 async function s2Request(path,body){const r=await fetch(path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});let j={};try{j=await r.json()}catch(_){}if(!r.ok)throw new Error(j.error||'Session 2 서버 요청에 실패했습니다.');return j}
-async function s2Fetch(){if(!S2.roomCode||!S2.sessionToken)return null;const r=await fetch('/api/rooms/'+encodeURIComponent(S2.roomCode)+'?sessionToken='+encodeURIComponent(S2.sessionToken));const j=await r.json();if(!r.ok)throw new Error(j.error||'방 상태를 불러오지 못했습니다.');s2Sync(j);return j}
+async function s2Fetch(){if(!S2.roomCode||!S2.sessionToken)return null;const r=await fetch('/api/rooms/'+encodeURIComponent(S2.roomCode)+'?sessionToken='+encodeURIComponent(S2.sessionToken)+'&_='+Date.now(),{cache:'no-store'});const j=await r.json();if(!r.ok)throw new Error(j.error||'방 상태를 불러오지 못했습니다.');s2Sync(j);return j}
 function s2Sync(j){if(!j)return;S2={...S2,active:true,roomCode:j.roomCode||S2.roomCode,hostId:j.hostId||S2.hostId,year:Number(j.year)||1990,month:Number(j.month)||1,turn:Number(j.turn)||0,players:Array.isArray(j.players)?j.players:[],market:{prices:{...(j.market?.prices||{})}},dayTrade:{...S2.dayTrade,...(j.dayTrade||{})},me:{...S2.me,...(j.me||{})},lastSync:Date.now(),phase:j.finished?'finished':(j.started?'game':'lobby')};s2Save();s2Render()}
 function s2Enter(){S2.active=true;$('modeModal')?.classList.remove('show');$('session2Modal')?.classList.add('show');s2Save();s2Render();if(S2.roomCode&&S2.sessionToken)s2Fetch().catch(e=>{s2Render();alert(e.message)})}
 function s2Close(){clearInterval(window.s2Poll);$('session2Modal')?.classList.remove('show');S2.active=false;s2Save()}
@@ -484,7 +484,7 @@ async function s2Loan(kind){const v=prompt(kind==='bank'?'1금융 대출 금액�
 async function s2DayTrade(side){const q=Math.max(1,Math.floor(Number($('s2DayQty')?.value)||1));try{const j=await s2Request('/api/rooms/daytrade',{roomCode:S2.roomCode,sessionToken:S2.sessionToken,side,qty:q});s2Sync(j)}catch(e){alert(e.message)}}
 function s2Select(id){if(!s2Asset(id))return;S2.selectedAsset=id;s2Save();s2Render()}
 async function s2Refresh(){try{await s2Fetch()}catch(e){alert(e.message)}}
-function s2StartPolling(){clearInterval(window.s2Poll);if(!S2.roomCode||!S2.sessionToken)return;window.s2Poll=setInterval(()=>s2Fetch().catch(()=>{}),700)}
+function s2StartPolling(){clearInterval(window.s2Poll);if(!S2.roomCode||!S2.sessionToken)return;s2Fetch().catch(()=>{});window.s2Poll=setInterval(()=>s2Fetch().catch(()=>{}),500)}
 async function s2Leave(){if(S2.roomCode&&S2.sessionToken){try{await s2Request('/api/rooms/leave',{roomCode:S2.roomCode,sessionToken:S2.sessionToken})}catch(_){} }clearInterval(window.s2Poll);S2={active:false,phase:'lobby',roomCode:'',sessionToken:'',playerId:'',hostId:'',year:1990,month:1,turn:0,players:[],market:{prices:{}},dayTrade:{active:false},me:{cash:100000000,positions:{},avg:{},loan:0,loanShark:0,netWorth:100000000},selectedAsset:'005930',qty:1,lastSync:0};try{localStorage.removeItem('tm-session2-save')}catch(_){}$('session2Modal')?.classList.remove('show');$('modeModal')?.classList.add('show');if(typeof showModeChoice==='function')showModeChoice()}
 </script>
 </body></html>
