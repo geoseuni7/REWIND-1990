@@ -1,0 +1,1 @@
+{"name":"rewind-1990-second-life","version":"15.0.0","private":true,"description":"REWIND 1990 — 2026 regression life/market simulation with streamer online battle","scripts":{"start":"node server.js"},"engines":{"node":">=18"}}
