@@ -1,8 +1,8 @@
 services:
   - type: web
-    name: rewind-1990-second-life
+    name: time-money-session2
     runtime: node
     plan: free
-    buildCommand: ""
-    startCommand: "node server.js"
-    healthCheckPath: /health
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
