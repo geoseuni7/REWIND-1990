@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: time-money-session2
+    name: time-money-normal
     runtime: node
     plan: free
     buildCommand: npm install
