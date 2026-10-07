@@ -62,31 +62,60 @@ function view(room,playerId){activateCountdown(room);for(const x of room.players
 function body(req){return new Promise((resolve,reject)=>{const declared=Number(req.headers['content-length']||0);if(declared>MAX_BODY_BYTES){reject(Object.assign(new Error('payload too large'),{status:413}));return}let s='',done=false;const fail=(e)=>{if(done)return;done=true;reject(e)};req.on('data',c=>{s+=c;if(s.length>MAX_BODY_BYTES){req.destroy();fail(Object.assign(new Error('payload too large'),{status:413}))}});req.on('end',()=>{if(done)return;try{done=true;resolve(s?JSON.parse(s):{})}catch(e){fail(e)}});req.on('error',fail)})}
 function auth(room,t){const s=sessions.get(t);if(!s||s.room!==room.code||s.exp<Date.now()){if(s&&s.exp<Date.now())sessions.delete(t);return null}const p=room.players.get(s.id)||null;if(p){p.lastSeen=Date.now();p.disconnected=false;if(!p.left)room.emptySince=0}return p}
 function onlineTurnContent(room){
-  const news=[
-    ['경제','금리와 기업 실적을 둘러싼 시장의 관심이 커지고 있다.'],
-    ['주식','주요 기업들의 실적 전망이 투자심리에 영향을 주고 있다.'],
-    ['부동산','서울 주요 지역의 거래 흐름이 서서히 움직이고 있다.'],
-    ['해외','미국 금리와 글로벌 경기 흐름이 국내 시장에 영향을 주고 있다.'],
-    ['사회','소비와 고용 환경의 변화 조짐이 나타나고 있다.']
-  ];
-  const n=news[crypto.randomInt(0,news.length)];
+  // 온라인 뉴스는 단순한 "시장 평가"가 아니라 실제 기사처럼
+  // 제목 + 본문 + 다음 회차 예고로 구성한다. 게임 자산 가격을 직접
+  // 결정하지 않고 투자 판단을 위한 정보/힌트 역할만 한다.
+  const y=Number(room.year)||1990;
+  const pools={
+    경제:[
+      ['금리 인하 기대감, 기업 투자심리 회복 조짐','시장에서는 경기 회복과 자금조달 여건 개선에 대한 기대가 커지고 있다. 기업들의 투자 계획에도 변화가 나타날 수 있다는 전망이 나온다.','경제 전반의 위험선호가 조금씩 회복될 가능성이 있습니다.'],
+      ['물가 안정세 이어지나…소비심리 변화 주목','물가 흐름이 안정되는 가운데 소비와 기업 비용에 대한 시장의 관심이 높아지고 있다. 전문가들은 향후 몇 달간 내수와 기업 실적을 함께 살펴볼 필요가 있다고 분석했다.','내수·소비 관련 자산의 흐름을 지켜볼 필요가 있습니다.'],
+      ['경기 둔화 우려 확산…기업 실적 전망 엇갈려','주요 지표를 둘러싼 경기 둔화 우려가 커지는 가운데 업종별 실적 전망은 엇갈리고 있다. 시장은 다음 경제지표 발표를 주목하고 있다.','위험자산 변동성이 커질 가능성이 있습니다.']
+    ],
+    주식:[
+      ['기업 실적 전망 엇갈려…업종별 주가 차별화','기업들의 실적 전망이 엇갈리면서 같은 시장 안에서도 업종별 주가 흐름이 달라질 수 있다는 분석이 나온다. 투자자들은 실적과 수급 변화를 함께 살피는 분위기다.','보유 종목의 업종별 민감도를 확인해 두는 것이 좋습니다.'],
+      ['외국인·기관 수급 변화에 증시 촉각','주요 종목을 중심으로 투자 주체들의 매매 방향이 바뀌면서 단기 주가 변동성에 대한 경계감이 높아지고 있다.','대형주 중심의 수급 변화가 이어질 가능성이 있습니다.'],
+      ['신성장 산업 투자 확대 기대…관련주 관심','기업과 투자자들이 새로운 성장 산업에 대한 투자 확대 가능성을 주목하고 있다. 다만 기대감이 실제 실적으로 이어질지는 지켜봐야 한다는 의견도 나온다.','관련 자산에 기대감이 먼저 반영될 수 있습니다.']
+    ],
+    부동산:[
+      ['주택 거래량 변화 조짐…서울 시장 향방 주목','서울 주요 지역의 거래 문의와 거래량에 변화가 나타나면서 주택시장 방향에 관심이 쏠리고 있다. 금리와 대출 여건이 향후 시장의 중요한 변수로 꼽힌다.','부동산 관련 자산의 변동성을 주의해서 볼 필요가 있습니다.'],
+      ['부동산 금융 여건 변화 가능성…시장 긴장','대출과 금융 여건을 둘러싼 변화 가능성이 거론되면서 부동산 투자자들의 관망세가 이어지고 있다.','부동산 자산의 단기 변동 가능성이 커질 수 있습니다.']
+    ],
+    해외:[
+      ['글로벌 경기 전망 엇갈려…해외 증시 변동성 확대','주요국 경기와 금리 전망이 엇갈리면서 해외 증시의 방향을 두고 의견이 나뉘고 있다. 글로벌 투자자들은 다음 경제지표와 기업 실적을 주시하고 있다.','해외 위험자산의 변동성이 확대될 가능성이 있습니다.'],
+      ['미국 금리 전망 변화에 글로벌 자금 이동 주목','미국의 통화정책 전망이 바뀔 수 있다는 관측 속에 글로벌 자금 흐름도 영향을 받을 수 있다는 분석이 나온다.','해외주식과 채권 가격의 방향을 함께 살펴보는 것이 좋습니다.']
+    ],
+    원자재:[
+      ['원자재 가격 변동 확대…공급 상황에 시장 촉각','주요 원자재의 공급과 수요 전망이 엇갈리면서 국제 가격의 변동성이 커지고 있다. 제조업 비용과 물가에도 영향을 줄 수 있다는 분석이다.','금·원자재 가격의 단기 변동에 주의할 필요가 있습니다.']
+    ],
+    사회:[
+      ['소비·고용 지표 변화에 시장 관심','가계 소비와 고용 환경의 변화 조짐이 나타나면서 내수 경기 전망에도 관심이 높아지고 있다. 시장은 향후 발표될 지표를 주목하고 있다.','소비 관련 기업과 내수 자산의 흐름을 살펴볼 필요가 있습니다.']
+    ]
+  };
+  // 시대감은 유지하되 특정 역사 사건을 현재 시점의 확정 사실처럼 단정하지 않는다.
+  const keys=Object.keys(pools);
+  const category=keys[crypto.randomInt(0,keys.length)];
+  const item=pools[category][crypto.randomInt(0,pools[category].length)];
+  const nextKey=y*12+Number(room.month)+6;
+  const ny=Math.floor((nextKey-1)/12),nm=((nextKey-1)%12)+1;
+  const accuracy=55+crypto.randomInt(0,31);
+  const news={category,title:item[0],text:item[1],preview:item[2],year:y,month:Number(room.month),
+    nextYear:ny,nextMonth:nm,forecastAccuracy:accuracy,
+    article:`${y}년 ${Number(room.month)}월 시장에서 ${item[0].replace(/[.…]+$/,'')}이라는 소식이 전해졌습니다. ${item[1]}`};
   const roll=crypto.randomInt(0,100);
   let event;
   if(roll<55){
     const rate=crypto.randomInt(1,4)/100;
-    event={kind:'생활',title:'예상 밖의 지출',text:`개인별 예상 밖의 지출로 순자산의 약 ${Math.round(rate*100)}%가 현금에서 빠져나갑니다.`,rate,sign:-1};
+    event={kind:'생활',title:'예상 밖의 생활비 증가 가능성',text:`다음 회차에 개인별 소액 지출이 발생할 가능성이 있다는 소식입니다. 현금을 조금 남겨두는 것이 유리합니다.`,rate,sign:-1};
   }else if(roll<80){
     const rate=crypto.randomInt(1,4)/100;
-    event={kind:'기회',title:'뜻밖의 수입',text:`특별 수입으로 순자산의 약 ${Math.round(rate*100)}%가 현금으로 추가됩니다.`,rate,sign:1};
+    event={kind:'기회',title:'소액의 추가 수입 기회',text:`다음 회차에 개인별 소액 현금 유입이 발생할 가능성이 있습니다. 큰 금액을 미리 움직일 필요는 없습니다.`,rate,sign:1};
   }else{
     const rate=crypto.randomInt(1,3)/100;
-    event={kind:'시장',title:'시장 참여 보너스',text:`시장 기회를 잡은 참가자들에게 순자산의 약 ${Math.round(rate*100)}%가 현금으로 지급됩니다.`,rate,sign:1};
+    event={kind:'시장',title:'투자 관련 소액 지원 소식',text:`다음 회차에 시장 참여자에게 소액 현금 보너스가 발생할 가능성이 있습니다.`,rate,sign:1};
   }
-  const nextKey=Number(room.year)*12+Number(room.month)+6;
-  const ny=Math.floor((nextKey-1)/12), nm=((nextKey-1)%12)+1;
-  const previewA=INVESTMENT_ASSET?.[Object.keys(INVESTMENT_ASSET||{})[crypto.randomInt(0,Math.max(1,Object.keys(INVESTMENT_ASSET||{}).length))]];
-  room.onlineNews={category:n[0],title:n[1],year:room.year,month:room.month,preview:`다음 회차(${ny}.${String(nm).padStart(2,'0')})에도 ${n[0]} 관련 변동이 이어질 가능성이 있습니다. 투자 판단의 참고용 예고이며 확정 신호는 아닙니다.`,forecastAccuracy:55+crypto.randomInt(0,31)};
-  room.onlineEvent={...event,year:room.year,month:room.month,applied:false,preview:true,amountRule:'보유 순자산의 0.1~0.3% 수준, 최대 300,000원',previewText:event.sign<0?'다음 회차에 소액의 현금 지출이 발생할 수 있습니다. 현금을 조금 남겨두는 것이 유리합니다.':'다음 회차에 소액의 현금 유입 가능성이 있습니다. 큰 금액을 미리 움직일 필요는 없습니다.'};
+  room.onlineNews=news;
+  room.onlineEvent={...event,year:y,month:Number(room.month),applied:false,preview:true,amountRule:'개인별 소액 조정 · 최소 50,000원 · 최대 300,000원',previewText:event.text};
 }
 function applyOnlineEvent(room){
   const e=room.onlineEvent;if(!e||e.applied)return;
