@@ -1,0 +1,5105 @@
+[
+  {
+    "id": "005930",
+    "name": "삼성전자",
+    "ticker": "005930",
+    "kind": "kr",
+    "year": 1969
+  },
+  {
+    "id": "000660",
+    "name": "SK하이닉스",
+    "ticker": "000660",
+    "kind": "kr",
+    "year": 1996
+  },
+  {
+    "id": "373220",
+    "name": "LG에너지솔루션",
+    "ticker": "373220",
+    "kind": "kr",
+    "year": 2022
+  },
+  {
+    "id": "207940",
+    "name": "삼성바이오로직스",
+    "ticker": "207940",
+    "kind": "kr",
+    "year": 2016
+  },
+  {
+    "id": "005380",
+    "name": "현대차",
+    "ticker": "005380",
+    "kind": "kr",
+    "year": 1974
+  },
+  {
+    "id": "000270",
+    "name": "기아",
+    "ticker": "000270",
+    "kind": "kr",
+    "year": 1973
+  },
+  {
+    "id": "068270",
+    "name": "셀트리온",
+    "ticker": "068270",
+    "kind": "kr",
+    "year": 2018
+  },
+  {
+    "id": "035420",
+    "name": "NAVER",
+    "ticker": "035420",
+    "kind": "kr",
+    "year": 2002
+  },
+  {
+    "id": "035720",
+    "name": "카카오",
+    "ticker": "035720",
+    "kind": "kr",
+    "year": 2017
+  },
+  {
+    "id": "005490",
+    "name": "POSCO홀딩스",
+    "ticker": "005490",
+    "kind": "kr",
+    "year": 1988
+  },
+  {
+    "id": "105560",
+    "name": "KB금융",
+    "ticker": "105560",
+    "kind": "kr",
+    "year": 2008
+  },
+  {
+    "id": "055550",
+    "name": "신한지주",
+    "ticker": "055550",
+    "kind": "kr",
+    "year": 2001
+  },
+  {
+    "id": "000810",
+    "name": "삼성화재",
+    "ticker": "000810",
+    "kind": "kr",
+    "year": 1975
+  },
+  {
+    "id": "032830",
+    "name": "삼성생명",
+    "ticker": "032830",
+    "kind": "kr",
+    "year": 2010
+  },
+  {
+    "id": "086790",
+    "name": "하나금융지주",
+    "ticker": "086790",
+    "kind": "kr",
+    "year": 2005
+  },
+  {
+    "id": "012330",
+    "name": "현대모비스",
+    "ticker": "012330",
+    "kind": "kr",
+    "year": 1989
+  },
+  {
+    "id": "051910",
+    "name": "LG화학",
+    "ticker": "051910",
+    "kind": "kr",
+    "year": 2001
+  },
+  {
+    "id": "006400",
+    "name": "삼성SDI",
+    "ticker": "006400",
+    "kind": "kr",
+    "year": 1979
+  },
+  {
+    "id": "066570",
+    "name": "LG전자",
+    "ticker": "066570",
+    "kind": "kr",
+    "year": 1970
+  },
+  {
+    "id": "003550",
+    "name": "LG",
+    "ticker": "003550",
+    "kind": "kr",
+    "year": 1970
+  },
+  {
+    "id": "028260",
+    "name": "삼성물산",
+    "ticker": "028260",
+    "kind": "kr",
+    "year": 2014
+  },
+  {
+    "id": "034730",
+    "name": "SK",
+    "ticker": "034730",
+    "kind": "kr",
+    "year": 2009
+  },
+  {
+    "id": "096770",
+    "name": "SK이노베이션",
+    "ticker": "096770",
+    "kind": "kr",
+    "year": 2007
+  },
+  {
+    "id": "017670",
+    "name": "SK텔레콤",
+    "ticker": "017670",
+    "kind": "kr",
+    "year": 1989
+  },
+  {
+    "id": "030200",
+    "name": "KT",
+    "ticker": "030200",
+    "kind": "kr",
+    "year": 1991
+  },
+  {
+    "id": "032640",
+    "name": "LG유플러스",
+    "ticker": "032640",
+    "kind": "kr",
+    "year": 2008
+  },
+  {
+    "id": "003670",
+    "name": "포스코퓨처엠",
+    "ticker": "003670",
+    "kind": "kr",
+    "year": 2001
+  },
+  {
+    "id": "009150",
+    "name": "삼성전기",
+    "ticker": "009150",
+    "kind": "kr",
+    "year": 1979
+  },
+  {
+    "id": "034220",
+    "name": "LG디스플레이",
+    "ticker": "034220",
+    "kind": "kr",
+    "year": 2004
+  },
+  {
+    "id": "018260",
+    "name": "삼성에스디에스",
+    "ticker": "018260",
+    "kind": "kr",
+    "year": 2014
+  },
+  {
+    "id": "010130",
+    "name": "고려아연",
+    "ticker": "010130",
+    "kind": "kr",
+    "year": 1990
+  },
+  {
+    "id": "011170",
+    "name": "롯데케미칼",
+    "ticker": "011170",
+    "kind": "kr",
+    "year": 1976
+  },
+  {
+    "id": "004020",
+    "name": "현대제철",
+    "ticker": "004020",
+    "kind": "kr",
+    "year": 1987
+  },
+  {
+    "id": "010140",
+    "name": "삼성중공업",
+    "ticker": "010140",
+    "kind": "kr",
+    "year": 1994
+  },
+  {
+    "id": "042660",
+    "name": "한화오션",
+    "ticker": "042660",
+    "kind": "kr",
+    "year": 1984
+  },
+  {
+    "id": "009540",
+    "name": "HD한국조선해양",
+    "ticker": "009540",
+    "kind": "kr",
+    "year": 1999
+  },
+  {
+    "id": "010620",
+    "name": "현대미포조선",
+    "ticker": "010620",
+    "kind": "kr",
+    "year": 1983
+  },
+  {
+    "id": "011200",
+    "name": "HMM",
+    "ticker": "011200",
+    "kind": "kr",
+    "year": 1976
+  },
+  {
+    "id": "028670",
+    "name": "팬오션",
+    "ticker": "028670",
+    "kind": "kr",
+    "year": 1976
+  },
+  {
+    "id": "003490",
+    "name": "대한항공",
+    "ticker": "003490",
+    "kind": "kr",
+    "year": 1962
+  },
+  {
+    "id": "020560",
+    "name": "아시아나항공",
+    "ticker": "020560",
+    "kind": "kr",
+    "year": 1988
+  },
+  {
+    "id": "008770",
+    "name": "호텔신라",
+    "ticker": "008770",
+    "kind": "kr",
+    "year": 1973
+  },
+  {
+    "id": "023530",
+    "name": "롯데쇼핑",
+    "ticker": "023530",
+    "kind": "kr",
+    "year": 2006
+  },
+  {
+    "id": "139480",
+    "name": "이마트",
+    "ticker": "139480",
+    "kind": "kr",
+    "year": 2011
+  },
+  {
+    "id": "004170",
+    "name": "신세계",
+    "ticker": "004170",
+    "kind": "kr",
+    "year": 1985
+  },
+  {
+    "id": "069960",
+    "name": "현대백화점",
+    "ticker": "069960",
+    "kind": "kr",
+    "year": 2002
+  },
+  {
+    "id": "021240",
+    "name": "코웨이",
+    "ticker": "021240",
+    "kind": "kr",
+    "year": 2001
+  },
+  {
+    "id": "033780",
+    "name": "KT&G",
+    "ticker": "033780",
+    "kind": "kr",
+    "year": 1999
+  },
+  {
+    "id": "097950",
+    "name": "CJ제일제당",
+    "ticker": "097950",
+    "kind": "kr",
+    "year": 2007
+  },
+  {
+    "id": "051900",
+    "name": "LG생활건강",
+    "ticker": "051900",
+    "kind": "kr",
+    "year": 2001
+  },
+  {
+    "id": "090430",
+    "name": "아모레퍼시픽",
+    "ticker": "090430",
+    "kind": "kr",
+    "year": 2006
+  },
+  {
+    "id": "002790",
+    "name": "아모레G",
+    "ticker": "002790",
+    "kind": "kr",
+    "year": 2006
+  },
+  {
+    "id": "004990",
+    "name": "롯데지주",
+    "ticker": "004990",
+    "kind": "kr",
+    "year": 2017
+  },
+  {
+    "id": "001040",
+    "name": "CJ",
+    "ticker": "001040",
+    "kind": "kr",
+    "year": 1973
+  },
+  {
+    "id": "000120",
+    "name": "CJ대한통운",
+    "ticker": "000120",
+    "kind": "kr",
+    "year": 1956
+  },
+  {
+    "id": "035250",
+    "name": "강원랜드",
+    "ticker": "035250",
+    "kind": "kr",
+    "year": 2001
+  },
+  {
+    "id": "036570",
+    "name": "엔씨소프트",
+    "ticker": "036570",
+    "kind": "kr",
+    "year": 2000
+  },
+  {
+    "id": "251270",
+    "name": "넷마블",
+    "ticker": "251270",
+    "kind": "kr",
+    "year": 2017
+  },
+  {
+    "id": "263750",
+    "name": "펄어비스",
+    "ticker": "263750",
+    "kind": "kr",
+    "year": 2017
+  },
+  {
+    "id": "112040",
+    "name": "위메이드",
+    "ticker": "112040",
+    "kind": "kr",
+    "year": 2009
+  },
+  {
+    "id": "293490",
+    "name": "카카오게임즈",
+    "ticker": "293490",
+    "kind": "kr",
+    "year": 2020
+  },
+  {
+    "id": "181710",
+    "name": "NHN",
+    "ticker": "181710",
+    "kind": "kr",
+    "year": 2013
+  },
+  {
+    "id": "095660",
+    "name": "네오위즈",
+    "ticker": "095660",
+    "kind": "kr",
+    "year": 2007
+  },
+  {
+    "id": "030000",
+    "name": "제일기획",
+    "ticker": "030000",
+    "kind": "kr",
+    "year": 1973
+  },
+  {
+    "id": "034120",
+    "name": "SBS",
+    "ticker": "034120",
+    "kind": "kr",
+    "year": 1999
+  },
+  {
+    "id": "035760",
+    "name": "CJ ENM",
+    "ticker": "035760",
+    "kind": "kr",
+    "year": 2018
+  },
+  {
+    "id": "122870",
+    "name": "와이지엔터테인먼트",
+    "ticker": "122870",
+    "kind": "kr",
+    "year": 2011
+  },
+  {
+    "id": "041510",
+    "name": "에스엠",
+    "ticker": "041510",
+    "kind": "kr",
+    "year": 2000
+  },
+  {
+    "id": "035900",
+    "name": "JYP Ent.",
+    "ticker": "035900",
+    "kind": "kr",
+    "year": 2001
+  },
+  {
+    "id": "352820",
+    "name": "하이브",
+    "ticker": "352820",
+    "kind": "kr",
+    "year": 2020
+  },
+  {
+    "id": "068760",
+    "name": "셀트리온제약",
+    "ticker": "068760",
+    "kind": "kr",
+    "year": 2006
+  },
+  {
+    "id": "145020",
+    "name": "휴젤",
+    "ticker": "145020",
+    "kind": "kr",
+    "year": 2015
+  },
+  {
+    "id": "000100",
+    "name": "유한양행",
+    "ticker": "000100",
+    "kind": "kr",
+    "year": 1962
+  },
+  {
+    "id": "128940",
+    "name": "한미약품",
+    "ticker": "128940",
+    "kind": "kr",
+    "year": 2010
+  },
+  {
+    "id": "009420",
+    "name": "한올바이오파마",
+    "ticker": "009420",
+    "kind": "kr",
+    "year": 1989
+  },
+  {
+    "id": "185750",
+    "name": "종근당",
+    "ticker": "185750",
+    "kind": "kr",
+    "year": 2013
+  },
+  {
+    "id": "170900",
+    "name": "동아에스티",
+    "ticker": "170900",
+    "kind": "kr",
+    "year": 2013
+  },
+  {
+    "id": "214450",
+    "name": "파마리서치",
+    "ticker": "214450",
+    "kind": "kr",
+    "year": 2015
+  },
+  {
+    "id": "196170",
+    "name": "알테오젠",
+    "ticker": "196170",
+    "kind": "kr",
+    "year": 2014
+  },
+  {
+    "id": "141080",
+    "name": "레고켐바이오",
+    "ticker": "141080",
+    "kind": "kr",
+    "year": 2013
+  },
+  {
+    "id": "028300",
+    "name": "HLB",
+    "ticker": "028300",
+    "kind": "kr",
+    "year": 1996
+  },
+  {
+    "id": "086900",
+    "name": "메디톡스",
+    "ticker": "086900",
+    "kind": "kr",
+    "year": 2009
+  },
+  {
+    "id": "214150",
+    "name": "클래시스",
+    "ticker": "214150",
+    "kind": "kr",
+    "year": 2017
+  },
+  {
+    "id": "145720",
+    "name": "덴티움",
+    "ticker": "145720",
+    "kind": "kr",
+    "year": 2017
+  },
+  {
+    "id": "039200",
+    "name": "오스코텍",
+    "ticker": "039200",
+    "kind": "kr",
+    "year": 2007
+  },
+  {
+    "id": "067080",
+    "name": "대화제약",
+    "ticker": "067080",
+    "kind": "kr",
+    "year": 2003
+  },
+  {
+    "id": "237690",
+    "name": "에스티팜",
+    "ticker": "237690",
+    "kind": "kr",
+    "year": 2016
+  },
+  {
+    "id": "000080",
+    "name": "하이트진로",
+    "ticker": "000080",
+    "kind": "kr",
+    "year": 1988
+  },
+  {
+    "id": "005300",
+    "name": "롯데칠성",
+    "ticker": "005300",
+    "kind": "kr",
+    "year": 1973
+  },
+  {
+    "id": "005440",
+    "name": "현대지에프홀딩스",
+    "ticker": "005440",
+    "kind": "kr",
+    "year": 1989
+  },
+  {
+    "id": "004370",
+    "name": "농심",
+    "ticker": "004370",
+    "kind": "kr",
+    "year": 1976
+  },
+  {
+    "id": "007310",
+    "name": "오뚜기",
+    "ticker": "007310",
+    "kind": "kr",
+    "year": 1994
+  },
+  {
+    "id": "280360",
+    "name": "롯데웰푸드",
+    "ticker": "280360",
+    "kind": "kr",
+    "year": 2017
+  },
+  {
+    "id": "271560",
+    "name": "오리온",
+    "ticker": "271560",
+    "kind": "kr",
+    "year": 2017
+  },
+  {
+    "id": "003230",
+    "name": "삼양식품",
+    "ticker": "003230",
+    "kind": "kr",
+    "year": 1975
+  },
+  {
+    "id": "026960",
+    "name": "동서",
+    "ticker": "026960",
+    "kind": "kr",
+    "year": 1975
+  },
+  {
+    "id": "001680",
+    "name": "대상",
+    "ticker": "001680",
+    "kind": "kr",
+    "year": 1970
+  },
+  {
+    "id": "002220",
+    "name": "한일시멘트",
+    "ticker": "002220",
+    "kind": "kr",
+    "year": 1969
+  },
+  {
+    "id": "000390",
+    "name": "삼화페인트",
+    "ticker": "000390",
+    "kind": "kr",
+    "year": 1993
+  },
+  {
+    "id": "003960",
+    "name": "사조대림",
+    "ticker": "003960",
+    "kind": "kr",
+    "year": 1976
+  },
+  {
+    "id": "014680",
+    "name": "한솔케미칼",
+    "ticker": "014680",
+    "kind": "kr",
+    "year": 1989
+  },
+  {
+    "id": "010950",
+    "name": "S-Oil",
+    "ticker": "010950",
+    "kind": "kr",
+    "year": 1987
+  },
+  {
+    "id": "096350",
+    "name": "대원강업",
+    "ticker": "096350",
+    "kind": "kr",
+    "year": 1977
+  },
+  {
+    "id": "004800",
+    "name": "효성",
+    "ticker": "004800",
+    "kind": "kr",
+    "year": 1973
+  },
+  {
+    "id": "298020",
+    "name": "효성티앤씨",
+    "ticker": "298020",
+    "kind": "kr",
+    "year": 2018
+  },
+  {
+    "id": "298050",
+    "name": "효성첨단소재",
+    "ticker": "298050",
+    "kind": "kr",
+    "year": 2018
+  },
+  {
+    "id": "298040",
+    "name": "효성중공업",
+    "ticker": "298040",
+    "kind": "kr",
+    "year": 2018
+  },
+  {
+    "id": "298000",
+    "name": "효성화학",
+    "ticker": "298000",
+    "kind": "kr",
+    "year": 2018
+  },
+  {
+    "id": "001740",
+    "name": "SK네트웍스",
+    "ticker": "001740",
+    "kind": "kr",
+    "year": 1977
+  },
+  {
+    "id": "000150",
+    "name": "두산",
+    "ticker": "000150",
+    "kind": "kr",
+    "year": 1973
+  },
+  {
+    "id": "034020",
+    "name": "두산에너빌리티",
+    "ticker": "034020",
+    "kind": "kr",
+    "year": 1962
+  },
+  {
+    "id": "241560",
+    "name": "두산밥캣",
+    "ticker": "241560",
+    "kind": "kr",
+    "year": 2016
+  },
+  {
+    "id": "042670",
+    "name": "HD현대인프라코어",
+    "ticker": "042670",
+    "kind": "kr",
+    "year": 2001
+  },
+  {
+    "id": "267250",
+    "name": "HD현대건설기계",
+    "ticker": "267250",
+    "kind": "kr",
+    "year": 2017
+  },
+  {
+    "id": "267260",
+    "name": "HD현대일렉트릭",
+    "ticker": "267260",
+    "kind": "kr",
+    "year": 2017
+  },
+  {
+    "id": "329180",
+    "name": "HD현대중공업",
+    "ticker": "329180",
+    "kind": "kr",
+    "year": 2021
+  },
+  {
+    "id": "009830",
+    "name": "한화솔루션",
+    "ticker": "009830",
+    "kind": "kr",
+    "year": 1974
+  },
+  {
+    "id": "012450",
+    "name": "한화에어로스페이스",
+    "ticker": "012450",
+    "kind": "kr",
+    "year": 1977
+  },
+  {
+    "id": "000880",
+    "name": "한화",
+    "ticker": "000880",
+    "kind": "kr",
+    "year": 1976
+  },
+  {
+    "id": "272210",
+    "name": "한화시스템",
+    "ticker": "272210",
+    "kind": "kr",
+    "year": 2019
+  },
+  {
+    "id": "042700",
+    "name": "한미반도체",
+    "ticker": "042700",
+    "kind": "kr",
+    "year": 2005
+  },
+  {
+    "id": "058470",
+    "name": "리노공업",
+    "ticker": "058470",
+    "kind": "kr",
+    "year": 2001
+  },
+  {
+    "id": "403870",
+    "name": "HPSP",
+    "ticker": "403870",
+    "kind": "kr",
+    "year": 2022
+  },
+  {
+    "id": "036930",
+    "name": "주성엔지니어링",
+    "ticker": "036930",
+    "kind": "kr",
+    "year": 1999
+  },
+  {
+    "id": "240810",
+    "name": "원익IPS",
+    "ticker": "240810",
+    "kind": "kr",
+    "year": 2005
+  },
+  {
+    "id": "357780",
+    "name": "솔브레인",
+    "ticker": "357780",
+    "kind": "kr",
+    "year": 2020
+  },
+  {
+    "id": "005290",
+    "name": "동진쎄미켐",
+    "ticker": "005290",
+    "kind": "kr",
+    "year": 1999
+  },
+  {
+    "id": "095610",
+    "name": "테스",
+    "ticker": "095610",
+    "kind": "kr",
+    "year": 2004
+  },
+  {
+    "id": "089030",
+    "name": "테크윙",
+    "ticker": "089030",
+    "kind": "kr",
+    "year": 2002
+  },
+  {
+    "id": "036540",
+    "name": "SFA반도체",
+    "ticker": "036540",
+    "kind": "kr",
+    "year": 2001
+  },
+  {
+    "id": "222800",
+    "name": "심텍",
+    "ticker": "222800",
+    "kind": "kr",
+    "year": 2000
+  },
+  {
+    "id": "108320",
+    "name": "LX세미콘",
+    "ticker": "108320",
+    "kind": "kr",
+    "year": 2001
+  },
+  {
+    "id": "064760",
+    "name": "티씨케이",
+    "ticker": "064760",
+    "kind": "kr",
+    "year": 2003
+  },
+  {
+    "id": "058610",
+    "name": "에스피지",
+    "ticker": "058610",
+    "kind": "kr",
+    "year": 2002
+  },
+  {
+    "id": "036810",
+    "name": "에프에스티",
+    "ticker": "036810",
+    "kind": "kr",
+    "year": 2000
+  },
+  {
+    "id": "101490",
+    "name": "에스앤에스텍",
+    "ticker": "101490",
+    "kind": "kr",
+    "year": 2001
+  },
+  {
+    "id": "084370",
+    "name": "유진테크",
+    "ticker": "084370",
+    "kind": "kr",
+    "year": 2006
+  },
+  {
+    "id": "033640",
+    "name": "네패스",
+    "ticker": "033640",
+    "kind": "kr",
+    "year": 1990
+  },
+  {
+    "id": "039030",
+    "name": "이오테크닉스",
+    "ticker": "039030",
+    "kind": "kr",
+    "year": 2000
+  },
+  {
+    "id": "078600",
+    "name": "대주전자재료",
+    "ticker": "078600",
+    "kind": "kr",
+    "year": 2004
+  },
+  {
+    "id": "131970",
+    "name": "두산테스나",
+    "ticker": "131970",
+    "kind": "kr",
+    "year": 2002
+  },
+  {
+    "id": "095500",
+    "name": "미래나노텍",
+    "ticker": "095500",
+    "kind": "kr",
+    "year": 2000
+  },
+  {
+    "id": "290550",
+    "name": "디케이티",
+    "ticker": "290550",
+    "kind": "kr",
+    "year": 2018
+  },
+  {
+    "id": "194480",
+    "name": "데브시스터즈",
+    "ticker": "194480",
+    "kind": "kr",
+    "year": 2014
+  },
+  {
+    "id": "058850",
+    "name": "KTcs",
+    "ticker": "058850",
+    "kind": "kr",
+    "year": 2001
+  },
+  {
+    "id": "036200",
+    "name": "유니셈",
+    "ticker": "036200",
+    "kind": "kr",
+    "year": 1999
+  },
+  {
+    "id": "036490",
+    "name": "SK머티리얼즈",
+    "ticker": "036490",
+    "kind": "kr",
+    "year": 1999
+  },
+  {
+    "id": "095340",
+    "name": "ISC",
+    "ticker": "095340",
+    "kind": "kr",
+    "year": 2007
+  },
+  {
+    "id": "046890",
+    "name": "서울반도체",
+    "ticker": "046890",
+    "kind": "kr",
+    "year": 2002
+  },
+  {
+    "id": "085660",
+    "name": "차바이오텍",
+    "ticker": "085660",
+    "kind": "kr",
+    "year": 2002
+  },
+  {
+    "id": "950160",
+    "name": "코오롱티슈진",
+    "ticker": "950160",
+    "kind": "kr",
+    "year": 2017
+  },
+  {
+    "id": "214370",
+    "name": "케어젠",
+    "ticker": "214370",
+    "kind": "kr",
+    "year": 2015
+  },
+  {
+    "id": "214430",
+    "name": "아이쓰리시스템",
+    "ticker": "214430",
+    "kind": "kr",
+    "year": 2015
+  },
+  {
+    "id": "950130",
+    "name": "엑세스바이오",
+    "ticker": "950130",
+    "kind": "kr",
+    "year": 2010
+  },
+  {
+    "id": "950140",
+    "name": "잉글우드랩",
+    "ticker": "950140",
+    "kind": "kr",
+    "year": 2016
+  },
+  {
+    "id": "293780",
+    "name": "압타바이오",
+    "ticker": "293780",
+    "kind": "kr",
+    "year": 2019
+  },
+  {
+    "id": "214610",
+    "name": "미코바이오메드",
+    "ticker": "214610",
+    "kind": "kr",
+    "year": 2020
+  },
+  {
+    "id": "195940",
+    "name": "HK이노엔",
+    "ticker": "195940",
+    "kind": "kr",
+    "year": 2021
+  },
+  {
+    "id": "326030",
+    "name": "SK바이오팜",
+    "ticker": "326030",
+    "kind": "kr",
+    "year": 2020
+  },
+  {
+    "id": "302440",
+    "name": "SK바이오사이언스",
+    "ticker": "302440",
+    "kind": "kr",
+    "year": 2021
+  },
+  {
+    "id": "357250",
+    "name": "미래에셋맵스리츠",
+    "ticker": "357250",
+    "kind": "kr",
+    "year": 2019
+  },
+  {
+    "id": "330590",
+    "name": "롯데리츠",
+    "ticker": "330590",
+    "kind": "kr",
+    "year": 2019
+  },
+  {
+    "id": "088980",
+    "name": "맥쿼리인프라",
+    "ticker": "088980",
+    "kind": "kr",
+    "year": 2006
+  },
+  {
+    "id": "094800",
+    "name": "맵스리얼티1",
+    "ticker": "094800",
+    "kind": "kr",
+    "year": 2007
+  },
+  {
+    "id": "123700",
+    "name": "SJM",
+    "ticker": "123700",
+    "kind": "kr",
+    "year": 2010
+  },
+  {
+    "id": "000720",
+    "name": "현대건설",
+    "ticker": "000720",
+    "kind": "kr",
+    "year": 1984
+  },
+  {
+    "id": "028050",
+    "name": "삼성엔지니어링",
+    "ticker": "028050",
+    "kind": "kr",
+    "year": 1996
+  },
+  {
+    "id": "006360",
+    "name": "GS건설",
+    "ticker": "006360",
+    "kind": "kr",
+    "year": 1981
+  },
+  {
+    "id": "047040",
+    "name": "대우건설",
+    "ticker": "047040",
+    "kind": "kr",
+    "year": 1973
+  },
+  {
+    "id": "010780",
+    "name": "아이에스동서",
+    "ticker": "010780",
+    "kind": "kr",
+    "year": 1975
+  },
+  {
+    "id": "034300",
+    "name": "신세계건설",
+    "ticker": "034300",
+    "kind": "kr",
+    "year": 1991
+  },
+  {
+    "id": "001450",
+    "name": "현대해상",
+    "ticker": "001450",
+    "kind": "kr",
+    "year": 1970
+  },
+  {
+    "id": "000060",
+    "name": "메리츠화재",
+    "ticker": "000060",
+    "kind": "kr",
+    "year": 2005
+  },
+  {
+    "id": "088350",
+    "name": "한화생명",
+    "ticker": "088350",
+    "kind": "kr",
+    "year": 2010
+  },
+  {
+    "id": "000370",
+    "name": "한화손해보험",
+    "ticker": "000370",
+    "kind": "kr",
+    "year": 1973
+  },
+  {
+    "id": "138040",
+    "name": "메리츠금융지주",
+    "ticker": "138040",
+    "kind": "kr",
+    "year": 2011
+  },
+  {
+    "id": "005940",
+    "name": "NH투자증권",
+    "ticker": "005940",
+    "kind": "kr",
+    "year": 1975
+  },
+  {
+    "id": "016360",
+    "name": "삼성증권",
+    "ticker": "016360",
+    "kind": "kr",
+    "year": 1982
+  },
+  {
+    "id": "006800",
+    "name": "미래에셋증권",
+    "ticker": "006800",
+    "kind": "kr",
+    "year": 1970
+  },
+  {
+    "id": "071050",
+    "name": "한국금융지주",
+    "ticker": "071050",
+    "kind": "kr",
+    "year": 2003
+  },
+  {
+    "id": "030610",
+    "name": "교보증권",
+    "ticker": "030610",
+    "kind": "kr",
+    "year": 1989
+  },
+  {
+    "id": "039490",
+    "name": "키움증권",
+    "ticker": "039490",
+    "kind": "kr",
+    "year": 2000
+  },
+  {
+    "id": "003540",
+    "name": "대신증권",
+    "ticker": "003540",
+    "kind": "kr",
+    "year": 1975
+  },
+  {
+    "id": "001500",
+    "name": "현대차증권",
+    "ticker": "001500",
+    "kind": "kr",
+    "year": 1975
+  },
+  {
+    "id": "008560",
+    "name": "메리츠증권",
+    "ticker": "008560",
+    "kind": "kr",
+    "year": 2010
+  },
+  {
+    "id": "005850",
+    "name": "에스엘",
+    "ticker": "005850",
+    "kind": "kr",
+    "year": 1988
+  },
+  {
+    "id": "018880",
+    "name": "한온시스템",
+    "ticker": "018880",
+    "kind": "kr",
+    "year": 1986
+  },
+  {
+    "id": "012750",
+    "name": "에스원",
+    "ticker": "012750",
+    "kind": "kr",
+    "year": 1996
+  },
+  {
+    "id": "039130",
+    "name": "하나투어",
+    "ticker": "039130",
+    "kind": "kr",
+    "year": 2000
+  },
+  {
+    "id": "080160",
+    "name": "모두투어",
+    "ticker": "080160",
+    "kind": "kr",
+    "year": 2005
+  },
+  {
+    "id": "114090",
+    "name": "GKL",
+    "ticker": "114090",
+    "kind": "kr",
+    "year": 2009
+  },
+  {
+    "id": "079160",
+    "name": "CJ CGV",
+    "ticker": "079160",
+    "kind": "kr",
+    "year": 2004
+  },
+  {
+    "id": "089590",
+    "name": "제주항공",
+    "ticker": "089590",
+    "kind": "kr",
+    "year": 2005
+  },
+  {
+    "id": "272450",
+    "name": "진에어",
+    "ticker": "272450",
+    "kind": "kr",
+    "year": 2017
+  },
+  {
+    "id": "298690",
+    "name": "에어부산",
+    "ticker": "298690",
+    "kind": "kr",
+    "year": 2018
+  },
+  {
+    "id": "004490",
+    "name": "세방전지",
+    "ticker": "004490",
+    "kind": "kr",
+    "year": 1987
+  },
+  {
+    "id": "011070",
+    "name": "LG이노텍",
+    "ticker": "011070",
+    "kind": "kr",
+    "year": 2008
+  },
+  {
+    "id": "009240",
+    "name": "한샘",
+    "ticker": "009240",
+    "kind": "kr",
+    "year": 2002
+  },
+  {
+    "id": "002240",
+    "name": "고려제강",
+    "ticker": "002240",
+    "kind": "kr",
+    "year": 1976
+  },
+  {
+    "id": "001820",
+    "name": "삼화콘덴서",
+    "ticker": "001820",
+    "kind": "kr",
+    "year": 1976
+  },
+  {
+    "id": "010120",
+    "name": "LS ELECTRIC",
+    "ticker": "010120",
+    "kind": "kr",
+    "year": 1974
+  },
+  {
+    "id": "006260",
+    "name": "LS",
+    "ticker": "006260",
+    "kind": "kr",
+    "year": 1974
+  },
+  {
+    "id": "078930",
+    "name": "GS",
+    "ticker": "078930",
+    "kind": "kr",
+    "year": 2004
+  },
+  {
+    "id": "004000",
+    "name": "롯데정밀화학",
+    "ticker": "004000",
+    "kind": "kr",
+    "year": 1976
+  },
+  {
+    "id": "006650",
+    "name": "대한유화",
+    "ticker": "006650",
+    "kind": "kr",
+    "year": 1970
+  },
+  {
+    "id": "011780",
+    "name": "금호석유화학",
+    "ticker": "011780",
+    "kind": "kr",
+    "year": 1988
+  },
+  {
+    "id": "011790",
+    "name": "SKC",
+    "ticker": "011790",
+    "kind": "kr",
+    "year": 1997
+  },
+  {
+    "id": "003240",
+    "name": "태광산업",
+    "ticker": "003240",
+    "kind": "kr",
+    "year": 1961
+  },
+  {
+    "id": "004430",
+    "name": "송원산업",
+    "ticker": "004430",
+    "kind": "kr",
+    "year": 1978
+  },
+  {
+    "id": "005950",
+    "name": "이수화학",
+    "ticker": "005950",
+    "kind": "kr",
+    "year": 1988
+  },
+  {
+    "id": "006110",
+    "name": "삼아알미늄",
+    "ticker": "006110",
+    "kind": "kr",
+    "year": 1969
+  },
+  {
+    "id": "001570",
+    "name": "금양",
+    "ticker": "001570",
+    "kind": "kr",
+    "year": 1976
+  },
+  {
+    "id": "017960",
+    "name": "한국카본",
+    "ticker": "017960",
+    "kind": "kr",
+    "year": 1995
+  },
+  {
+    "id": "001230",
+    "name": "동국홀딩스",
+    "ticker": "001230",
+    "kind": "kr",
+    "year": 1974
+  },
+  {
+    "id": "001430",
+    "name": "세아베스틸지주",
+    "ticker": "001430",
+    "kind": "kr",
+    "year": 1955
+  },
+  {
+    "id": "306200",
+    "name": "세아제강지주",
+    "ticker": "306200",
+    "kind": "kr",
+    "year": 2018
+  },
+  {
+    "id": "004690",
+    "name": "삼천리",
+    "ticker": "004690",
+    "kind": "kr",
+    "year": 1966
+  },
+  {
+    "id": "010600",
+    "name": "웰바이오텍",
+    "ticker": "010600",
+    "kind": "kr",
+    "year": 1975
+  },
+  {
+    "id": "003520",
+    "name": "영진약품",
+    "ticker": "003520",
+    "kind": "kr",
+    "year": 1962
+  },
+  {
+    "id": "007570",
+    "name": "일양약품",
+    "ticker": "007570",
+    "kind": "kr",
+    "year": 1972
+  },
+  {
+    "id": "004720",
+    "name": "팜젠사이언스",
+    "ticker": "004720",
+    "kind": "kr",
+    "year": 1966
+  },
+  {
+    "id": "003850",
+    "name": "보령",
+    "ticker": "003850",
+    "kind": "kr",
+    "year": 1988
+  },
+  {
+    "id": "069620",
+    "name": "대웅제약",
+    "ticker": "069620",
+    "kind": "kr",
+    "year": 2002
+  },
+  {
+    "id": "003090",
+    "name": "대웅",
+    "ticker": "003090",
+    "kind": "kr",
+    "year": 1973
+  },
+  {
+    "id": "012510",
+    "name": "더존비즈온",
+    "ticker": "012510",
+    "kind": "kr",
+    "year": 2000
+  },
+  {
+    "id": "053800",
+    "name": "안랩",
+    "ticker": "053800",
+    "kind": "kr",
+    "year": 2001
+  },
+  {
+    "id": "032500",
+    "name": "케이엠더블유",
+    "ticker": "032500",
+    "kind": "kr",
+    "year": 2005
+  },
+  {
+    "id": "067160",
+    "name": "아프리카TV",
+    "ticker": "067160",
+    "kind": "kr",
+    "year": 2003
+  },
+  {
+    "id": "041020",
+    "name": "폴라리스오피스",
+    "ticker": "041020",
+    "kind": "kr",
+    "year": 2005
+  },
+  {
+    "id": "060250",
+    "name": "NHN KCP",
+    "ticker": "060250",
+    "kind": "kr",
+    "year": 2002
+  },
+  {
+    "id": "035600",
+    "name": "KG이니시스",
+    "ticker": "035600",
+    "kind": "kr",
+    "year": 2002
+  },
+  {
+    "id": "060150",
+    "name": "인선이엔티",
+    "ticker": "060150",
+    "kind": "kr",
+    "year": 2001
+  },
+  {
+    "id": "215600",
+    "name": "신라젠",
+    "ticker": "215600",
+    "kind": "kr",
+    "year": 2016
+  },
+  {
+    "id": "041960",
+    "name": "코미팜",
+    "ticker": "041960",
+    "kind": "kr",
+    "year": 2001
+  },
+  {
+    "id": "091990",
+    "name": "셀트리온헬스케어",
+    "ticker": "091990",
+    "kind": "kr",
+    "year": 2017
+  },
+  {
+    "id": "183490",
+    "name": "엔지켐생명과학",
+    "ticker": "183490",
+    "kind": "kr",
+    "year": 2007
+  },
+  {
+    "id": "084990",
+    "name": "헬릭스미스",
+    "ticker": "084990",
+    "kind": "kr",
+    "year": 2005
+  },
+  {
+    "id": "137400",
+    "name": "피엔티",
+    "ticker": "137400",
+    "kind": "kr",
+    "year": 2003
+  },
+  {
+    "id": "121600",
+    "name": "나노신소재",
+    "ticker": "121600",
+    "kind": "kr",
+    "year": 2011
+  },
+  {
+    "id": "078340",
+    "name": "컴투스",
+    "ticker": "078340",
+    "kind": "kr",
+    "year": 2007
+  },
+  {
+    "id": "063080",
+    "name": "컴투스홀딩스",
+    "ticker": "063080",
+    "kind": "kr",
+    "year": 2007
+  },
+  {
+    "id": "078130",
+    "name": "국일제지",
+    "ticker": "078130",
+    "kind": "kr",
+    "year": 2004
+  },
+  {
+    "id": "036170",
+    "name": "클라우드에어",
+    "ticker": "036170",
+    "kind": "kr",
+    "year": 1997
+  },
+  {
+    "id": "092040",
+    "name": "아미코젠",
+    "ticker": "092040",
+    "kind": "kr",
+    "year": 2013
+  },
+  {
+    "id": "101730",
+    "name": "위메이드맥스",
+    "ticker": "101730",
+    "kind": "kr",
+    "year": 2009
+  },
+  {
+    "id": "263700",
+    "name": "케어랩스",
+    "ticker": "263700",
+    "kind": "kr",
+    "year": 2017
+  },
+  {
+    "id": "263860",
+    "name": "지니언스",
+    "ticker": "263860",
+    "kind": "kr",
+    "year": 2017
+  },
+  {
+    "id": "035810",
+    "name": "이지홀딩스",
+    "ticker": "035810",
+    "kind": "kr",
+    "year": 1999
+  },
+  {
+    "id": "005960",
+    "name": "동부건설",
+    "ticker": "005960",
+    "kind": "kr",
+    "year": 1978
+  },
+  {
+    "id": "001380",
+    "name": "SG글로벌",
+    "ticker": "001380",
+    "kind": "kr",
+    "year": 1967
+  },
+  {
+    "id": "002350",
+    "name": "넥센타이어",
+    "ticker": "002350",
+    "kind": "kr",
+    "year": 1977
+  },
+  {
+    "id": "005030",
+    "name": "부산주공",
+    "ticker": "005030",
+    "kind": "kr",
+    "year": 1975
+  },
+  {
+    "id": "004270",
+    "name": "남성",
+    "ticker": "004270",
+    "kind": "kr",
+    "year": 1965
+  },
+  {
+    "id": "001210",
+    "name": "금호전기",
+    "ticker": "001210",
+    "kind": "kr",
+    "year": 1973
+  },
+  {
+    "id": "006090",
+    "name": "사조오양",
+    "ticker": "006090",
+    "kind": "kr",
+    "year": 1969
+  },
+  {
+    "id": "004410",
+    "name": "서울식품",
+    "ticker": "004410",
+    "kind": "kr",
+    "year": 1955
+  },
+  {
+    "id": "004700",
+    "name": "조광피혁",
+    "ticker": "004700",
+    "kind": "kr",
+    "year": 1972
+  },
+  {
+    "id": "003200",
+    "name": "일신방직",
+    "ticker": "003200",
+    "kind": "kr",
+    "year": 1967
+  },
+  {
+    "id": "001070",
+    "name": "대한방직",
+    "ticker": "001070",
+    "kind": "kr",
+    "year": 1967
+  },
+  {
+    "id": "002760",
+    "name": "보락",
+    "ticker": "002760",
+    "kind": "kr",
+    "year": 1977
+  },
+  {
+    "id": "004100",
+    "name": "태양금속",
+    "ticker": "004100",
+    "kind": "kr",
+    "year": 1976
+  },
+  {
+    "id": "003300",
+    "name": "한일홀딩스",
+    "ticker": "003300",
+    "kind": "kr",
+    "year": 1978
+  },
+  {
+    "id": "002620",
+    "name": "제일파마홀딩스",
+    "ticker": "002620",
+    "kind": "kr",
+    "year": 1960
+  },
+  {
+    "id": "002630",
+    "name": "오리엔트바이오",
+    "ticker": "002630",
+    "kind": "kr",
+    "year": 1959
+  },
+  {
+    "id": "009810",
+    "name": "플레이그램",
+    "ticker": "009810",
+    "kind": "kr",
+    "year": 1972
+  },
+  {
+    "id": "014910",
+    "name": "성문전자",
+    "ticker": "014910",
+    "kind": "kr",
+    "year": 1980
+  },
+  {
+    "id": "017180",
+    "name": "명문제약",
+    "ticker": "017180",
+    "kind": "kr",
+    "year": 2008
+  },
+  {
+    "id": "005670",
+    "name": "푸드웰",
+    "ticker": "005670",
+    "kind": "kr",
+    "year": 1993
+  },
+  {
+    "id": "007700",
+    "name": "F&F",
+    "ticker": "007700",
+    "kind": "kr",
+    "year": 1992
+  },
+  {
+    "id": "383220",
+    "name": "F&F홀딩스",
+    "ticker": "383220",
+    "kind": "kr",
+    "year": 2021
+  },
+  {
+    "id": "007070",
+    "name": "GS리테일",
+    "ticker": "007070",
+    "kind": "kr",
+    "year": 2005
+  },
+  {
+    "id": "282330",
+    "name": "BGF리테일",
+    "ticker": "282330",
+    "kind": "kr",
+    "year": 2017
+  },
+  {
+    "id": "027410",
+    "name": "BGF",
+    "ticker": "027410",
+    "kind": "kr",
+    "year": 2014
+  },
+  {
+    "id": "006840",
+    "name": "AK홀딩스",
+    "ticker": "006840",
+    "kind": "kr",
+    "year": 1999
+  },
+  {
+    "id": "008730",
+    "name": "율촌화학",
+    "ticker": "008730",
+    "kind": "kr",
+    "year": 1973
+  },
+  {
+    "id": "011690",
+    "name": "유니드",
+    "ticker": "011690",
+    "kind": "kr",
+    "year": 2004
+  },
+  {
+    "id": "017800",
+    "name": "현대엘리베이터",
+    "ticker": "017800",
+    "kind": "kr",
+    "year": 1996
+  },
+  {
+    "id": "013570",
+    "name": "디와이",
+    "ticker": "013570",
+    "kind": "kr",
+    "year": 1978
+  },
+  {
+    "id": "012610",
+    "name": "경인양행",
+    "ticker": "012610",
+    "kind": "kr",
+    "year": 1973
+  },
+  {
+    "id": "005420",
+    "name": "코스모화학",
+    "ticker": "005420",
+    "kind": "kr",
+    "year": 1968
+  },
+  {
+    "id": "005180",
+    "name": "빙그레",
+    "ticker": "005180",
+    "kind": "kr",
+    "year": 1971
+  },
+  {
+    "id": "008040",
+    "name": "사조동아원",
+    "ticker": "008040",
+    "kind": "kr",
+    "year": 1970
+  },
+  {
+    "id": "003680",
+    "name": "한성기업",
+    "ticker": "003680",
+    "kind": "kr",
+    "year": 1963
+  },
+  {
+    "id": "003580",
+    "name": "HLB글로벌",
+    "ticker": "003580",
+    "kind": "kr",
+    "year": 1973
+  },
+  {
+    "id": "001630",
+    "name": "종근당홀딩스",
+    "ticker": "001630",
+    "kind": "kr",
+    "year": 1956
+  },
+  {
+    "id": "000490",
+    "name": "대동",
+    "ticker": "000490",
+    "kind": "kr",
+    "year": 1947
+  },
+  {
+    "id": "009160",
+    "name": "삼정펄프",
+    "ticker": "009160",
+    "kind": "kr",
+    "year": 1971
+  },
+  {
+    "id": "002020",
+    "name": "코오롱",
+    "ticker": "002020",
+    "kind": "kr",
+    "year": 1977
+  },
+  {
+    "id": "120110",
+    "name": "코오롱인더",
+    "ticker": "120110",
+    "kind": "kr",
+    "year": 2010
+  },
+  {
+    "id": "138930",
+    "name": "BNK금융지주",
+    "ticker": "138930",
+    "kind": "kr",
+    "year": 2011
+  },
+  {
+    "id": "139130",
+    "name": "DGB금융지주",
+    "ticker": "139130",
+    "kind": "kr",
+    "year": 2011
+  },
+  {
+    "id": "316140",
+    "name": "우리금융지주",
+    "ticker": "316140",
+    "kind": "kr",
+    "year": 2019
+  },
+  {
+    "id": "024110",
+    "name": "기업은행",
+    "ticker": "024110",
+    "kind": "kr",
+    "year": 2003
+  },
+  {
+    "id": "001270",
+    "name": "부국증권",
+    "ticker": "001270",
+    "kind": "kr",
+    "year": 1988
+  },
+  {
+    "id": "001290",
+    "name": "상상인증권",
+    "ticker": "001290",
+    "kind": "kr",
+    "year": 1988
+  },
+  {
+    "id": "003470",
+    "name": "유안타증권",
+    "ticker": "003470",
+    "kind": "kr",
+    "year": 2009
+  },
+  {
+    "id": "003530",
+    "name": "한화투자증권",
+    "ticker": "003530",
+    "kind": "kr",
+    "year": 1986
+  },
+  {
+    "id": "001720",
+    "name": "신영증권",
+    "ticker": "001720",
+    "kind": "kr",
+    "year": 1971
+  },
+  {
+    "id": "000210",
+    "name": "DL",
+    "ticker": "000210",
+    "kind": "kr",
+    "year": 1976
+  },
+  {
+    "id": "002380",
+    "name": "KCC",
+    "ticker": "002380",
+    "kind": "kr",
+    "year": 1973
+  },
+  {
+    "id": "NVDA",
+    "name": "NVIDIA",
+    "ticker": "NVDA",
+    "kind": "over",
+    "year": 1999
+  },
+  {
+    "id": "AAPL",
+    "name": "Apple",
+    "ticker": "AAPL",
+    "kind": "over",
+    "year": 1980
+  },
+  {
+    "id": "MSFT",
+    "name": "Microsoft",
+    "ticker": "MSFT",
+    "kind": "over",
+    "year": 1986
+  },
+  {
+    "id": "AMZN",
+    "name": "Amazon",
+    "ticker": "AMZN",
+    "kind": "over",
+    "year": 1997
+  },
+  {
+    "id": "GOOGL",
+    "name": "Alphabet A",
+    "ticker": "GOOGL",
+    "kind": "over",
+    "year": 2004
+  },
+  {
+    "id": "GOOG",
+    "name": "Alphabet C",
+    "ticker": "GOOG",
+    "kind": "over",
+    "year": 2004
+  },
+  {
+    "id": "META",
+    "name": "Meta Platforms",
+    "ticker": "META",
+    "kind": "over",
+    "year": 2012
+  },
+  {
+    "id": "AVGO",
+    "name": "Broadcom",
+    "ticker": "AVGO",
+    "kind": "over",
+    "year": 2009
+  },
+  {
+    "id": "TSLA",
+    "name": "Tesla",
+    "ticker": "TSLA",
+    "kind": "over",
+    "year": 2010
+  },
+  {
+    "id": "JPM",
+    "name": "JPMorgan Chase",
+    "ticker": "JPM",
+    "kind": "over",
+    "year": 1970
+  },
+  {
+    "id": "WMT",
+    "name": "Walmart",
+    "ticker": "WMT",
+    "kind": "over",
+    "year": 1970
+  },
+  {
+    "id": "LLY",
+    "name": "Eli Lilly",
+    "ticker": "LLY",
+    "kind": "over",
+    "year": 1952
+  },
+  {
+    "id": "XOM",
+    "name": "Exxon Mobil",
+    "ticker": "XOM",
+    "kind": "over",
+    "year": 1920
+  },
+  {
+    "id": "V",
+    "name": "Visa",
+    "ticker": "V",
+    "kind": "over",
+    "year": 2008
+  },
+  {
+    "id": "JNJ",
+    "name": "Johnson & Johnson",
+    "ticker": "JNJ",
+    "kind": "over",
+    "year": 1944
+  },
+  {
+    "id": "MA",
+    "name": "Mastercard",
+    "ticker": "MA",
+    "kind": "over",
+    "year": 2006
+  },
+  {
+    "id": "ABBV",
+    "name": "AbbVie",
+    "ticker": "ABBV",
+    "kind": "over",
+    "year": 2012
+  },
+  {
+    "id": "PLTR",
+    "name": "Palantir",
+    "ticker": "PLTR",
+    "kind": "over",
+    "year": 2020
+  },
+  {
+    "id": "ORCL",
+    "name": "Oracle",
+    "ticker": "ORCL",
+    "kind": "over",
+    "year": 1986
+  },
+  {
+    "id": "CVX",
+    "name": "Chevron",
+    "ticker": "CVX",
+    "kind": "over",
+    "year": 1921
+  },
+  {
+    "id": "COST",
+    "name": "Costco",
+    "ticker": "COST",
+    "kind": "over",
+    "year": 1982
+  },
+  {
+    "id": "HD",
+    "name": "Home Depot",
+    "ticker": "HD",
+    "kind": "over",
+    "year": 1981
+  },
+  {
+    "id": "NFLX",
+    "name": "Netflix",
+    "ticker": "NFLX",
+    "kind": "over",
+    "year": 2002
+  },
+  {
+    "id": "BAC",
+    "name": "Bank of America",
+    "ticker": "BAC",
+    "kind": "over",
+    "year": 1970
+  },
+  {
+    "id": "KO",
+    "name": "Coca-Cola",
+    "ticker": "KO",
+    "kind": "over",
+    "year": 1919
+  },
+  {
+    "id": "MRK",
+    "name": "Merck",
+    "ticker": "MRK",
+    "kind": "over",
+    "year": 1944
+  },
+  {
+    "id": "PG",
+    "name": "Procter & Gamble",
+    "ticker": "PG",
+    "kind": "over",
+    "year": 2016
+  },
+  {
+    "id": "UNH",
+    "name": "UnitedHealth",
+    "ticker": "UNH",
+    "kind": "over",
+    "year": 2017
+  },
+  {
+    "id": "GE",
+    "name": "GE Aerospace",
+    "ticker": "GE",
+    "kind": "over",
+    "year": 1892
+  },
+  {
+    "id": "TMO",
+    "name": "Thermo Fisher",
+    "ticker": "TMO",
+    "kind": "over",
+    "year": 2019
+  },
+  {
+    "id": "DIS",
+    "name": "Walt Disney",
+    "ticker": "DIS",
+    "kind": "over",
+    "year": 1957
+  },
+  {
+    "id": "PEP",
+    "name": "PepsiCo",
+    "ticker": "PEP",
+    "kind": "over",
+    "year": 1952
+  },
+  {
+    "id": "MCD",
+    "name": "McDonald's",
+    "ticker": "MCD",
+    "kind": "over",
+    "year": 1965
+  },
+  {
+    "id": "WFC",
+    "name": "Wells Fargo",
+    "ticker": "WFC",
+    "kind": "over",
+    "year": 1992
+  },
+  {
+    "id": "CSCO",
+    "name": "Cisco",
+    "ticker": "CSCO",
+    "kind": "over",
+    "year": 1993
+  },
+  {
+    "id": "IBM",
+    "name": "IBM",
+    "ticker": "IBM",
+    "kind": "over",
+    "year": 1994
+  },
+  {
+    "id": "CAT",
+    "name": "Caterpillar",
+    "ticker": "CAT",
+    "kind": "over",
+    "year": 1929
+  },
+  {
+    "id": "AMD",
+    "name": "AMD",
+    "ticker": "AMD",
+    "kind": "over",
+    "year": 1979
+  },
+  {
+    "id": "INTC",
+    "name": "Intel",
+    "ticker": "INTC",
+    "kind": "over",
+    "year": 1971
+  },
+  {
+    "id": "QCOM",
+    "name": "Qualcomm",
+    "ticker": "QCOM",
+    "kind": "over",
+    "year": 1991
+  },
+  {
+    "id": "TXN",
+    "name": "Texas Instruments",
+    "ticker": "TXN",
+    "kind": "over",
+    "year": 1953
+  },
+  {
+    "id": "AMAT",
+    "name": "Applied Materials",
+    "ticker": "AMAT",
+    "kind": "over",
+    "year": 1972
+  },
+  {
+    "id": "LRCX",
+    "name": "Lam Research",
+    "ticker": "LRCX",
+    "kind": "over",
+    "year": 1984
+  },
+  {
+    "id": "ADI",
+    "name": "ADI",
+    "ticker": "ADI",
+    "kind": "over",
+    "year": 2002
+  },
+  {
+    "id": "MU",
+    "name": "MU",
+    "ticker": "MU",
+    "kind": "over",
+    "year": 1984
+  },
+  {
+    "id": "AMGN",
+    "name": "AMGN",
+    "ticker": "AMGN",
+    "kind": "over",
+    "year": 2004
+  },
+  {
+    "id": "GILD",
+    "name": "GILD",
+    "ticker": "GILD",
+    "kind": "over",
+    "year": 1992
+  },
+  {
+    "id": "PFE",
+    "name": "PFE",
+    "ticker": "PFE",
+    "kind": "over",
+    "year": 1942
+  },
+  {
+    "id": "ABT",
+    "name": "ABT",
+    "ticker": "ABT",
+    "kind": "over",
+    "year": 2007
+  },
+  {
+    "id": "DHR",
+    "name": "DHR",
+    "ticker": "DHR",
+    "kind": "over",
+    "year": 2008
+  },
+  {
+    "id": "NKE",
+    "name": "NKE",
+    "ticker": "NKE",
+    "kind": "over",
+    "year": 1980
+  },
+  {
+    "id": "BA",
+    "name": "BA",
+    "ticker": "BA",
+    "kind": "over",
+    "year": 1962
+  },
+  {
+    "id": "RTX",
+    "name": "RTX",
+    "ticker": "RTX",
+    "kind": "over",
+    "year": 1934
+  },
+  {
+    "id": "LMT",
+    "name": "LMT",
+    "ticker": "LMT",
+    "kind": "over",
+    "year": 1995
+  },
+  {
+    "id": "DE",
+    "name": "DE",
+    "ticker": "DE",
+    "kind": "over",
+    "year": 2013
+  },
+  {
+    "id": "UPS",
+    "name": "UPS",
+    "ticker": "UPS",
+    "kind": "over",
+    "year": 1999
+  },
+  {
+    "id": "UNP",
+    "name": "UNP",
+    "ticker": "UNP",
+    "kind": "over",
+    "year": 2015
+  },
+  {
+    "id": "HON",
+    "name": "HON",
+    "ticker": "HON",
+    "kind": "over",
+    "year": 1985
+  },
+  {
+    "id": "MMM",
+    "name": "MMM",
+    "ticker": "MMM",
+    "kind": "over",
+    "year": 2017
+  },
+  {
+    "id": "LOW",
+    "name": "LOW",
+    "ticker": "LOW",
+    "kind": "over",
+    "year": 2018
+  },
+  {
+    "id": "TJX",
+    "name": "TJX",
+    "ticker": "TJX",
+    "kind": "over",
+    "year": 2019
+  },
+  {
+    "id": "SBUX",
+    "name": "SBUX",
+    "ticker": "SBUX",
+    "kind": "over",
+    "year": 1992
+  },
+  {
+    "id": "NEE",
+    "name": "NEE",
+    "ticker": "NEE",
+    "kind": "over",
+    "year": 1990
+  },
+  {
+    "id": "SO",
+    "name": "SO",
+    "ticker": "SO",
+    "kind": "over",
+    "year": 1991
+  },
+  {
+    "id": "DUK",
+    "name": "DUK",
+    "ticker": "DUK",
+    "kind": "over",
+    "year": 1992
+  },
+  {
+    "id": "SPG",
+    "name": "SPG",
+    "ticker": "SPG",
+    "kind": "over",
+    "year": 1993
+  },
+  {
+    "id": "O",
+    "name": "O",
+    "ticker": "O",
+    "kind": "over",
+    "year": 1994
+  },
+  {
+    "id": "REAL",
+    "name": "REAL",
+    "ticker": "REAL",
+    "kind": "over",
+    "year": 1995
+  },
+  {
+    "id": "PSA",
+    "name": "PSA",
+    "ticker": "PSA",
+    "kind": "over",
+    "year": 1996
+  },
+  {
+    "id": "OXY",
+    "name": "OXY",
+    "ticker": "OXY",
+    "kind": "over",
+    "year": 1964
+  },
+  {
+    "id": "COP",
+    "name": "COP",
+    "ticker": "COP",
+    "kind": "over",
+    "year": 2002
+  },
+  {
+    "id": "SLB",
+    "name": "SLB",
+    "ticker": "SLB",
+    "kind": "over",
+    "year": 1962
+  },
+  {
+    "id": "EOG",
+    "name": "EOG",
+    "ticker": "EOG",
+    "kind": "over",
+    "year": 2000
+  },
+  {
+    "id": "GS",
+    "name": "GS",
+    "ticker": "GS",
+    "kind": "over",
+    "year": 1999
+  },
+  {
+    "id": "MS",
+    "name": "MS",
+    "ticker": "MS",
+    "kind": "over",
+    "year": 1986
+  },
+  {
+    "id": "C",
+    "name": "C",
+    "ticker": "C",
+    "kind": "over",
+    "year": 2003
+  },
+  {
+    "id": "BLK",
+    "name": "BLK",
+    "ticker": "BLK",
+    "kind": "over",
+    "year": 1999
+  },
+  {
+    "id": "SCHW",
+    "name": "SCHW",
+    "ticker": "SCHW",
+    "kind": "over",
+    "year": 2005
+  },
+  {
+    "id": "CME",
+    "name": "CME",
+    "ticker": "CME",
+    "kind": "over",
+    "year": 2002
+  },
+  {
+    "id": "ICE",
+    "name": "ICE",
+    "ticker": "ICE",
+    "kind": "over",
+    "year": 2007
+  },
+  {
+    "id": "SPGI",
+    "name": "SPGI",
+    "ticker": "SPGI",
+    "kind": "over",
+    "year": 1971
+  },
+  {
+    "id": "AXP",
+    "name": "AXP",
+    "ticker": "AXP",
+    "kind": "over",
+    "year": 2009
+  },
+  {
+    "id": "BK",
+    "name": "BK",
+    "ticker": "BK",
+    "kind": "over",
+    "year": 2010
+  },
+  {
+    "id": "BNY",
+    "name": "BNY",
+    "ticker": "BNY",
+    "kind": "over",
+    "year": 2011
+  },
+  {
+    "id": "USB",
+    "name": "USB",
+    "ticker": "USB",
+    "kind": "over",
+    "year": 2012
+  },
+  {
+    "id": "PNC",
+    "name": "PNC",
+    "ticker": "PNC",
+    "kind": "over",
+    "year": 2013
+  },
+  {
+    "id": "TFC",
+    "name": "TFC",
+    "ticker": "TFC",
+    "kind": "over",
+    "year": 2014
+  },
+  {
+    "id": "COF",
+    "name": "COF",
+    "ticker": "COF",
+    "kind": "over",
+    "year": 2015
+  },
+  {
+    "id": "AON",
+    "name": "AON",
+    "ticker": "AON",
+    "kind": "over",
+    "year": 2016
+  },
+  {
+    "id": "ALL",
+    "name": "ALL",
+    "ticker": "ALL",
+    "kind": "over",
+    "year": 2017
+  },
+  {
+    "id": "MET",
+    "name": "MET",
+    "ticker": "MET",
+    "kind": "over",
+    "year": 2018
+  },
+  {
+    "id": "PRU",
+    "name": "PRU",
+    "ticker": "PRU",
+    "kind": "over",
+    "year": 2019
+  },
+  {
+    "id": "AFL",
+    "name": "AFL",
+    "ticker": "AFL",
+    "kind": "over",
+    "year": 2020
+  },
+  {
+    "id": "TRV",
+    "name": "TRV",
+    "ticker": "TRV",
+    "kind": "over",
+    "year": 1990
+  },
+  {
+    "id": "CB",
+    "name": "CB",
+    "ticker": "CB",
+    "kind": "over",
+    "year": 1991
+  },
+  {
+    "id": "ACGL",
+    "name": "ACGL",
+    "ticker": "ACGL",
+    "kind": "over",
+    "year": 1992
+  },
+  {
+    "id": "AJG",
+    "name": "AJG",
+    "ticker": "AJG",
+    "kind": "over",
+    "year": 1993
+  },
+  {
+    "id": "MMC",
+    "name": "MMC",
+    "ticker": "MMC",
+    "kind": "over",
+    "year": 1994
+  },
+  {
+    "id": "VZ",
+    "name": "VZ",
+    "ticker": "VZ",
+    "kind": "over",
+    "year": 1995
+  },
+  {
+    "id": "T",
+    "name": "T",
+    "ticker": "T",
+    "kind": "over",
+    "year": 1996
+  },
+  {
+    "id": "MDT",
+    "name": "MDT",
+    "ticker": "MDT",
+    "kind": "over",
+    "year": 1997
+  },
+  {
+    "id": "SYK",
+    "name": "SYK",
+    "ticker": "SYK",
+    "kind": "over",
+    "year": 1998
+  },
+  {
+    "id": "ISRG",
+    "name": "ISRG",
+    "ticker": "ISRG",
+    "kind": "over",
+    "year": 1999
+  },
+  {
+    "id": "BSX",
+    "name": "BSX",
+    "ticker": "BSX",
+    "kind": "over",
+    "year": 2000
+  },
+  {
+    "id": "ELV",
+    "name": "ELV",
+    "ticker": "ELV",
+    "kind": "over",
+    "year": 2001
+  },
+  {
+    "id": "CVS",
+    "name": "CVS",
+    "ticker": "CVS",
+    "kind": "over",
+    "year": 2002
+  },
+  {
+    "id": "CI",
+    "name": "CI",
+    "ticker": "CI",
+    "kind": "over",
+    "year": 2003
+  },
+  {
+    "id": "HUM",
+    "name": "HUM",
+    "ticker": "HUM",
+    "kind": "over",
+    "year": 2004
+  },
+  {
+    "id": "REGN",
+    "name": "REGN",
+    "ticker": "REGN",
+    "kind": "over",
+    "year": 1991
+  },
+  {
+    "id": "BIIB",
+    "name": "BIIB",
+    "ticker": "BIIB",
+    "kind": "over",
+    "year": 1991
+  },
+  {
+    "id": "BMY",
+    "name": "BMY",
+    "ticker": "BMY",
+    "kind": "over",
+    "year": 1949
+  },
+  {
+    "id": "GSK",
+    "name": "GSK",
+    "ticker": "GSK",
+    "kind": "over",
+    "year": 2008
+  },
+  {
+    "id": "NVO",
+    "name": "Novo Nordisk",
+    "ticker": "NVO",
+    "kind": "over",
+    "year": 1981
+  },
+  {
+    "id": "AZN",
+    "name": "AstraZeneca",
+    "ticker": "AZN",
+    "kind": "over",
+    "year": 1999
+  },
+  {
+    "id": "SNY",
+    "name": "SNY",
+    "ticker": "SNY",
+    "kind": "over",
+    "year": 2002
+  },
+  {
+    "id": "TAK",
+    "name": "TAK",
+    "ticker": "TAK",
+    "kind": "over",
+    "year": 2012
+  },
+  {
+    "id": "ZTS",
+    "name": "ZTS",
+    "ticker": "ZTS",
+    "kind": "over",
+    "year": 2013
+  },
+  {
+    "id": "MRNA",
+    "name": "MRNA",
+    "ticker": "MRNA",
+    "kind": "over",
+    "year": 2018
+  },
+  {
+    "id": "VRTX",
+    "name": "VRTX",
+    "ticker": "VRTX",
+    "kind": "over",
+    "year": 2015
+  },
+  {
+    "id": "LIN",
+    "name": "LIN",
+    "ticker": "LIN",
+    "kind": "over",
+    "year": 2016
+  },
+  {
+    "id": "APD",
+    "name": "APD",
+    "ticker": "APD",
+    "kind": "over",
+    "year": 2017
+  },
+  {
+    "id": "SHW",
+    "name": "SHW",
+    "ticker": "SHW",
+    "kind": "over",
+    "year": 2018
+  },
+  {
+    "id": "ECL",
+    "name": "ECL",
+    "ticker": "ECL",
+    "kind": "over",
+    "year": 2019
+  },
+  {
+    "id": "FCX",
+    "name": "FCX",
+    "ticker": "FCX",
+    "kind": "over",
+    "year": 2020
+  },
+  {
+    "id": "NUE",
+    "name": "NUE",
+    "ticker": "NUE",
+    "kind": "over",
+    "year": 1990
+  },
+  {
+    "id": "NEM",
+    "name": "NEM",
+    "ticker": "NEM",
+    "kind": "over",
+    "year": 1991
+  },
+  {
+    "id": "RIO",
+    "name": "RIO",
+    "ticker": "RIO",
+    "kind": "over",
+    "year": 1992
+  },
+  {
+    "id": "BHP",
+    "name": "BHP",
+    "ticker": "BHP",
+    "kind": "over",
+    "year": 1993
+  },
+  {
+    "id": "VALE",
+    "name": "VALE",
+    "ticker": "VALE",
+    "kind": "over",
+    "year": 1994
+  },
+  {
+    "id": "SCCO",
+    "name": "SCCO",
+    "ticker": "SCCO",
+    "kind": "over",
+    "year": 1995
+  },
+  {
+    "id": "DOW",
+    "name": "DOW",
+    "ticker": "DOW",
+    "kind": "over",
+    "year": 1996
+  },
+  {
+    "id": "DD",
+    "name": "DD",
+    "ticker": "DD",
+    "kind": "over",
+    "year": 1997
+  },
+  {
+    "id": "LYB",
+    "name": "LYB",
+    "ticker": "LYB",
+    "kind": "over",
+    "year": 1998
+  },
+  {
+    "id": "EMN",
+    "name": "EMN",
+    "ticker": "EMN",
+    "kind": "over",
+    "year": 1999
+  },
+  {
+    "id": "ALB",
+    "name": "ALB",
+    "ticker": "ALB",
+    "kind": "over",
+    "year": 2000
+  },
+  {
+    "id": "ETN",
+    "name": "ETN",
+    "ticker": "ETN",
+    "kind": "over",
+    "year": 2001
+  },
+  {
+    "id": "PH",
+    "name": "PH",
+    "ticker": "PH",
+    "kind": "over",
+    "year": 2002
+  },
+  {
+    "id": "ROK",
+    "name": "ROK",
+    "ticker": "ROK",
+    "kind": "over",
+    "year": 2003
+  },
+  {
+    "id": "EMR",
+    "name": "EMR",
+    "ticker": "EMR",
+    "kind": "over",
+    "year": 2004
+  },
+  {
+    "id": "ITW",
+    "name": "ITW",
+    "ticker": "ITW",
+    "kind": "over",
+    "year": 2005
+  },
+  {
+    "id": "GEV",
+    "name": "GEV",
+    "ticker": "GEV",
+    "kind": "over",
+    "year": 2006
+  },
+  {
+    "id": "CARR",
+    "name": "CARR",
+    "ticker": "CARR",
+    "kind": "over",
+    "year": 2007
+  },
+  {
+    "id": "TT",
+    "name": "TT",
+    "ticker": "TT",
+    "kind": "over",
+    "year": 2008
+  },
+  {
+    "id": "CMI",
+    "name": "CMI",
+    "ticker": "CMI",
+    "kind": "over",
+    "year": 2009
+  },
+  {
+    "id": "PCAR",
+    "name": "PCAR",
+    "ticker": "PCAR",
+    "kind": "over",
+    "year": 2010
+  },
+  {
+    "id": "F",
+    "name": "F",
+    "ticker": "F",
+    "kind": "over",
+    "year": 2011
+  },
+  {
+    "id": "FAST",
+    "name": "FAST",
+    "ticker": "FAST",
+    "kind": "over",
+    "year": 2012
+  },
+  {
+    "id": "FDX",
+    "name": "FDX",
+    "ticker": "FDX",
+    "kind": "over",
+    "year": 1978
+  },
+  {
+    "id": "DAL",
+    "name": "DAL",
+    "ticker": "DAL",
+    "kind": "over",
+    "year": 2014
+  },
+  {
+    "id": "LUV",
+    "name": "LUV",
+    "ticker": "LUV",
+    "kind": "over",
+    "year": 2015
+  },
+  {
+    "id": "CSX",
+    "name": "CSX",
+    "ticker": "CSX",
+    "kind": "over",
+    "year": 2016
+  },
+  {
+    "id": "NSC",
+    "name": "NSC",
+    "ticker": "NSC",
+    "kind": "over",
+    "year": 2017
+  },
+  {
+    "id": "WM",
+    "name": "WM",
+    "ticker": "WM",
+    "kind": "over",
+    "year": 2018
+  },
+  {
+    "id": "RSG",
+    "name": "RSG",
+    "ticker": "RSG",
+    "kind": "over",
+    "year": 2019
+  },
+  {
+    "id": "CHTR",
+    "name": "CHTR",
+    "ticker": "CHTR",
+    "kind": "over",
+    "year": 2020
+  },
+  {
+    "id": "CMCSA",
+    "name": "CMCSA",
+    "ticker": "CMCSA",
+    "kind": "over",
+    "year": 1990
+  },
+  {
+    "id": "TGT",
+    "name": "TGT",
+    "ticker": "TGT",
+    "kind": "over",
+    "year": 1991
+  },
+  {
+    "id": "DG",
+    "name": "DG",
+    "ticker": "DG",
+    "kind": "over",
+    "year": 1992
+  },
+  {
+    "id": "DLTR",
+    "name": "DLTR",
+    "ticker": "DLTR",
+    "kind": "over",
+    "year": 1993
+  },
+  {
+    "id": "KR",
+    "name": "KR",
+    "ticker": "KR",
+    "kind": "over",
+    "year": 1994
+  },
+  {
+    "id": "KHC",
+    "name": "KHC",
+    "ticker": "KHC",
+    "kind": "over",
+    "year": 1995
+  },
+  {
+    "id": "GIS",
+    "name": "GIS",
+    "ticker": "GIS",
+    "kind": "over",
+    "year": 1996
+  },
+  {
+    "id": "KDP",
+    "name": "KDP",
+    "ticker": "KDP",
+    "kind": "over",
+    "year": 1997
+  },
+  {
+    "id": "HSY",
+    "name": "HSY",
+    "ticker": "HSY",
+    "kind": "over",
+    "year": 1998
+  },
+  {
+    "id": "SJM",
+    "name": "SJM",
+    "ticker": "SJM",
+    "kind": "over",
+    "year": 1999
+  },
+  {
+    "id": "CL",
+    "name": "CL",
+    "ticker": "CL",
+    "kind": "over",
+    "year": 2000
+  },
+  {
+    "id": "PM",
+    "name": "PM",
+    "ticker": "PM",
+    "kind": "over",
+    "year": 2001
+  },
+  {
+    "id": "MO",
+    "name": "MO",
+    "ticker": "MO",
+    "kind": "over",
+    "year": 2002
+  },
+  {
+    "id": "BTI",
+    "name": "BTI",
+    "ticker": "BTI",
+    "kind": "over",
+    "year": 2003
+  },
+  {
+    "id": "ORLY",
+    "name": "ORLY",
+    "ticker": "ORLY",
+    "kind": "over",
+    "year": 2004
+  },
+  {
+    "id": "AZO",
+    "name": "AZO",
+    "ticker": "AZO",
+    "kind": "over",
+    "year": 2005
+  },
+  {
+    "id": "GM",
+    "name": "GM",
+    "ticker": "GM",
+    "kind": "over",
+    "year": 2006
+  },
+  {
+    "id": "RIVN",
+    "name": "RIVN",
+    "ticker": "RIVN",
+    "kind": "over",
+    "year": 2007
+  },
+  {
+    "id": "ABNB",
+    "name": "Airbnb",
+    "ticker": "ABNB",
+    "kind": "over",
+    "year": 2020
+  },
+  {
+    "id": "BKNG",
+    "name": "BKNG",
+    "ticker": "BKNG",
+    "kind": "over",
+    "year": 2009
+  },
+  {
+    "id": "MAR",
+    "name": "MAR",
+    "ticker": "MAR",
+    "kind": "over",
+    "year": 2010
+  },
+  {
+    "id": "HLT",
+    "name": "HLT",
+    "ticker": "HLT",
+    "kind": "over",
+    "year": 2011
+  },
+  {
+    "id": "EXPE",
+    "name": "EXPE",
+    "ticker": "EXPE",
+    "kind": "over",
+    "year": 2012
+  },
+  {
+    "id": "UBER",
+    "name": "Uber",
+    "ticker": "UBER",
+    "kind": "over",
+    "year": 2019
+  },
+  {
+    "id": "LYFT",
+    "name": "LYFT",
+    "ticker": "LYFT",
+    "kind": "over",
+    "year": 2014
+  },
+  {
+    "id": "DASH",
+    "name": "DASH",
+    "ticker": "DASH",
+    "kind": "over",
+    "year": 2015
+  },
+  {
+    "id": "CRM",
+    "name": "Salesforce",
+    "ticker": "CRM",
+    "kind": "over",
+    "year": 2004
+  },
+  {
+    "id": "NOW",
+    "name": "ServiceNow",
+    "ticker": "NOW",
+    "kind": "over",
+    "year": 2012
+  },
+  {
+    "id": "ADBE",
+    "name": "Adobe",
+    "ticker": "ADBE",
+    "kind": "over",
+    "year": 1986
+  },
+  {
+    "id": "INTU",
+    "name": "INTU",
+    "ticker": "INTU",
+    "kind": "over",
+    "year": 2019
+  },
+  {
+    "id": "PANW",
+    "name": "Palo Alto Networks",
+    "ticker": "PANW",
+    "kind": "over",
+    "year": 2012
+  },
+  {
+    "id": "CRWD",
+    "name": "CrowdStrike",
+    "ticker": "CRWD",
+    "kind": "over",
+    "year": 2019
+  },
+  {
+    "id": "SNOW",
+    "name": "Snowflake",
+    "ticker": "SNOW",
+    "kind": "over",
+    "year": 2020
+  },
+  {
+    "id": "DDOG",
+    "name": "DDOG",
+    "ticker": "DDOG",
+    "kind": "over",
+    "year": 2019
+  },
+  {
+    "id": "NET",
+    "name": "NET",
+    "ticker": "NET",
+    "kind": "over",
+    "year": 2010
+  },
+  {
+    "id": "MDB",
+    "name": "MDB",
+    "ticker": "MDB",
+    "kind": "over",
+    "year": 1994
+  },
+  {
+    "id": "TEAM",
+    "name": "TEAM",
+    "ticker": "TEAM",
+    "kind": "over",
+    "year": 1995
+  },
+  {
+    "id": "ZS",
+    "name": "ZS",
+    "ticker": "ZS",
+    "kind": "over",
+    "year": 1996
+  },
+  {
+    "id": "OKTA",
+    "name": "OKTA",
+    "ticker": "OKTA",
+    "kind": "over",
+    "year": 1997
+  },
+  {
+    "id": "ANET",
+    "name": "ANET",
+    "ticker": "ANET",
+    "kind": "over",
+    "year": 1998
+  },
+  {
+    "id": "CDNS",
+    "name": "CDNS",
+    "ticker": "CDNS",
+    "kind": "over",
+    "year": 1999
+  },
+  {
+    "id": "SNPS",
+    "name": "SNPS",
+    "ticker": "SNPS",
+    "kind": "over",
+    "year": 2000
+  },
+  {
+    "id": "MRVL",
+    "name": "MRVL",
+    "ticker": "MRVL",
+    "kind": "over",
+    "year": 2001
+  },
+  {
+    "id": "ON",
+    "name": "ON",
+    "ticker": "ON",
+    "kind": "over",
+    "year": 2002
+  },
+  {
+    "id": "NXPI",
+    "name": "NXPI",
+    "ticker": "NXPI",
+    "kind": "over",
+    "year": 2003
+  },
+  {
+    "id": "KLAC",
+    "name": "KLAC",
+    "ticker": "KLAC",
+    "kind": "over",
+    "year": 2004
+  },
+  {
+    "id": "WDC",
+    "name": "WDC",
+    "ticker": "WDC",
+    "kind": "over",
+    "year": 2005
+  },
+  {
+    "id": "STX",
+    "name": "STX",
+    "ticker": "STX",
+    "kind": "over",
+    "year": 2006
+  },
+  {
+    "id": "HPQ",
+    "name": "HPQ",
+    "ticker": "HPQ",
+    "kind": "over",
+    "year": 2007
+  },
+  {
+    "id": "DELL",
+    "name": "DELL",
+    "ticker": "DELL",
+    "kind": "over",
+    "year": 2008
+  },
+  {
+    "id": "HPE",
+    "name": "HPE",
+    "ticker": "HPE",
+    "kind": "over",
+    "year": 2009
+  },
+  {
+    "id": "ARM",
+    "name": "ARM",
+    "ticker": "ARM",
+    "kind": "over",
+    "year": 2023
+  },
+  {
+    "id": "ASML",
+    "name": "ASML",
+    "ticker": "ASML",
+    "kind": "over",
+    "year": 1995
+  },
+  {
+    "id": "TSM",
+    "name": "TSMC",
+    "ticker": "TSM",
+    "kind": "over",
+    "year": 1997
+  },
+  {
+    "id": "STM",
+    "name": "STM",
+    "ticker": "STM",
+    "kind": "over",
+    "year": 2013
+  },
+  {
+    "id": "SAP",
+    "name": "SAP",
+    "ticker": "SAP",
+    "kind": "over",
+    "year": 2014
+  },
+  {
+    "id": "SONY",
+    "name": "Sony",
+    "ticker": "SONY",
+    "kind": "over",
+    "year": 2015
+  },
+  {
+    "id": "TM",
+    "name": "Toyota",
+    "ticker": "TM",
+    "kind": "over",
+    "year": 2016
+  },
+  {
+    "id": "HMC",
+    "name": "HMC",
+    "ticker": "HMC",
+    "kind": "over",
+    "year": 2017
+  },
+  {
+    "id": "NSANY",
+    "name": "NSANY",
+    "ticker": "NSANY",
+    "kind": "over",
+    "year": 2018
+  },
+  {
+    "id": "BABA",
+    "name": "Alibaba",
+    "ticker": "BABA",
+    "kind": "over",
+    "year": 2014
+  },
+  {
+    "id": "JD",
+    "name": "JD",
+    "ticker": "JD",
+    "kind": "over",
+    "year": 2020
+  },
+  {
+    "id": "PDD",
+    "name": "PDD Holdings",
+    "ticker": "PDD",
+    "kind": "over",
+    "year": 2018
+  },
+  {
+    "id": "BIDU",
+    "name": "BIDU",
+    "ticker": "BIDU",
+    "kind": "over",
+    "year": 1991
+  },
+  {
+    "id": "NIO",
+    "name": "NIO",
+    "ticker": "NIO",
+    "kind": "over",
+    "year": 2018
+  },
+  {
+    "id": "LI",
+    "name": "LI",
+    "ticker": "LI",
+    "kind": "over",
+    "year": 2020
+  },
+  {
+    "id": "XPEV",
+    "name": "XPEV",
+    "ticker": "XPEV",
+    "kind": "over",
+    "year": 2020
+  },
+  {
+    "id": "TCEHY",
+    "name": "TCEHY",
+    "ticker": "TCEHY",
+    "kind": "over",
+    "year": 1995
+  },
+  {
+    "id": "MELI",
+    "name": "MELI",
+    "ticker": "MELI",
+    "kind": "over",
+    "year": 1996
+  },
+  {
+    "id": "SE",
+    "name": "SE",
+    "ticker": "SE",
+    "kind": "over",
+    "year": 1997
+  },
+  {
+    "id": "GRAB",
+    "name": "GRAB",
+    "ticker": "GRAB",
+    "kind": "over",
+    "year": 1998
+  },
+  {
+    "id": "SHOP",
+    "name": "Shopify",
+    "ticker": "SHOP",
+    "kind": "over",
+    "year": 2015
+  },
+  {
+    "id": "SPOT",
+    "name": "Spotify",
+    "ticker": "SPOT",
+    "kind": "over",
+    "year": 2018
+  },
+  {
+    "id": "ROKU",
+    "name": "ROKU",
+    "ticker": "ROKU",
+    "kind": "over",
+    "year": 2001
+  },
+  {
+    "id": "SHEL",
+    "name": "SHEL",
+    "ticker": "SHEL",
+    "kind": "over",
+    "year": 2002
+  },
+  {
+    "id": "BP",
+    "name": "BP",
+    "ticker": "BP",
+    "kind": "over",
+    "year": 2003
+  },
+  {
+    "id": "TTE",
+    "name": "TTE",
+    "ticker": "TTE",
+    "kind": "over",
+    "year": 2004
+  },
+  {
+    "id": "EQNR",
+    "name": "EQNR",
+    "ticker": "EQNR",
+    "kind": "over",
+    "year": 2005
+  },
+  {
+    "id": "ENB",
+    "name": "ENB",
+    "ticker": "ENB",
+    "kind": "over",
+    "year": 2006
+  },
+  {
+    "id": "CNQ",
+    "name": "CNQ",
+    "ticker": "CNQ",
+    "kind": "over",
+    "year": 2007
+  },
+  {
+    "id": "SU",
+    "name": "SU",
+    "ticker": "SU",
+    "kind": "over",
+    "year": 2008
+  },
+  {
+    "id": "HSBC",
+    "name": "HSBC",
+    "ticker": "HSBC",
+    "kind": "over",
+    "year": 2009
+  },
+  {
+    "id": "RY",
+    "name": "RY",
+    "ticker": "RY",
+    "kind": "over",
+    "year": 2010
+  },
+  {
+    "id": "TD",
+    "name": "TD",
+    "ticker": "TD",
+    "kind": "over",
+    "year": 2011
+  },
+  {
+    "id": "BMO",
+    "name": "BMO",
+    "ticker": "BMO",
+    "kind": "over",
+    "year": 2012
+  },
+  {
+    "id": "BNS",
+    "name": "BNS",
+    "ticker": "BNS",
+    "kind": "over",
+    "year": 2013
+  },
+  {
+    "id": "CM",
+    "name": "CM",
+    "ticker": "CM",
+    "kind": "over",
+    "year": 2014
+  },
+  {
+    "id": "MUFG",
+    "name": "MUFG",
+    "ticker": "MUFG",
+    "kind": "over",
+    "year": 2015
+  },
+  {
+    "id": "SMFG",
+    "name": "SMFG",
+    "ticker": "SMFG",
+    "kind": "over",
+    "year": 2016
+  },
+  {
+    "id": "MFG",
+    "name": "MFG",
+    "ticker": "MFG",
+    "kind": "over",
+    "year": 2017
+  },
+  {
+    "id": "NVS",
+    "name": "NVS",
+    "ticker": "NVS",
+    "kind": "over",
+    "year": 2000
+  },
+  {
+    "id": "NOVN",
+    "name": "NOVN",
+    "ticker": "NOVN",
+    "kind": "over",
+    "year": 2019
+  },
+  {
+    "id": "UL",
+    "name": "UL",
+    "ticker": "UL",
+    "kind": "over",
+    "year": 2020
+  },
+  {
+    "id": "DEO",
+    "name": "DEO",
+    "ticker": "DEO",
+    "kind": "over",
+    "year": 1990
+  },
+  {
+    "id": "BUD",
+    "name": "BUD",
+    "ticker": "BUD",
+    "kind": "over",
+    "year": 1991
+  },
+  {
+    "id": "RELX",
+    "name": "RELX",
+    "ticker": "RELX",
+    "kind": "over",
+    "year": 1992
+  },
+  {
+    "id": "IBN",
+    "name": "IBN",
+    "ticker": "IBN",
+    "kind": "over",
+    "year": 1993
+  },
+  {
+    "id": "HDB",
+    "name": "HDB",
+    "ticker": "HDB",
+    "kind": "over",
+    "year": 1994
+  },
+  {
+    "id": "INFY",
+    "name": "INFY",
+    "ticker": "INFY",
+    "kind": "over",
+    "year": 1995
+  },
+  {
+    "id": "WIT",
+    "name": "WIT",
+    "ticker": "WIT",
+    "kind": "over",
+    "year": 1996
+  },
+  {
+    "id": "PBR",
+    "name": "PBR",
+    "ticker": "PBR",
+    "kind": "over",
+    "year": 1997
+  },
+  {
+    "id": "ITUB",
+    "name": "ITUB",
+    "ticker": "ITUB",
+    "kind": "over",
+    "year": 1998
+  },
+  {
+    "id": "NU",
+    "name": "NU",
+    "ticker": "NU",
+    "kind": "over",
+    "year": 1999
+  },
+  {
+    "id": "ADSK",
+    "name": "ADSK",
+    "ticker": "ADSK",
+    "kind": "over",
+    "year": 2000
+  },
+  {
+    "id": "ADP",
+    "name": "ADP",
+    "ticker": "ADP",
+    "kind": "over",
+    "year": 2001
+  },
+  {
+    "id": "ACN",
+    "name": "ACN",
+    "ticker": "ACN",
+    "kind": "over",
+    "year": 2002
+  },
+  {
+    "id": "APH",
+    "name": "APH",
+    "ticker": "APH",
+    "kind": "over",
+    "year": 2003
+  },
+  {
+    "id": "AME",
+    "name": "AME",
+    "ticker": "AME",
+    "kind": "over",
+    "year": 2004
+  },
+  {
+    "id": "AMT",
+    "name": "AMT",
+    "ticker": "AMT",
+    "kind": "over",
+    "year": 2005
+  },
+  {
+    "id": "AEP",
+    "name": "AEP",
+    "ticker": "AEP",
+    "kind": "over",
+    "year": 2006
+  },
+  {
+    "id": "AES",
+    "name": "AES",
+    "ticker": "AES",
+    "kind": "over",
+    "year": 2007
+  },
+  {
+    "id": "AIG",
+    "name": "AIG",
+    "ticker": "AIG",
+    "kind": "over",
+    "year": 2008
+  },
+  {
+    "id": "AMCR",
+    "name": "AMCR",
+    "ticker": "AMCR",
+    "kind": "over",
+    "year": 2009
+  },
+  {
+    "id": "ANSS",
+    "name": "ANSS",
+    "ticker": "ANSS",
+    "kind": "over",
+    "year": 2010
+  },
+  {
+    "id": "AOS",
+    "name": "AOS",
+    "ticker": "AOS",
+    "kind": "over",
+    "year": 2011
+  },
+  {
+    "id": "APA",
+    "name": "APA",
+    "ticker": "APA",
+    "kind": "over",
+    "year": 2012
+  },
+  {
+    "id": "ARE",
+    "name": "ARE",
+    "ticker": "ARE",
+    "kind": "over",
+    "year": 2013
+  },
+  {
+    "id": "AWK",
+    "name": "AWK",
+    "ticker": "AWK",
+    "kind": "over",
+    "year": 2014
+  },
+  {
+    "id": "BKR",
+    "name": "BKR",
+    "ticker": "BKR",
+    "kind": "over",
+    "year": 2015
+  },
+  {
+    "id": "BAX",
+    "name": "BAX",
+    "ticker": "BAX",
+    "kind": "over",
+    "year": 2016
+  },
+  {
+    "id": "BDX",
+    "name": "BDX",
+    "ticker": "BDX",
+    "kind": "over",
+    "year": 2017
+  },
+  {
+    "id": "BF.B",
+    "name": "BF.B",
+    "ticker": "BF.B",
+    "kind": "over",
+    "year": 2018
+  },
+  {
+    "id": "BXP",
+    "name": "BXP",
+    "ticker": "BXP",
+    "kind": "over",
+    "year": 2019
+  },
+  {
+    "id": "BWA",
+    "name": "BWA",
+    "ticker": "BWA",
+    "kind": "over",
+    "year": 2020
+  },
+  {
+    "id": "CAG",
+    "name": "CAG",
+    "ticker": "CAG",
+    "kind": "over",
+    "year": 1990
+  },
+  {
+    "id": "CAH",
+    "name": "CAH",
+    "ticker": "CAH",
+    "kind": "over",
+    "year": 1991
+  },
+  {
+    "id": "CBRE",
+    "name": "CBRE",
+    "ticker": "CBRE",
+    "kind": "over",
+    "year": 1992
+  },
+  {
+    "id": "CDW",
+    "name": "CDW",
+    "ticker": "CDW",
+    "kind": "over",
+    "year": 1993
+  },
+  {
+    "id": "CE",
+    "name": "CE",
+    "ticker": "CE",
+    "kind": "over",
+    "year": 1994
+  },
+  {
+    "id": "CIEN",
+    "name": "CIEN",
+    "ticker": "CIEN",
+    "kind": "over",
+    "year": 1995
+  },
+  {
+    "id": "CINF",
+    "name": "CINF",
+    "ticker": "CINF",
+    "kind": "over",
+    "year": 1996
+  },
+  {
+    "id": "CNP",
+    "name": "CNP",
+    "ticker": "CNP",
+    "kind": "over",
+    "year": 1997
+  },
+  {
+    "id": "COO",
+    "name": "COO",
+    "ticker": "COO",
+    "kind": "over",
+    "year": 1998
+  },
+  {
+    "id": "CPRI",
+    "name": "CPRI",
+    "ticker": "CPRI",
+    "kind": "over",
+    "year": 1999
+  },
+  {
+    "id": "CSGP",
+    "name": "CSGP",
+    "ticker": "CSGP",
+    "kind": "over",
+    "year": 2000
+  },
+  {
+    "id": "CTAS",
+    "name": "CTAS",
+    "ticker": "CTAS",
+    "kind": "over",
+    "year": 2001
+  },
+  {
+    "id": "CTRA",
+    "name": "CTRA",
+    "ticker": "CTRA",
+    "kind": "over",
+    "year": 2002
+  },
+  {
+    "id": "CTVA",
+    "name": "CTVA",
+    "ticker": "CTVA",
+    "kind": "over",
+    "year": 2003
+  },
+  {
+    "id": "D",
+    "name": "D",
+    "ticker": "D",
+    "kind": "over",
+    "year": 2004
+  },
+  {
+    "id": "Dominion",
+    "name": "Dominion",
+    "ticker": "Dominion",
+    "kind": "over",
+    "year": 2005
+  },
+  {
+    "id": "DHI",
+    "name": "DHI",
+    "ticker": "DHI",
+    "kind": "over",
+    "year": 2006
+  },
+  {
+    "id": "DOV",
+    "name": "DOV",
+    "ticker": "DOV",
+    "kind": "over",
+    "year": 2007
+  },
+  {
+    "id": "DRI",
+    "name": "DRI",
+    "ticker": "DRI",
+    "kind": "over",
+    "year": 2008
+  },
+  {
+    "id": "DTE",
+    "name": "DTE",
+    "ticker": "DTE",
+    "kind": "over",
+    "year": 2009
+  },
+  {
+    "id": "DVN",
+    "name": "DVN",
+    "ticker": "DVN",
+    "kind": "over",
+    "year": 2010
+  },
+  {
+    "id": "BTC",
+    "name": "Bitcoin",
+    "ticker": "BTC",
+    "kind": "coin",
+    "year": 2009
+  },
+  {
+    "id": "ETH",
+    "name": "Ethereum",
+    "ticker": "ETH",
+    "kind": "coin",
+    "year": 2015
+  },
+  {
+    "id": "BNB",
+    "name": "BNB",
+    "ticker": "BNB",
+    "kind": "coin",
+    "year": 2017
+  },
+  {
+    "id": "XRP",
+    "name": "XRP",
+    "ticker": "XRP",
+    "kind": "coin",
+    "year": 2013
+  },
+  {
+    "id": "SOL",
+    "name": "Solana",
+    "ticker": "SOL",
+    "kind": "coin",
+    "year": 2020
+  },
+  {
+    "id": "ADA",
+    "name": "Cardano",
+    "ticker": "ADA",
+    "kind": "coin",
+    "year": 2017
+  },
+  {
+    "id": "DOGE",
+    "name": "Dogecoin",
+    "ticker": "DOGE",
+    "kind": "coin",
+    "year": 2013
+  },
+  {
+    "id": "TRX",
+    "name": "TRON",
+    "ticker": "TRX",
+    "kind": "coin",
+    "year": 2017
+  },
+  {
+    "id": "LINK",
+    "name": "Chainlink",
+    "ticker": "LINK",
+    "kind": "coin",
+    "year": 2017
+  },
+  {
+    "id": "AVAX",
+    "name": "Avalanche",
+    "ticker": "AVAX",
+    "kind": "coin",
+    "year": 2020
+  },
+  {
+    "id": "SPY",
+    "name": "SPDR S&P 500 ETF",
+    "ticker": "SPY",
+    "kind": "fund",
+    "year": 1993
+  },
+  {
+    "id": "VOO",
+    "name": "Vanguard S&P 500 ETF",
+    "ticker": "VOO",
+    "kind": "fund",
+    "year": 2010
+  },
+  {
+    "id": "IVV",
+    "name": "iShares Core S&P 500 ETF",
+    "ticker": "IVV",
+    "kind": "fund",
+    "year": 2000
+  },
+  {
+    "id": "SPLG",
+    "name": "SPDR Portfolio S&P 500 ETF",
+    "ticker": "SPLG",
+    "kind": "fund",
+    "year": 2005
+  },
+  {
+    "id": "QQQ",
+    "name": "Invesco QQQ Trust",
+    "ticker": "QQQ",
+    "kind": "fund",
+    "year": 1999
+  },
+  {
+    "id": "DIA",
+    "name": "SPDR Dow Jones Industrial Average ETF",
+    "ticker": "DIA",
+    "kind": "fund",
+    "year": 1998
+  },
+  {
+    "id": "IWM",
+    "name": "iShares Russell 2000 ETF",
+    "ticker": "IWM",
+    "kind": "fund",
+    "year": 2000
+  },
+  {
+    "id": "VTI",
+    "name": "Vanguard Total Stock Market ETF",
+    "ticker": "VTI",
+    "kind": "fund",
+    "year": 2001
+  },
+  {
+    "id": "VT",
+    "name": "Vanguard Total World Stock ETF",
+    "ticker": "VT",
+    "kind": "fund",
+    "year": 2008
+  },
+  {
+    "id": "VXUS",
+    "name": "Vanguard Total International Stock ETF",
+    "ticker": "VXUS",
+    "kind": "fund",
+    "year": 2011
+  },
+  {
+    "id": "VEA",
+    "name": "Vanguard FTSE Developed Markets ETF",
+    "ticker": "VEA",
+    "kind": "fund",
+    "year": 2007
+  },
+  {
+    "id": "VWO",
+    "name": "Vanguard FTSE Emerging Markets ETF",
+    "ticker": "VWO",
+    "kind": "fund",
+    "year": 2005
+  },
+  {
+    "id": "EFA",
+    "name": "iShares MSCI EAFE ETF",
+    "ticker": "EFA",
+    "kind": "fund",
+    "year": 2001
+  },
+  {
+    "id": "EEM",
+    "name": "iShares MSCI Emerging Markets ETF",
+    "ticker": "EEM",
+    "kind": "fund",
+    "year": 2003
+  },
+  {
+    "id": "ARKK",
+    "name": "ARK Innovation ETF",
+    "ticker": "ARKK",
+    "kind": "fund",
+    "year": 2014
+  },
+  {
+    "id": "SCHD",
+    "name": "Schwab US Dividend Equity ETF",
+    "ticker": "SCHD",
+    "kind": "fund",
+    "year": 2011
+  },
+  {
+    "id": "VIG",
+    "name": "Vanguard Dividend Appreciation ETF",
+    "ticker": "VIG",
+    "kind": "fund",
+    "year": 2006
+  },
+  {
+    "id": "DVY",
+    "name": "iShares Select Dividend ETF",
+    "ticker": "DVY",
+    "kind": "fund",
+    "year": 2003
+  },
+  {
+    "id": "JEPI",
+    "name": "JPMorgan Equity Premium Income ETF",
+    "ticker": "JEPI",
+    "kind": "fund",
+    "year": 2020
+  },
+  {
+    "id": "JEPQ",
+    "name": "JPMorgan Nasdaq Equity Premium Income ETF",
+    "ticker": "JEPQ",
+    "kind": "fund",
+    "year": 2022
+  },
+  {
+    "id": "XLK",
+    "name": "Technology Select Sector SPDR Fund",
+    "ticker": "XLK",
+    "kind": "fund",
+    "year": 1998
+  },
+  {
+    "id": "XLF",
+    "name": "Financial Select Sector SPDR Fund",
+    "ticker": "XLF",
+    "kind": "fund",
+    "year": 1998
+  },
+  {
+    "id": "XLE",
+    "name": "Energy Select Sector SPDR Fund",
+    "ticker": "XLE",
+    "kind": "fund",
+    "year": 1998
+  },
+  {
+    "id": "XLV",
+    "name": "Health Care Select Sector SPDR Fund",
+    "ticker": "XLV",
+    "kind": "fund",
+    "year": 1998
+  },
+  {
+    "id": "XLY",
+    "name": "Consumer Discretionary Select Sector SPDR Fund",
+    "ticker": "XLY",
+    "kind": "fund",
+    "year": 1998
+  },
+  {
+    "id": "XLP",
+    "name": "Consumer Staples Select Sector SPDR Fund",
+    "ticker": "XLP",
+    "kind": "fund",
+    "year": 1998
+  },
+  {
+    "id": "XLI",
+    "name": "Industrial Select Sector SPDR Fund",
+    "ticker": "XLI",
+    "kind": "fund",
+    "year": 1998
+  },
+  {
+    "id": "XLU",
+    "name": "Utilities Select Sector SPDR Fund",
+    "ticker": "XLU",
+    "kind": "fund",
+    "year": 1998
+  },
+  {
+    "id": "XLB",
+    "name": "Materials Select Sector SPDR Fund",
+    "ticker": "XLB",
+    "kind": "fund",
+    "year": 1998
+  },
+  {
+    "id": "XLC",
+    "name": "Communication Services Select Sector SPDR Fund",
+    "ticker": "XLC",
+    "kind": "fund",
+    "year": 2018
+  },
+  {
+    "id": "XBI",
+    "name": "SPDR S&P Biotech ETF",
+    "ticker": "XBI",
+    "kind": "fund",
+    "year": 2006
+  },
+  {
+    "id": "VNQ",
+    "name": "Vanguard Real Estate ETF",
+    "ticker": "VNQ",
+    "kind": "fund",
+    "year": 2004
+  },
+  {
+    "id": "TLT",
+    "name": "iShares 20+ Year Treasury Bond ETF",
+    "ticker": "TLT",
+    "kind": "fund",
+    "year": 2002
+  },
+  {
+    "id": "IEF",
+    "name": "iShares 7-10 Year Treasury Bond ETF",
+    "ticker": "IEF",
+    "kind": "fund",
+    "year": 2002
+  },
+  {
+    "id": "SHY",
+    "name": "iShares 1-3 Year Treasury Bond ETF",
+    "ticker": "SHY",
+    "kind": "fund",
+    "year": 2002
+  },
+  {
+    "id": "AGG",
+    "name": "iShares Core U.S. Aggregate Bond ETF",
+    "ticker": "AGG",
+    "kind": "fund",
+    "year": 2003
+  },
+  {
+    "id": "BND",
+    "name": "Vanguard Total Bond Market ETF",
+    "ticker": "BND",
+    "kind": "fund",
+    "year": 2007
+  },
+  {
+    "id": "LQD",
+    "name": "iShares iBoxx Investment Grade Corporate Bond ETF",
+    "ticker": "LQD",
+    "kind": "fund",
+    "year": 2002
+  },
+  {
+    "id": "HYG",
+    "name": "iShares iBoxx High Yield Corporate Bond ETF",
+    "ticker": "HYG",
+    "kind": "fund",
+    "year": 2007
+  },
+  {
+    "id": "TIP",
+    "name": "iShares TIPS Bond ETF",
+    "ticker": "TIP",
+    "kind": "fund",
+    "year": 2003
+  },
+  {
+    "id": "GLD",
+    "name": "SPDR Gold Shares",
+    "ticker": "GLD",
+    "kind": "fund",
+    "year": 2004
+  },
+  {
+    "id": "IAU",
+    "name": "iShares Gold Trust",
+    "ticker": "IAU",
+    "kind": "fund",
+    "year": 2005
+  },
+  {
+    "id": "SLV",
+    "name": "iShares Silver Trust",
+    "ticker": "SLV",
+    "kind": "fund",
+    "year": 2006
+  },
+  {
+    "id": "USO",
+    "name": "United States Oil Fund",
+    "ticker": "USO",
+    "kind": "fund",
+    "year": 2006
+  },
+  {
+    "id": "UNG",
+    "name": "United States Natural Gas Fund",
+    "ticker": "UNG",
+    "kind": "fund",
+    "year": 2007
+  },
+  {
+    "id": "DBC",
+    "name": "Invesco DB Commodity Index Tracking Fund",
+    "ticker": "DBC",
+    "kind": "fund",
+    "year": 2006
+  },
+  {
+    "id": "PDBC",
+    "name": "Invesco Optimum Yield Diversified Commodity Strategy",
+    "ticker": "PDBC",
+    "kind": "fund",
+    "year": 2014
+  },
+  {
+    "id": "GSG",
+    "name": "iShares S&P GSCI Commodity-Indexed Trust",
+    "ticker": "GSG",
+    "kind": "fund",
+    "year": 2006
+  },
+  {
+    "id": "MUB",
+    "name": "iShares National Muni Bond ETF",
+    "ticker": "MUB",
+    "kind": "fund",
+    "year": 2007
+  },
+  {
+    "id": "BNDX",
+    "name": "Vanguard Total International Bond ETF",
+    "ticker": "BNDX",
+    "kind": "fund",
+    "year": 2013
+  },
+  {
+    "id": "BOND_KTB3",
+    "name": "iShares 20+ Year Treasury Bond ETF",
+    "ticker": "TLT",
+    "kind": "bonds",
+    "year": 2002
+  },
+  {
+    "id": "BOND_KTB1",
+    "name": "iShares 7-10 Year Treasury Bond ETF",
+    "ticker": "IEF",
+    "kind": "bonds",
+    "year": 2002
+  },
+  {
+    "id": "BOND_CORP3",
+    "name": "iShares iBoxx $ Investment Grade Corporate Bond ETF",
+    "ticker": "LQD",
+    "kind": "bonds",
+    "year": 2002
+  },
+  {
+    "id": "BOND_KTB5",
+    "name": "iShares Core U.S. Aggregate Bond ETF",
+    "ticker": "AGG",
+    "kind": "bonds",
+    "year": 2003
+  },
+  {
+    "id": "BOND_KTB10",
+    "name": "Vanguard Total Bond Market ETF",
+    "ticker": "BND",
+    "kind": "bonds",
+    "year": 2007
+  },
+  {
+    "id": "BOND_REPO",
+    "name": "iShares 1-3 Year Treasury Bond ETF",
+    "ticker": "SHY",
+    "kind": "bonds",
+    "year": 2002
+  },
+  {
+    "id": "BOND_MSB2",
+    "name": "iShares TIPS Bond ETF",
+    "ticker": "TIP",
+    "kind": "bonds",
+    "year": 2003
+  },
+  {
+    "id": "BOND_CORP1",
+    "name": "iShares iBoxx $ High Yield Corporate Bond ETF",
+    "ticker": "HYG",
+    "kind": "bonds",
+    "year": 2007
+  },
+  {
+    "id": "GOLD_KRW",
+    "name": "Gold Futures",
+    "ticker": "GC=F",
+    "kind": "gold",
+    "year": 1990
+  },
+  {
+    "id": "GOLD_DON",
+    "name": "Silver Futures",
+    "ticker": "SI=F",
+    "kind": "gold",
+    "year": 1990
+  },
+  {
+    "id": "SILVER_G",
+    "name": "Crude Oil WTI Futures",
+    "ticker": "CL=F",
+    "kind": "gold",
+    "year": 1990
+  },
+  {
+    "id": "OIL_BBL",
+    "name": "Copper Futures",
+    "ticker": "HG=F",
+    "kind": "gold",
+    "year": 1990
+  },
+  {
+    "id": "COPPER_KG",
+    "name": "Platinum Futures",
+    "ticker": "PL=F",
+    "kind": "gold",
+    "year": 1990
+  },
+  {
+    "id": "PLATINUM_G",
+    "name": "Palladium Futures",
+    "ticker": "PA=F",
+    "kind": "gold",
+    "year": 1990
+  },
+  {
+    "id": "F_KOSPI200",
+    "name": "E-mini S&P 500 Futures",
+    "ticker": "ES=F",
+    "kind": "deriv",
+    "year": 1997
+  },
+  {
+    "id": "O_KOSPI200",
+    "name": "E-mini Nasdaq-100 Futures",
+    "ticker": "NQ=F",
+    "kind": "deriv",
+    "year": 1999
+  },
+  {
+    "id": "F_KTB3",
+    "name": "10-Year U.S. Treasury Note Futures",
+    "ticker": "ZN=F",
+    "kind": "deriv",
+    "year": 1999
+  },
+  {
+    "id": "F_USD",
+    "name": "U.S. Dollar Index Futures",
+    "ticker": "DX=F",
+    "kind": "deriv",
+    "year": 1985
+  },
+  {
+    "id": "F_STOCK",
+    "name": "E-mini Dow Jones Industrial Average Futures",
+    "ticker": "YM=F",
+    "kind": "deriv",
+    "year": 1997
+  },
+  {
+    "id": "REAL_R001",
+    "name": "Realty Income Corporation",
+    "ticker": "O",
+    "kind": "real",
+    "year": 1994
+  },
+  {
+    "id": "REAL_R002",
+    "name": "Prologis, Inc.",
+    "ticker": "PLD",
+    "kind": "real",
+    "year": 1997
+  },
+  {
+    "id": "REAL_R003",
+    "name": "American Tower Corporation",
+    "ticker": "AMT",
+    "kind": "real",
+    "year": 1998
+  },
+  {
+    "id": "REAL_R004",
+    "name": "Equinix, Inc.",
+    "ticker": "EQIX",
+    "kind": "real",
+    "year": 2000
+  },
+  {
+    "id": "REAL_R005",
+    "name": "Simon Property Group, Inc.",
+    "ticker": "SPG",
+    "kind": "real",
+    "year": 1993
+  },
+  {
+    "id": "REAL_R006",
+    "name": "Public Storage",
+    "ticker": "PSA",
+    "kind": "real",
+    "year": 1980
+  },
+  {
+    "id": "REAL_R007",
+    "name": "Digital Realty Trust, Inc.",
+    "ticker": "DLR",
+    "kind": "real",
+    "year": 2004
+  },
+  {
+    "id": "REAL_R008",
+    "name": "VICI Properties Inc.",
+    "ticker": "VICI",
+    "kind": "real",
+    "year": 2018
+  },
+  {
+    "id": "REAL_R009",
+    "name": "AvalonBay Communities, Inc.",
+    "ticker": "AVB",
+    "kind": "real",
+    "year": 1993
+  },
+  {
+    "id": "REAL_R010",
+    "name": "Equity Residential",
+    "ticker": "EQR",
+    "kind": "real",
+    "year": 1993
+  },
+  {
+    "id": "REAL_R011",
+    "name": "Essex Property Trust, Inc.",
+    "ticker": "ESS",
+    "kind": "real",
+    "year": 1994
+  },
+  {
+    "id": "REAL_R012",
+    "name": "Invitation Homes Inc.",
+    "ticker": "INVH",
+    "kind": "real",
+    "year": 2017
+  },
+  {
+    "id": "REAL_R013",
+    "name": "Extra Space Storage Inc.",
+    "ticker": "EXR",
+    "kind": "real",
+    "year": 2004
+  },
+  {
+    "id": "REAL_R014",
+    "name": "UDR, Inc.",
+    "ticker": "UDR",
+    "kind": "real",
+    "year": 1972
+  },
+  {
+    "id": "REAL_R015",
+    "name": "Camden Property Trust",
+    "ticker": "CPT",
+    "kind": "real",
+    "year": 1993
+  },
+  {
+    "id": "REAL_R016",
+    "name": "Alexandria Real Estate Equities, Inc.",
+    "ticker": "ARE",
+    "kind": "real",
+    "year": 1994
+  },
+  {
+    "id": "REAL_R017",
+    "name": "Host Hotels & Resorts, Inc.",
+    "ticker": "HST",
+    "kind": "real",
+    "year": 1998
+  },
+  {
+    "id": "REAL_R018",
+    "name": "Kimco Realty Corporation",
+    "ticker": "KIM",
+    "kind": "real",
+    "year": 1991
+  },
+  {
+    "id": "REAL_R019",
+    "name": "Regency Centers Corporation",
+    "ticker": "REG",
+    "kind": "real",
+    "year": 1993
+  },
+  {
+    "id": "REAL_R020",
+    "name": "Federal Realty Investment Trust",
+    "ticker": "FRT",
+    "kind": "real",
+    "year": 1962
+  },
+  {
+    "id": "REAL_R021",
+    "name": "BXP, Inc.",
+    "ticker": "BXP",
+    "kind": "real",
+    "year": 1997
+  },
+  {
+    "id": "REAL_R022",
+    "name": "Ventas, Inc.",
+    "ticker": "VTR",
+    "kind": "real",
+    "year": 1991
+  },
+  {
+    "id": "REAL_R023",
+    "name": "CubeSmart",
+    "ticker": "CUBE",
+    "kind": "real",
+    "year": 2009
+  },
+  {
+    "id": "REAL_R024",
+    "name": "Healthpeak Properties, Inc.",
+    "ticker": "DOC",
+    "kind": "real",
+    "year": 1985
+  },
+  {
+    "id": "REAL_R025",
+    "name": "Equity LifeStyle Properties, Inc.",
+    "ticker": "ELS",
+    "kind": "real",
+    "year": 1993
+  },
+  {
+    "id": "REAL_R026",
+    "name": "Sun Communities, Inc.",
+    "ticker": "SUI",
+    "kind": "real",
+    "year": 1993
+  },
+  {
+    "id": "REAL_R027",
+    "name": "STAG Industrial, Inc.",
+    "ticker": "STAG",
+    "kind": "real",
+    "year": 2011
+  },
+  {
+    "id": "REAL_R028",
+    "name": "NNN REIT, Inc.",
+    "ticker": "NNN",
+    "kind": "real",
+    "year": 1984
+  },
+  {
+    "id": "REAL_R029",
+    "name": "Agree Realty Corporation",
+    "ticker": "ADC",
+    "kind": "real",
+    "year": 1994
+  },
+  {
+    "id": "REAL_R030",
+    "name": "Omega Healthcare Investors, Inc.",
+    "ticker": "OHI",
+    "kind": "real",
+    "year": 1992
+  },
+  {
+    "id": "REAL_R031",
+    "name": "Gaming and Leisure Properties, Inc.",
+    "ticker": "GLPI",
+    "kind": "real",
+    "year": 2013
+  },
+  {
+    "id": "REAL_R032",
+    "name": "Americold Realty Trust, Inc.",
+    "ticker": "COLD",
+    "kind": "real",
+    "year": 2018
+  },
+  {
+    "id": "REAL_R033",
+    "name": "Rexford Industrial Realty, Inc.",
+    "ticker": "REXR",
+    "kind": "real",
+    "year": 2013
+  },
+  {
+    "id": "REAL_R034",
+    "name": "Kilroy Realty Corporation",
+    "ticker": "KRC",
+    "kind": "real",
+    "year": 1997
+  },
+  {
+    "id": "REAL_R035",
+    "name": "SL Green Realty Corp.",
+    "ticker": "SLG",
+    "kind": "real",
+    "year": 1997
+  },
+  {
+    "id": "REAL_R036",
+    "name": "Vornado Realty Trust",
+    "ticker": "VNO",
+    "kind": "real",
+    "year": 1968
+  },
+  {
+    "id": "REAL_R037",
+    "name": "W. P. Carey Inc.",
+    "ticker": "WPC",
+    "kind": "real",
+    "year": 1973
+  },
+  {
+    "id": "REAL_R038",
+    "name": "LXP Industrial Trust",
+    "ticker": "LXP",
+    "kind": "real",
+    "year": 1993
+  },
+  {
+    "id": "REAL_R039",
+    "name": "Corporate Office Properties Trust",
+    "ticker": "OFC",
+    "kind": "real",
+    "year": 1997
+  },
+  {
+    "id": "REAL_R040",
+    "name": "Easterly Government Properties, Inc.",
+    "ticker": "DEA",
+    "kind": "real",
+    "year": 2015
+  },
+  {
+    "id": "REAL_R041",
+    "name": "American Assets Trust, Inc.",
+    "ticker": "AAT",
+    "kind": "real",
+    "year": 2011
+  },
+  {
+    "id": "REAL_R042",
+    "name": "Highwoods Properties, Inc.",
+    "ticker": "HIW",
+    "kind": "real",
+    "year": 1994
+  },
+  {
+    "id": "REAL_R043",
+    "name": "Macerich Company",
+    "ticker": "MAC",
+    "kind": "real",
+    "year": 1994
+  },
+  {
+    "id": "REAL_R044",
+    "name": "Acadia Realty Trust",
+    "ticker": "AKR",
+    "kind": "real",
+    "year": 1993
+  },
+  {
+    "id": "REAL_R045",
+    "name": "Welltower Inc.",
+    "ticker": "WELL",
+    "kind": "real",
+    "year": 1970
+  },
+  {
+    "id": "REAL_R046",
+    "name": "Armada Hoffler Properties, Inc.",
+    "ticker": "AHH",
+    "kind": "real",
+    "year": 2013
+  },
+  {
+    "id": "REAL_R047",
+    "name": "Cousins Properties Incorporated",
+    "ticker": "CUZ",
+    "kind": "real",
+    "year": 1998
+  },
+  {
+    "id": "REAL_R048",
+    "name": "City Office REIT, Inc.",
+    "ticker": "CIO",
+    "kind": "real",
+    "year": 2014
+  },
+  {
+    "id": "REAL_R049",
+    "name": "Global Medical REIT Inc.",
+    "ticker": "GMRE",
+    "kind": "real",
+    "year": 2016
+  },
+  {
+    "id": "REAL_R050",
+    "name": "Iron Mountain Incorporated",
+    "ticker": "IRM",
+    "kind": "real",
+    "year": 1996
+  }
+]
