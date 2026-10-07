@@ -1,0 +1,27 @@
+TIME & MONEY FINAL IMAGE MANIFEST
+
+1990~1999 CHARACTER (6)
+1000036264.jpg
+1000036265.jpg
+1000036266.jpg
+1000036267.jpg
+1000036268.jpg
+1000036269.jpg
+
+2000~2026 CHARACTER (6)
+1000036327.jpg
+1000036329.jpg
+1000036330.jpg
+1000036331.jpg
+1000036332.jpg
+1000036333.jpg
+
+EXCLUDED CHARACTER
+1000036328.jpg
+
+ENDING (5)
+ending_current_1.png
+ending_current_2.png
+ending_current_3.png
+ending_current_4.png
+ending_current_5.png

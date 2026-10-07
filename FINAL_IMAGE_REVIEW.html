@@ -1,0 +1,21 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TIME & MONEY 최종 이미지 검수</title><style>body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:#10131a;color:#eef2f7;margin:0;padding:24px}.wrap{max-width:1400px;margin:auto}.box{background:#171c25;border:1px solid #303746;border-radius:16px;padding:18px;margin-bottom:18px}h1,h2{margin-top:0}.ok{color:#79e2a2;font-weight:800}.warn{color:#f0c86a;font-weight:800}.grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}.item{background:#0e1219;border:1px solid #303746;border-radius:10px;padding:8px}.item img{display:block;width:100%;height:240px;object-fit:contain;background:#000;border-radius:7px}.item p{font-size:11px;word-break:break-all;margin:7px 0 0}.checks{display:grid;gap:6px}.check{padding:8px 10px;background:#0e1219;border-radius:8px}.mono{font-family:ui-monospace,monospace}@media(max-width:900px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:600px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.item img{height:220px}}</style></head><body><div class="wrap"><div class="box"><h1>TIME & MONEY — 최종 이미지 검수</h1><div class="checks"><div class="check"><span class="ok">PASS</span> 1990~1999 캐릭터 6장</div><div class="check"><span class="ok">PASS</span> 2000~2026 캐릭터 6장</div><div class="check"><span class="ok">PASS</span> 엔딩 5장</div><div class="check"><span class="ok">PASS</span> 캐릭터 원본 바이트 그대로 임베드</div><div class="check"><span class="ok">PASS</span> 엔딩 원본 PNG 그대로 임베드</div><div class="check"><span class="warn">EXCLUDED</span> 1000036328.jpg — 최종 캐릭터 12장 구성에서 제외</div></div></div><div class="box"><h2>1990~1999 · 캐릭터 6장</h2><div class="grid">
+<div class="item"><img src="assets/characters/1990_1999/1000036264.jpg"><p>1000036264.jpg</p></div>
+<div class="item"><img src="assets/characters/1990_1999/1000036265.jpg"><p>1000036265.jpg</p></div>
+<div class="item"><img src="assets/characters/1990_1999/1000036266.jpg"><p>1000036266.jpg</p></div>
+<div class="item"><img src="assets/characters/1990_1999/1000036267.jpg"><p>1000036267.jpg</p></div>
+<div class="item"><img src="assets/characters/1990_1999/1000036268.jpg"><p>1000036268.jpg</p></div>
+<div class="item"><img src="assets/characters/1990_1999/1000036269.jpg"><p>1000036269.jpg</p></div>
+</div></div><div class="box"><h2>2000~2026 · 캐릭터 6장</h2><div class="grid">
+<div class="item"><img src="assets/characters/2000_2026/1000036327.jpg"><p>1000036327.jpg</p></div>
+<div class="item"><img src="assets/characters/2000_2026/1000036329.jpg"><p>1000036329.jpg</p></div>
+<div class="item"><img src="assets/characters/2000_2026/1000036330.jpg"><p>1000036330.jpg</p></div>
+<div class="item"><img src="assets/characters/2000_2026/1000036331.jpg"><p>1000036331.jpg</p></div>
+<div class="item"><img src="assets/characters/2000_2026/1000036332.jpg"><p>1000036332.jpg</p></div>
+<div class="item"><img src="assets/characters/2000_2026/1000036333.jpg"><p>1000036333.jpg</p></div>
+</div></div><div class="box"><h2>엔딩 · 5장</h2><div class="grid">
+<div class="item"><img src="assets/endings/ending_current_1.png"><p>ending_current_1.png</p></div>
+<div class="item"><img src="assets/endings/ending_current_2.png"><p>ending_current_2.png</p></div>
+<div class="item"><img src="assets/endings/ending_current_3.png"><p>ending_current_3.png</p></div>
+<div class="item"><img src="assets/endings/ending_current_4.png"><p>ending_current_4.png</p></div>
+<div class="item"><img src="assets/endings/ending_current_5.png"><p>ending_current_5.png</p></div>
+</div></div><div class="box"><h2>배경/코드 검수</h2><p>일반모드와 온라인 대전의 배경은 <span class="mono">body</span> 자체의 background-image 레이어로 수정했다. 기존 음수 z-index pseudo-element 방식은 제거했다.</p><p>배경 씬: <b>era90 / era00 / modern / invest / news / online / daytrade / transition</b> — 각 10개 원격 이미지 참조.</p><p>원격 배경이 로드되지 않는 환경에서는 기본 gradient fallback이 남는다.</p></div></div></body></html>
