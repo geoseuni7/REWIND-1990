@@ -1,0 +1,27 @@
+{
+  "version": "V22",
+  "assets": 729,
+  "counts": {
+    "kr": 300,
+    "over": 300,
+    "coin": 10,
+    "fund": 50,
+    "bonds": 8,
+    "gold": 6,
+    "deriv": 5,
+    "real": 50
+  },
+  "historicalTickerDuplicates": 0,
+  "replacements": 14,
+  "knownStartMonthMetadata": 10,
+  "runtimeAConfirmed": 0,
+  "gameLogicFallbackAllowed": 729,
+  "files": [
+    "index.html",
+    "server.js",
+    "session2_assets.json",
+    "historical_engine_qa.js",
+    "HISTORICAL_UNSUPPLEMENTED_V22.md",
+    "QA_FINAL_V22.md"
+  ]
+}

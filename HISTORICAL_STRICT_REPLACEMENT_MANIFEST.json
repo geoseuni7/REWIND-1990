@@ -1,0 +1,38 @@
+{
+  "version": "V21",
+  "replacements": {
+    "채권": [
+      "BOND_KTB3",
+      "BOND_KTB1",
+      "BOND_CORP3",
+      "BOND_KTB5",
+      "BOND_KTB10",
+      "BOND_REPO",
+      "BOND_MSB2",
+      "BOND_CORP1"
+    ],
+    "부동산/REIT": [
+      "REAL_R001",
+      "REAL_R003",
+      "REAL_R005",
+      "REAL_R006",
+      "REAL_R016",
+      "REAL_R021"
+    ],
+    "파생상품": [
+      "F_STOCK"
+    ]
+  },
+  "tickerOverlapCount": 0,
+  "assetCount": 729,
+  "counts": {
+    "kr": 300,
+    "over": 300,
+    "coin": 10,
+    "fund": 50,
+    "bonds": 8,
+    "gold": 6,
+    "deriv": 5,
+    "real": 50
+  }
+}

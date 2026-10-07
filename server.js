@@ -1,4 +1,4 @@
-const http=require('http');const crypto=require('crypto');const fs=require('fs');const path=require('path');
+const http=require('http');const crypto=require('crypto');const fs=require('fs');const path=require('path');const {execFile}=require('child_process');const {promisify}=require('util');const execFileAsync=promisify(execFile);
 const PORT=Number(process.env.PORT)||3000, TURN_MS=150*1000, DAY_BATTLE_MS=30*1000, MAX_PLAYERS=50, ROOM_TTL_MS=5*60*1000, DISCONNECT_GRACE_MS=5000, MAX_BODY_BYTES=16*1024, MAX_NAME_LENGTH=20, MAX_QTY=1e12, MAX_MONEY=Number.MAX_SAFE_INTEGER, rooms=new Map(),sessions=new Map(),rate=new Map();
 const ASSETS=JSON.parse(fs.readFileSync(path.join(__dirname,'session2_assets.json'),'utf8'));
 const ASSET=new Map(ASSETS.map(a=>[a.id,a]));
@@ -6,13 +6,221 @@ function hash32(s){let h=2166136261>>>0;for(let i=0;i<s.length;i++){h^=s.charCod
 
 const HISTORY_CACHE=new Map();
 const HISTORY_TTL_MS=7*24*60*60*1000;
+const EODHD_API_TOKEN=String(process.env.EODHD_API_TOKEN||'').trim();
+const ALPHAVANTAGE_API_KEY=String(process.env.ALPHAVANTAGE_API_KEY||'').trim();
+const FMP_API_KEY=String(process.env.FMP_API_KEY||'').trim();
+const WAYBACK_ENABLED=String(process.env.WAYBACK_ENABLED||'1')!=='0';
+const KRX_DATA_DIR=String(process.env.KRX_DATA_DIR||'').trim();
+const HISTORICAL_IMPORT_DIR=String(process.env.HISTORICAL_IMPORT_DIR||'').trim();
+const MULTISOURCE_TIMEOUT_MS=15000;
 function yahooSymbols(id,kind,ticker){const out=[];if(ticker)out.push(ticker);else if(kind==='kr'){out.push(id+'.KS',id+'.KQ')}else if(kind==='coin'){out.push(id+'-USD')}else if(kind==='over'||kind==='fund'){out.push(id)}return [...new Set(out)];}
+function eodhdSymbols(id,kind,ticker){
+  const raw=String(ticker||id||'').trim();
+  if(!raw)return [];
+  if(/^[A-Za-z0-9]+\.(US|LSE|XETRA|KO|HK|JP|T|AS|PA|MI|SW)$/i.test(raw))return [raw];
+  if(kind==='kr')return [raw+'.KO'];
+  if(kind==='coin')return [raw+'.CC',raw];
+  if(kind==='over')return [raw+'.US',raw];
+  if(kind==='fund')return [raw+'.US',raw];
+  if(kind==='futures')return [raw];
+  return [raw];
+}
+async function eodhdMonthly(symbol,start='1990-01',end='2026-12'){
+  if(!EODHD_API_TOKEN)return null;
+  const u=`https://eodhd.com/api/eod/${encodeURIComponent(symbol)}?api_token=${encodeURIComponent(EODHD_API_TOKEN)}&from=${start}-01&to=${end}-31&period=m&order=a&fmt=json`;
+  const ctl=new AbortController(),timer=setTimeout(()=>ctl.abort(),15000);
+  try{
+    const r=await fetch(u,{signal:ctl.signal,headers:{'User-Agent':'TIME-MONEY/16.0'}});if(!r.ok)return null;
+    const j=await r.json();if(!Array.isArray(j)||!j.length)return null;
+    const monthly={};
+    for(const row of j){const d=String(row?.date||'').slice(0,7),v=Number(row?.close);if(/^\d{4}-\d{2}$/.test(d)&&Number.isFinite(v)&&v>0)monthly[d]=v}
+    return Object.keys(monthly).length?monthly:null;
+  }catch(_){return null}finally{clearTimeout(timer)}
+}
 async function yahooMonthly(symbol,start='1990-01',end='2026-12'){
   const p1=Math.floor(new Date(start+'-01T00:00:00Z').getTime()/1000),p2=Math.floor(new Date(end+'-01T00:00:00Z').getTime()/1000)+32*86400;
   const u=`https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?period1=${p1}&period2=${p2}&interval=1mo&events=history&includeAdjustedClose=true`;
   const ctl=new AbortController(),timer=setTimeout(()=>ctl.abort(),12000);try{const r=await fetch(u,{signal:ctl.signal,headers:{'User-Agent':'TIME-MONEY/5.0'}});if(!r.ok)return null;const j=await r.json();const res=j?.chart?.result?.[0];if(!res?.timestamp||!res?.indicators?.quote?.[0]?.close)return null;const close=res.indicators.quote[0].close,monthly={};res.timestamp.forEach((ts,i)=>{const d=new Date(ts*1000),k=`${d.getUTCFullYear()}-${String(d.getUTCMonth()+1).padStart(2,'0')}`,v=Number(close[i]);if(Number.isFinite(v)&&v>0)monthly[k]=v});return Object.keys(monthly).length?monthly:null}finally{clearTimeout(timer)}}
-async function historicalMonthly(id,kind,ticker){const key=`${kind}:${id}`;const hit=HISTORY_CACHE.get(key);if(hit&&Date.now()-hit.at<HISTORY_TTL_MS)return hit;for(const sym of yahooSymbols(id,kind,ticker)){try{const monthly=await yahooMonthly(sym);if(monthly){const v={at:Date.now(),monthly,source:`Yahoo Finance · ${sym} · 월말 Close`};HISTORY_CACHE.set(key,v);return v}}catch(_){} }return null}
-function unitPrice(a,y,m){if(!a||y<a.year)return 0;const h=HISTORY_CACHE.get(`${a.kind}:${a.id}`);const monthly=h?.monthly||{};const key=`${y}-${String(m).padStart(2,'0')}`;if(monthly[key]!=null)return Number(monthly[key]);const keys=Object.keys(monthly).sort();if(keys.length){let prior=keys.filter(k=>k<=key).at(-1);if(prior==null)prior=keys[0];const v=Number(monthly[prior]);if(Number.isFinite(v)&&v>0)return v}return Number(a.base)||1}
+function alphaSymbols(id,kind,ticker){
+  const raw=String(ticker||id||'').trim();if(!raw)return [];
+  if(kind==='kr')return [raw+'.KOR',raw];
+  if(kind==='over'||kind==='fund'||kind==='futures')return [raw];
+  return [raw];
+}
+async function alphaVantageMonthly(symbol,adjusted=false){
+  if(!ALPHAVANTAGE_API_KEY)return null;
+  const fn=adjusted?'TIME_SERIES_MONTHLY_ADJUSTED':'TIME_SERIES_MONTHLY';
+  const u=`https://www.alphavantage.co/query?function=${fn}&symbol=${encodeURIComponent(symbol)}&apikey=${encodeURIComponent(ALPHAVANTAGE_API_KEY)}`;
+  const ctl=new AbortController(),timer=setTimeout(()=>ctl.abort(),MULTISOURCE_TIMEOUT_MS);
+  try{
+    const r=await fetch(u,{signal:ctl.signal,headers:{'User-Agent':'TIME-MONEY/17.0'}});if(!r.ok)return null;
+    const j=await r.json();const key=adjusted?'Monthly Adjusted Time Series':'Monthly Time Series',rows=j?.[key];if(!rows||typeof rows!=='object')return null;
+    const monthly={};for(const [d,row] of Object.entries(rows)){const v=Number(row?.['5. adjusted close']??row?.['4. close']);if(Number.isFinite(v)&&v>0)monthly[String(d).slice(0,7)]=v}
+    return Object.keys(monthly).length?monthly:null;
+  }catch(_){return null}finally{clearTimeout(timer)}
+}
+function stooqSymbols(id,kind,ticker){
+  const raw=String(ticker||id||'').trim();if(!raw)return [];
+  if(kind==='kr')return [raw.toLowerCase()+'.kr'];
+  if(kind==='over'||kind==='fund')return [raw.toLowerCase()+'.us',raw.toLowerCase()];
+  if(kind==='futures')return [raw.toLowerCase()];
+  return [raw.toLowerCase()];
+}
+async function stooqMonthly(symbol){
+  const u=`https://stooq.com/q/d/l/?s=${encodeURIComponent(symbol)}&d1=19900101&d2=20261231&i=m`;
+  const ctl=new AbortController(),timer=setTimeout(()=>ctl.abort(),MULTISOURCE_TIMEOUT_MS);
+  try{
+    const r=await fetch(u,{signal:ctl.signal,headers:{'User-Agent':'TIME-MONEY/17.0'}});if(!r.ok)return null;
+    const csv=await r.text();if(!csv||/^No data/i.test(csv.trim()))return null;
+    const lines=csv.trim().split(/\r?\n/);if(lines.length<2)return null;const head=lines[0].split(',').map(x=>x.trim().toLowerCase()),di=head.indexOf('date'),ci=head.indexOf('close');if(di<0||ci<0)return null;
+    const monthly={};for(const line of lines.slice(1)){const c=line.split(',');const d=String(c[di]||'').slice(0,7),v=Number(c[ci]);if(/^\d{4}-\d{2}$/.test(d)&&Number.isFinite(v)&&v>0)monthly[d]=v}return Object.keys(monthly).length?monthly:null;
+  }catch(_){return null}finally{clearTimeout(timer)}
+}
+function fmpSymbols(id,kind,ticker){const raw=String(ticker||id||'').trim();if(!raw)return [];if(kind==='kr')return [raw+'.KSC',raw+'.KO'];if(kind==='futures')return [raw];return [raw];}
+async function fmpMonthly(symbol){
+  if(!FMP_API_KEY)return null;
+  const u=`https://financialmodelingprep.com/api/v3/historical-price-full/${encodeURIComponent(symbol)}?from=1990-01-01&to=2026-12-31&apikey=${encodeURIComponent(FMP_API_KEY)}`;
+  const ctl=new AbortController(),timer=setTimeout(()=>ctl.abort(),MULTISOURCE_TIMEOUT_MS);
+  try{
+    const r=await fetch(u,{signal:ctl.signal,headers:{'User-Agent':'TIME-MONEY/17.0'}});if(!r.ok)return null;const j=await r.json();const rows=Array.isArray(j?.historical)?j.historical:[];if(!rows.length)return null;const monthly={};for(const row of rows){const d=String(row?.date||'').slice(0,7),v=Number(row?.adjClose??row?.close);if(/^\d{4}-\d{2}$/.test(d)&&Number.isFinite(v)&&v>0){if(monthly[d]==null)monthly[d]=v;else monthly[d]=v}}return Object.keys(monthly).length?monthly:null;
+  }catch(_){return null}finally{clearTimeout(timer)}
+}
+function parseImportedMonthly(file){
+  try{
+    const raw=fs.readFileSync(file,'utf8').replace(/^\uFEFF/,'');
+    const rows=JSON.parse(raw);
+    const arr=Array.isArray(rows)?rows:(Array.isArray(rows?.monthly)?rows.monthly:[]);
+    const monthly={};
+    for(const row of arr){
+      const d=String(row?.date||row?.Date||row?.month||row?.Month||'').slice(0,7);
+      const v=Number(row?.adjusted_close??row?.adjClose??row?.['Adj Close']??row?.close??row?.Close);
+      if(/^\d{4}-\d{2}$/.test(d)&&Number.isFinite(v)&&v>0)monthly[d]=v;
+    }
+    return Object.keys(monthly).length?monthly:null;
+  }catch(_){return null}
+}
+function importedFiles(id,kind,ticker){
+  if(!HISTORICAL_IMPORT_DIR)return [];
+  const safe=x=>String(x||'').replace(/[^A-Za-z0-9_.-]/g,'_');
+  const names=[safe(id),safe(ticker),safe(kind+'_'+id)];
+  const out=[];
+  for(const n of names){for(const ext of ['.json','.csv']){const f=path.join(HISTORICAL_IMPORT_DIR,n+ext);if(fs.existsSync(f))out.push(f)}}
+  return [...new Set(out)];
+}
+async function importedMonthly(file){
+  if(file.endsWith('.json'))return parseImportedMonthly(file);
+  try{
+    const raw=fs.readFileSync(file,'utf8').replace(/^\uFEFF/,'');
+    const lines=raw.trim().split(/\r?\n/);if(lines.length<2)return null;
+    const head=lines[0].split(',').map(x=>x.trim().toLowerCase().replace(/['"]+/g,''));
+    const di=head.findIndex(x=>['date','datetime','timestamp','month'].includes(x));
+    const ci=head.findIndex(x=>['adj close','adjusted close','adj_close','adjclose','close'].includes(x));
+    if(di<0||ci<0)return null;
+    const monthly={};
+    for(const line of lines.slice(1)){const c=line.split(',').map(x=>x.trim().replace(/^"|"$/g,''));const d=String(c[di]||'').slice(0,7),v=Number(c[ci]);if(/^\d{4}-\d{2}$/.test(d)&&Number.isFinite(v)&&v>0)monthly[d]=v;}
+    return Object.keys(monthly).length?monthly:null;
+  }catch(_){return null}
+}
+async function waybackMonthly(symbol){
+  if(!WAYBACK_ENABLED||!symbol)return null;
+  const urls=[
+    `http://ichart.finance.yahoo.com/table.csv?s=${encodeURIComponent(symbol)}`,
+    `https://ichart.finance.yahoo.com/table.csv?s=${encodeURIComponent(symbol)}`,
+    `https://finance.yahoo.com/quote/${encodeURIComponent(symbol)}/history`
+  ];
+  const ctl=new AbortController(),timer=setTimeout(()=>ctl.abort(),20000);
+  try{
+    for(const target of urls){
+      const cdx=`https://web.archive.org/cdx/search/cdx?url=${encodeURIComponent(target)}&output=json&filter=statuscode:200&collapse=digest&fl=timestamp,original,statuscode,mimetype&filter=mimetype:text/csv&limit=20`;
+      let r=await fetch(cdx,{signal:ctl.signal,headers:{'User-Agent':'TIME-MONEY historical recovery'}});
+      if(!r.ok)continue;
+      let j=await r.json().catch(()=>null);if(!Array.isArray(j)||j.length<2)continue;
+      for(const row of j.slice(1).reverse()){
+        const ts=row?.[0],orig=row?.[1];if(!ts||!orig)continue;
+        const archived=`https://web.archive.org/web/${ts}id_/${orig}`;
+        const rr=await fetch(archived,{signal:ctl.signal,headers:{'User-Agent':'TIME-MONEY historical recovery'}});if(!rr.ok)continue;
+        const text=await rr.text();const lines=text.trim().split(/\r?\n/);if(lines.length<2)continue;
+        const head=lines[0].split(',').map(x=>x.trim().toLowerCase().replace(/['"]+/g,''));
+        const di=head.findIndex(x=>x==='date'),ci=head.findIndex(x=>x==='close');if(di<0||ci<0)continue;
+        const monthly={};
+        for(const line of lines.slice(1)){const c=line.split(',').map(x=>x.trim().replace(/^"|"$/g,''));const d=String(c[di]||'').slice(0,7),v=Number(c[ci]);if(/^\d{4}-\d{2}$/.test(d)&&Number.isFinite(v)&&v>0)monthly[d]=v;}
+        if(Object.keys(monthly).length)return monthly;
+      }
+    }
+  }catch(_){}finally{clearTimeout(timer)}
+  return null;
+}
+async function waybackSymbols(id,kind,ticker){const raw=String(ticker||id||'').trim();return raw?[raw]:[];}
+
+async function tryHistoricalProvidersAll(id,kind,ticker){
+  const attempts=[],sources=[];
+  async function add(provider,symbol,fn,label){
+    try{
+      const monthly=await fn(symbol);
+      attempts.push({provider,symbol,ok:!!monthly,months:monthly?Object.keys(monthly).length:0});
+      if(monthly)sources.push({provider,symbol,monthly,source:label});
+    }catch(_){attempts.push({provider,symbol,ok:false,months:0})}
+  }
+  // Licensed/local historical exports: CRSP, WRDS, Norgate or any vetted provider can be dropped into HISTORICAL_IMPORT_DIR.
+  for(const file of importedFiles(id,kind,ticker))await add('Imported historical dataset',file,importedMonthly,`Imported · ${path.basename(file)} · monthly`);
+  if(EODHD_API_TOKEN)for(const sym of eodhdSymbols(id,kind,ticker))await add('EODHD',sym,eodhdMonthly,`EODHD · ${sym} · 월별 Close`);
+  if(ALPHAVANTAGE_API_KEY)for(const sym of alphaSymbols(id,kind,ticker))await add('Alpha Vantage',sym,(x)=>alphaVantageMonthly(x,true),`Alpha Vantage · ${sym} · 월별 Adjusted Close`);
+  if(FMP_API_KEY)for(const sym of fmpSymbols(id,kind,ticker))await add('Financial Modeling Prep',sym,fmpMonthly,`FMP · ${sym} · 월별 adjusted close`);
+  for(const sym of stooqSymbols(id,kind,ticker))await add('Stooq',sym,stooqMonthly,`Stooq · ${sym} · 월별 Close`);
+  for(const sym of await waybackSymbols(id,kind,ticker))await add('Internet Archive Wayback',sym,waybackMonthly,`Wayback · ${sym} · archived Yahoo history`);
+  for(const sym of yahooSymbols(id,kind,ticker))await add('Yahoo Finance',sym,yahooMonthly,`Yahoo Finance · ${sym} · 월말 Close`);
+  if(!sources.length)return {monthly:null,attempts,sources,confidence:'D',consensusProviders:0,agreement:null};
+  // Prefer the source with the widest history, but calculate independent-source agreement.
+  sources.sort((a,b)=>Object.keys(b.monthly).length-Object.keys(a.monthly).length);
+  const primary=sources[0];
+  const providerCount=sources.length;
+  let overlap=0,agree=0,maxDiff=0;
+  for(const [k,v] of Object.entries(primary.monthly)){
+    const vals=sources.slice(1).map(x=>Number(x.monthly[k])).filter(Number.isFinite);
+    if(!vals.length)continue;
+    overlap++;
+    const localMax=Math.max(...vals),localMin=Math.min(...vals);
+    const diff=localMin>0?(localMax-localMin)/localMin:1;
+    maxDiff=Math.max(maxDiff,diff);
+    if(diff<=0.02 && vals.every(x=>Math.abs(x-v)/Math.max(v,1e-12)<=0.02))agree++;
+  }
+  let confidence='B';
+  if(providerCount>=2 && overlap>=12 && agree/Math.max(1,overlap)>=0.90 && maxDiff<=0.05)confidence='A';
+  else if(providerCount>=2 && overlap>=3 && agree/Math.max(1,overlap)>=0.75)confidence='B';
+  else if(providerCount===1)confidence='C';
+  else confidence='C';
+  return {monthly:primary.monthly,provider:primary.provider,source:primary.source,attempts,sources,confidence,consensusProviders:providerCount,agreement:overlap?agree/overlap:0,overlapMonths:overlap,maxDiff};
+}
+
+async function tryHistoricalProvider(id,kind,ticker){
+  return tryHistoricalProvidersAll(id,kind,ticker);
+}
+
+async function historicalMonthly(id,kind,ticker){
+  const key=`${kind}:${id}`;const hit=HISTORY_CACHE.get(key);if(hit&&Date.now()-hit.at<HISTORY_TTL_MS)return hit;
+  const got=await tryHistoricalProvidersAll(id,kind,ticker);
+  if(got?.monthly){const v={at:Date.now(),monthly:got.monthly,source:got.source,provider:got.provider,attempts:got.attempts,confidence:got.confidence,consensusProviders:got.consensusProviders,agreement:got.agreement,overlapMonths:got.overlapMonths,maxDiff:got.maxDiff};HISTORY_CACHE.set(key,v);return v;}
+  return null;
+}
+function unitPrice(a,y,m){
+  if(!a||y<a.year)return 0;
+  const h=HISTORY_CACHE.get(`${a.kind}:${a.id}`),monthly=h?.monthly||{},key=`${y}-${String(m).padStart(2,'0')}`;
+  if(monthly[key]!=null)return Number(monthly[key]);
+  const keys=Object.keys(monthly).filter(k=>Number(monthly[k])>0).sort();
+  if(keys.length){
+    const n=y*12+m, pts=keys.map(k=>({k,n:(Number(k.slice(0,4))*12+Number(k.slice(5,7))),v:Number(monthly[k])}));
+    let lo=pts.filter(x=>x.n<=n).at(-1),hi=pts.find(x=>x.n>=n);
+    if(lo&&hi){if(lo.n===hi.n)return lo.v;const t=(n-lo.n)/(hi.n-lo.n);return Math.exp(Math.log(lo.v)*(1-t)+Math.log(hi.v)*t)}
+    const base=Math.max(0.000001,Number(a.base)||1);
+    if(!lo&&hi){const start=Math.max(Number(a.year)||1990,1990)*12+1,den=Math.max(1,hi.n-start),t=Math.max(0,Math.min(1,(n-start)/den));return Math.exp(Math.log(base)*(1-t)+Math.log(hi.v)*t)}
+    if(lo&&!hi){const step=Math.max(0.2,Math.min(1.8,Number(a.vol)||0.8));const months=Math.max(0,n-lo.n);return Math.max(0.000001,lo.v*Math.pow(1+0.002*step,months))}
+  }
+  const base=Math.max(0.000001,Number(a.base)||1), sy=Math.max(Number(a.year)||1990,1990), macro={1990:1,1991:.96,1992:.90,1993:1.02,1994:1.12,1995:1.08,1996:1.04,1997:.72,1998:.63,1999:1.12,2000:1.02,2001:.82,2002:.78,2003:.94,2004:1.10,2005:1.16,2006:1.30,2007:1.38,2008:.72,2009:.94,2010:1.08,2011:1.02,2012:1.04,2013:1.08,2014:1.12,2015:1.06,2016:1.15,2017:1.30,2018:1.18,2019:1.24,2020:1.10,2021:1.30,2022:1.00,2023:1.12,2024:1.28,2025:1.42,2026:1.48};
+  const ref=Number(macro[sy]||1),trend=Number(macro[y]||1)/ref,phase=((y-sy)*12+(m-1));
+  const cyc=1+0.05*Math.sin(phase/12*Math.PI*2+String(a.id).length*.19);
+  const noise=1+0.025*((hash32(`${a.id}|${y}-${m}`)/4294967295)*2-1);
+  return Math.max(0.000001,base*Math.pow(Math.max(.05,trend),.75)*cyc*noise);
+}
 function market(room){if(!room.marketPrices)room.marketPrices={};for(const a of ASSETS)if(a.year<=room.year)room.marketPrices[a.id]=unitPrice(a,room.year,room.month);return room.marketPrices}
 function positionValue(p,room){let n=0;for(const [id,q] of Object.entries(p.positions||{})){const a=ASSET.get(id),price=Number(room.marketPrices?.[id]||0);if(a&&price)n+=Number(q)*price*(Number(a.multiplier)||1)}return Math.round(n)}
 function netWorth(p){return Math.round((Number(p.cash)||0)+(Number(p.assetValue)||0)-(Number(p.debt)||0)-(Number(p.loan)||0)-(Number(p.loanShark)||0))}
@@ -147,12 +355,13 @@ if(req.method==='POST'&&u.pathname==='/api/historical/verify-all'){
   for(const a of list){
     const id=String(a.id||'').trim(), ticker=String(a.ticker||'').trim(), kind=String(a.kind||'fund').trim();
     if(!id||!ticker){results.push({id,ticker,ok:false,error:'id/ticker missing'});continue}
-    let monthly=null;try{monthly=await yahooMonthly(ticker)}catch(_){monthly=null}
-    results.push({id,ticker,kind,ok:!!monthly,months:monthly?Object.keys(monthly).length:0,first:monthly?Object.keys(monthly).sort()[0]:null,last:monthly?Object.keys(monthly).sort().at(-1):null});
+    let got=null;try{got=await tryHistoricalProvider(id,kind,ticker)}catch(_){got=null}
+    const monthly=got?.monthly||null,keys=monthly?Object.keys(monthly).sort():[];
+    results.push({id,ticker,kind,ok:!!monthly,confidence:got?.confidence||'D',consensusProviders:got?.consensusProviders||0,agreement:got?.agreement??null,overlapMonths:got?.overlapMonths||0,maxDiff:got?.maxDiff??null,provider:got?.provider||null,source:got?.source||null,months:keys.length,first:keys[0]||null,last:keys.at(-1)||null,attempts:got?.attempts||[]});
   }
-  return json(res,200,{ok:true,count:results.length,passed:results.filter(x=>x.ok).length,failed:results.filter(x=>!x.ok).length,results},req)
+  return json(res,200,{ok:true,count:results.length,passed:results.filter(x=>x.ok).length,failed:results.filter(x=>!x.ok).length,confidence:{A:results.filter(x=>x.confidence==='A').length,B:results.filter(x=>x.confidence==='B').length,C:results.filter(x=>x.confidence==='C').length,D:results.filter(x=>x.confidence==='D').length},results},req)
 }
-if(req.method==='GET'&&u.pathname==='/api/historical'){const id=String(u.searchParams.get('id')||'').trim(),kind=String(u.searchParams.get('kind')||'').trim(),ticker=String(u.searchParams.get('ticker')||id).trim();if(!id||!kind||!ticker)return json(res,400,{error:'역사 데이터 요청값이 잘못되었습니다.'},req);const h=await historicalMonthly(id,kind,ticker);if(!h)return json(res,404,{ok:false,error:'실제 월별 데이터를 찾지 못했습니다.'},req);return json(res,200,{ok:true,id,kind,monthly:h.monthly,source:h.source},req)}
+if(req.method==='GET'&&u.pathname==='/api/historical'){const id=String(u.searchParams.get('id')||'').trim(),kind=String(u.searchParams.get('kind')||'').trim(),ticker=String(u.searchParams.get('ticker')||id).trim();if(!id||!kind||!ticker)return json(res,400,{error:'역사 데이터 요청값이 잘못되었습니다.'},req);const h=await historicalMonthly(id,kind,ticker);if(!h)return json(res,404,{ok:false,error:'실제 월별 데이터를 찾지 못했습니다.'},req);return json(res,200,{ok:true,id,kind,monthly:h.monthly,source:h.source,confidence:h.confidence||'C',consensusProviders:h.consensusProviders||0,overlapMonths:h.overlapMonths||0,agreement:h.agreement||0,maxDiff:h.maxDiff||0},req)}
 if(req.method==='POST'&&u.pathname==='/api/rooms'){const b=await body(req);if(b.name!==undefined&&typeof b.name!=='string')return json(res,400,{error:'이름이 잘못되었습니다.'},req);const r=create(b.name);return json(res,200,{roomCode:r.code,sessionToken:r.token,playerId:r.id,started:false,year:1990,month:1,deadline:0,periodStart:{year:1990,month:1},periodEnd:{year:1990,month:6}})}
 if(req.method==='POST'&&u.pathname==='/api/rooms/join'){const b=await body(req);if(!validRoomCode(b.roomCode)||typeof b.name!=='string'&&b.name!==undefined)return json(res,400,{error:'방 코드 또는 이름이 잘못되었습니다.'},req);const room=rooms.get(String(b.roomCode||''));if(!room)return json(res,404,{error:'방을 찾을 수 없습니다.'});if(room.finished)return json(res,409,{error:'이미 종료된 방입니다.'});if(room.started)return json(res,409,{error:'이미 시작된 방입니다.'});if(room.players.size>=MAX_PLAYERS)return json(res,409,{error:'방이 가득 찼습니다.'});const id=crypto.randomUUID(),t=token();room.players.set(id,{id,name:safeName(b.name),cash:100000000,assetValue:0,debt:0,positions:{},avg:{},loan:0,loanShark:0,ready:false,dayReady:false,lastSeen:Date.now()});sessions.set(t,{room:room.code,id,exp:Date.now()+86400000});return json(res,200,{...view(room,id),sessionToken:t,playerId:id})}
 if(req.method==='POST'&&u.pathname==='/api/rooms/start'){const b=await body(req),room=rooms.get(String(b.roomCode||''));if(!room)return json(res,404,{error:'방을 찾을 수 없습니다.'});const p=auth(room,sessionTokenFrom(req,b));if(!p)return json(res,401,{error:'인증 실패'});if(room.hostId!==p.id)return json(res,403,{error:'방장만 대전을 시작할 수 있습니다.'});if(room.players.size<2)return json(res,409,{error:'최소 2명이 필요합니다.'});if(room.started)return json(res,409,{error:'이미 시작된 대전입니다.'});if(!startRoom(room))return json(res,409,{error:'대전을 시작할 수 없습니다.'});return json(res,200,view(room,p.id))}
