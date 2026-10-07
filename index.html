@@ -523,7 +523,16 @@ function ensureAllInvestmentHistory(){
 }
 function historicalTicker(a){const id=String(a?.id||'');if(a?.historyTicker)return String(a.historyTicker);if(a?.kind==='kr')return id+'.KS';if(a?.kind==='over'||a?.kind==='fund')return id;if(a?.kind==='coin')return id+'-USD';return ''}
 async function loadRemoteHistorical(a){if(!a)return false;if(S.remoteHistory?.[a.id]){rebuildInvestmentHistoryFromSource(a);return true}const ticker=historicalTicker(a);if(!ticker)return false;const sourceKind=a.historicalKind||(['kr','over','fund','coin'].includes(a.kind)?a.kind:'fund');try{const qs=new URLSearchParams({id:a.id,kind:sourceKind,ticker,start:'1990-01',end:'2026-12'});const r=await fetch('/api/historical?'+qs.toString(),{cache:'no-store'});if(!r.ok)return false;const j=await r.json();if(!j.ok||!j.monthly)return false;S.remoteHistory=S.remoteHistory||{};S.remoteHistory[a.id]=j.monthly;S.remoteHistorySource=S.remoteHistorySource||{};S.remoteHistorySource[a.id]=j.source||'Yahoo Finance monthly close';delete SECURITY_HISTORY[a.id];const cur=remoteHistoricalValue(a.id,S.year,S.month);if(cur!=null)S.prices[a.id]=cur;rebuildInvestmentHistoryFromSource(a);ensureAllInvestmentHistory();return true}catch(_){return false}}
-function rebuildInvestmentHistoryFromSource(a){if(!a)return;const h=S.remoteHistory?.[a.id];if(!h||typeof h!=='object')return;const sy=Math.max(1990,Number(a.year)||1990),ey=S.year,em=S.month;const rows=[];for(let y=sy;y<=ey;y++){for(let m=1;m<=12;m++){if(y===ey&&m>em)break;const v=Number(h[`${y}-${String(m).padStart(2,'0')}`]);if(Number.isFinite(v)&&v>0)rows.push(v)}}if(rows.length){S.investHistory=S.investHistory||{};S.investHistory[a.id]=rows.slice(-444)}}
+function rebuildInvestmentHistoryFromSource(a){
+  if(!a)return;
+  const sy=Math.max(1990,Number(a.year)||1990),ey=S.year,em=S.month,rows=[];
+  for(let y=sy;y<=ey;y++)for(let m=1;m<=12;m++){
+    if(y===ey&&m>em)break;
+    const v=historicalPriceFor(a,y,m);
+    if(Number.isFinite(v)&&v>0)rows.push(v);
+  }
+  if(rows.length){S.investHistory=S.investHistory||{};S.investHistory[a.id]=rows.slice(-444)}
+}
 function investmentInit(a){
   if(S.prices[a.id]==null || !Number.isFinite(Number(S.prices[a.id])) || Number(S.prices[a.id])<=0){
     S.prices[a.id]=a.base;
@@ -561,21 +570,63 @@ const HISTORICAL_ANCHORS={
 const HIST_MACRO={1990:1,1991:.96,1992:.90,1993:1.02,1994:1.12,1995:1.08,1996:1.04,1997:.72,1998:.63,1999:1.12,2000:1.02,2001:.82,2002:.78,2003:.94,2004:1.10,2005:1.16,2006:1.30,2007:1.38,2008:.72,2009:.94,2010:1.08,2011:1.02,2012:1.04,2013:1.08,2014:1.12,2015:1.06,2016:1.15,2017:1.30,2018:1.18,2019:1.24,2020:1.10,2021:1.30,2022:1.00,2023:1.12,2024:1.28,2025:1.42,2026:1.48};
 const SECTOR_BETA={tech:1.25,finance:.9,health:1.05,energy:1.15,construction:1.05,auto:1.08,transport:1.12,materials:1.15,general:.95,global:1,crypto:2.2,gold:.45,silver:.8,oil:1.4,commodity:.8,realestate:.55,bond:.25,bondfuture:.2,fx:.35,equityfuture:1.1};
 const SECURITY_HISTORY={};
-function seededNoise(id,key){return 0}
+function seededNoise(id,key){
+  const str=String(id)+'|'+String(key);let h=2166136261;
+  for(let i=0;i<str.length;i++){h^=str.charCodeAt(i);h=Math.imul(h,16777619)}
+  return ((h>>>0)/4294967295)*2-1;
+}
 function remoteHistoricalValue(id,y,m){const h=S.remoteHistory?.[id];if(!h)return null;const v=h[`${y}-${String(m).padStart(2,'0')}`];return Number.isFinite(Number(v))&&Number(v)>0?Number(v):null}
 function anchorValueFor(id,y){const m=HISTORICAL_ANCHORS[id];if(!m)return null;if(m[y]!=null)return Number(m[y]);const ys=Object.keys(m).map(Number).sort((a,b)=>a-b),lo=ys.filter(v=>v<y).at(-1),hi=ys.find(v=>v>y);if(lo==null||hi==null)return null;const t=(y-lo)/(hi-lo);return Math.exp(Math.log(Number(m[lo]))*(1-t)+Math.log(Number(m[hi]))*t)}
 function assetSector(a){const id=String(a?.id||'').toUpperCase(),name=String(a?.name||'').toLowerCase(),kind=String(a?.kind||'');if(kind==='coin')return 'crypto';if(kind==='bonds')return 'bond';if(kind==='real')return 'realestate';if(kind==='gold'){if(id.includes('SILVER'))return 'silver';if(id.includes('OIL'))return 'oil';return 'gold'}if(kind==='deriv'){if(id.startsWith('F_KTB'))return 'bondfuture';if(id.startsWith('F_USD'))return 'fx';return 'equityfuture'}if(/nvda|apple|microsoft|amazon|google|alphabet|meta|tesla|intel|amd|semiconductor|software|technology|tech|internet|game|cloud|ai/.test(id+' '+name))return 'tech';if(/bank|financial|finance|insurance|securities|card|capital/.test(id+' '+name))return 'finance';if(/oil|energy|petro|gas|refining/.test(id+' '+name))return 'energy';if(/health|pharma|bio|medical/.test(id+' '+name))return 'health';if(/auto|motor|vehicle/.test(id+' '+name))return 'auto';if(/construction|engineering|housing|realestate|developer/.test(id+' '+name))return 'construction';if(/steel|metal|chemical|material|cement/.test(id+' '+name))return 'materials';if(/transport|airline|shipping|rail/.test(id+' '+name))return 'transport';if(kind==='over'||kind==='fund')return 'global';return 'general'}
 function securitySector(a){return assetSector(a)}
 function estimatedYearFactor(a,y){return 0}
-function buildSecurityHistory(a){const id=a.id;if(SECURITY_HISTORY[id])return SECURITY_HISTORY[id];const sy=Math.max(1990,Number(a.year)||1990),ey=2026,h=S.remoteHistory?.[id]||{},path={};const keys=Object.keys(h).sort();let last=null;for(let y=sy;y<=ey;y++){for(let m=1;m<=12;m++){const k=`${y}-${String(m).padStart(2,'0')}`;if(h[k]!=null){last=Number(h[k]);path[y*12+m]=last;continue}if(last!=null)path[y*12+m]=last}}if(keys.length){const first=Number(h[keys[0]]);for(let y=sy;y<=ey;y++)for(let m=1;m<=12;m++){const k=y*12+m;if(path[k]==null)path[k]=first}}SECURITY_HISTORY[id]=path;return path}
-function historicalPriceFor(a,y,m){const remote=remoteHistoricalValue(a.id,y,m);if(remote!=null)return remote;const path=buildSecurityHistory(a),v=path[y*12+m];if(v!=null)return v;const anchor=anchorValueFor(a.id,y);if(anchor!=null){const monthPhase=(Number(m)-1)/12;const prev=anchorValueFor(a.id,y-1)||anchor,next=anchorValueFor(a.id,y+1)||anchor;return Math.max(0.000001,anchor*Math.exp((Math.sin((monthPhase*2*Math.PI)+String(a.id).length)*0.012))) }return Number(a.base)||0}
+function buildSecurityHistory(a){
+  const id=a.id;if(SECURITY_HISTORY[id])return SECURITY_HISTORY[id];
+  const sy=Math.max(1990,Number(a.year)||1990),ey=2026,h=S.remoteHistory?.[id]||{},path={};
+  const keys=Object.keys(h).sort();
+  if(keys.length){
+    let last=null;
+    for(let y=sy;y<=ey;y++)for(let m=1;m<=12;m++){
+      const k=`${y}-${String(m).padStart(2,'0')}`;
+      if(h[k]!=null&&Number(h[k])>0)last=Number(h[k]);
+      if(last!=null)path[y*12+m]=last;
+    }
+    const first=Number(h[keys[0]]);
+    if(Number.isFinite(first)&&first>0)for(let y=sy;y<=ey;y++)for(let m=1;m<=12;m++){const k=y*12+m;if(path[k]==null)path[k]=first}
+    SECURITY_HISTORY[id]=path;return path;
+  }
+  /* No remote series: build a deterministic non-flat fallback. Real Yahoo data, when available, always wins above. */
+  const anchorSeries=HISTORICAL_ANCHORS[id];
+  if(anchorSeries){
+    for(let y=sy;y<=ey;y++)for(let m=1;m<=12;m++){
+      const v=anchorValueFor(id,y);if(v==null)continue;
+      const wave=1+0.018*Math.sin((m-1)/12*Math.PI*2+String(id).length*0.37)+0.006*seededNoise(id,`${y}-${m}`);
+      path[y*12+m]=Math.max(0.000001,v*wave);
+    }
+  }else{
+    const beta=Number(SECTOR_BETA[assetSector(a)]||1), base=Math.max(0.000001,Number(a.base)||1), ref=Number(HIST_MACRO[sy]||1);
+    for(let y=sy;y<=ey;y++)for(let m=1;m<=12;m++){
+      const macro=Number(HIST_MACRO[y]||1)/ref;
+      const trend=Math.pow(Math.max(0.05,macro),0.72*Math.min(1.6,Math.max(0.2,beta)));
+      const cyc=1+0.055*Math.sin(((y-sy)*12+(m-1))/12*Math.PI*2 + String(id).length*0.19);
+      const shock=1+0.035*seededNoise(id,`${y}-${m}`);
+      path[y*12+m]=Math.max(0.000001,base*trend*cyc*shock);
+    }
+  }
+  SECURITY_HISTORY[id]=path;return path;
+}
+function historicalPriceFor(a,y,m){
+  const remote=remoteHistoricalValue(a.id,y,m);if(remote!=null)return remote;
+  const path=buildSecurityHistory(a),v=path[y*12+m];if(v!=null)return v;
+  return Math.max(0.000001,Number(a.base)||0);
+}
 function initializeAllSecurityHistories(){Object.values(INVESTMENT_ASSET).forEach(a=>{buildSecurityHistory(a);const p=historicalPriceFor(a,S.year,S.month);if(p>0)S.prices[a.id]=p;if(!S.investHistory)S.investHistory={};S.investHistory[a.id]=p>0?[p]:[]});S.investmentEngineVersion=5}
 function investmentUpdateOne(a){if(!investmentListed(a))return;let p=historicalPriceFor(a,S.year,S.month);if(!(p>0))return;S.prices[a.id]=p;if(!S.investHistory)S.investHistory={};S.investHistory[a.id]=(S.investHistory[a.id]||[]).concat(p).slice(-444)}
 function updateAllInvestmentPrices(){Object.values(INVESTMENT_ASSET).forEach(investmentUpdateOne)}
 function investmentChart(id){
  const c=$('chart');if(!c)return;const a=INVESTMENT_ASSET[id];if(!a)return;const raw=(S.investHistory&&S.investHistory[id])||[investmentPrice(a)];const lim=S.chartRange==='1m'?2:S.chartRange==='1y'?12:S.chartRange==='10y'?120:raw.length;const h=raw.slice(-Math.max(1,lim));const dpr=devicePixelRatio||1,w=Math.max(1,c.clientWidth),hgt=Math.max(1,c.clientHeight);c.width=w*dpr;c.height=hgt*dpr;const ctx=c.getContext('2d');ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,w,hgt);ctx.strokeStyle='#252b36';for(let i=1;i<6;i++){ctx.beginPath();ctx.moveTo(0,i*hgt/6);ctx.lineTo(w,i*hgt/6);ctx.stroke()}const avg=investmentAvg(a),vals=h.slice();if(avg>0)vals.push(avg);const mn=Math.min(...vals),mx=Math.max(...vals),rg=mx-mn||1;const X=i=>8+i*(w-16)/Math.max(1,h.length-1),Y=v=>hgt-12-(Number(v)-mn)/rg*(hgt-28);ctx.strokeStyle='#e7c66e';ctx.lineWidth=2.5;ctx.beginPath();h.forEach((v,i)=>{const xx=X(i),yy=Y(v);i?ctx.lineTo(xx,yy):ctx.moveTo(xx,yy)});ctx.stroke();if(avg>0){ctx.save();ctx.setLineDash([6,5]);ctx.strokeStyle='#9aa3b5';ctx.lineWidth=1.2;ctx.beginPath();ctx.moveTo(8,Y(avg));ctx.lineTo(w-8,Y(avg));ctx.stroke();ctx.restore();ctx.fillStyle='#c8ced9';ctx.font='10px system-ui';ctx.fillText(`평균매수가 ${money(avg)} · 구매가 대비 ${((investmentPrice(a)*a.multiplier-avg)/avg*100)>=0?'+':''}${((investmentPrice(a)*a.multiplier-avg)/avg*100).toFixed(2)}%`,10,Math.max(12,Y(avg)-5))}const markers=(S.investTradeMarkers?.[id]||[]),offset=raw.length-h.length;markers.forEach(m=>{const idx=Math.max(0,Math.min(h.length-1,Number(m.index||0)-offset)),px=Number(m.price)||h[idx],x=X(idx),y=Y(px);ctx.fillStyle=m.side==='buy'?'#45d483':'#ff5f6d';ctx.beginPath();ctx.arc(x,y,4,0,Math.PI*2);ctx.fill();ctx.strokeStyle='#111722';ctx.lineWidth=1;ctx.stroke();ctx.fillStyle=m.side==='buy'?'#8ff0b6':'#ff9aa2';ctx.font='bold 10px system-ui';ctx.fillText(m.side==='buy'?'매수':'매도',Math.min(w-34,Math.max(8,x-10)),Math.max(12,y-8))})
 }
-async function selectInvestment(id){const a=investmentAssetFor(id);if(!a)return;investmentInit(a);S.selectedAsset=(S.selectedAsset===id)?null:id;S.selectedStock=(a.kind==='kr'||a.kind==='over'||a.kind==='coin'||a.kind==='fund')?id:S.selectedStock;render();if(S.selectedAsset===id){await loadRemoteHistorical(a);render()}}
+async function selectInvestment(id){const a=investmentAssetFor(id);if(!a)return;investmentInit(a);S.selectedAsset=(S.selectedAsset===id)?null:id;S.selectedStock=(a.kind==='kr'||a.kind==='over'||a.kind==='coin'||a.kind==='fund')?id:S.selectedStock;if(S.selectedAsset===id){rebuildInvestmentHistoryFromSource(a);render();await loadRemoteHistorical(a);rebuildInvestmentHistoryFromSource(a);render()}else render()}
 function investmentPositionInfo(a){const q=investmentQty(a),avg=investmentAvg(a),p=investmentPrice(a),value=q*p*a.multiplier,ret=avg?(p*a.multiplier-avg)/avg*100:0;return {q,avg,p,value,ret}}
 function recordInvestmentMarker(id,side,qty,price){S.investTradeMarkers=S.investTradeMarkers||{};const h=S.investHistory?.[id]||[];const arr=Array.isArray(S.investTradeMarkers[id])?S.investTradeMarkers[id]:[];arr.push({side,qty,price,index:Math.max(0,h.length-1),year:S.year,month:S.month});S.investTradeMarkers[id]=arr.slice(-120)}
 function investmentBuy(id,amount){const a=investmentAssetFor(id);if(!a)return alert('투자 종목을 선택하세요.');if(!investmentListed(a))return alert(`아직 거래 가능 시점이 아닙니다. (${a.year}년 이후)`);investmentInit(a);const p=Number(investmentPrice(a));const unit=Number(a.multiplier)||1;const unitCost=p*unit;if(!Number.isFinite(p)||p<=0||!Number.isFinite(unitCost)||unitCost<=0)return alert('현재 가격을 불러오지 못했습니다.');const cash=Number(S.cash)||0;const requested=Math.max(0,Number(amount)||0);const tradeAmount=Math.min(requested,cash);const q=Math.floor((tradeAmount/unitCost)*1000000)/1000000;if(!(q>0))return alert(`매수 금액을 선택하세요. 최소 거래금액은 ${money(unitCost/1000000)}부터 가능합니다.`);const cost=q*unitCost;if(cost>cash+1e-9)return alert('현금이 부족합니다.');const {pos:pm,avg:am}=investmentTradeMap(a);const old=Math.max(0,Number(pm[id])||0);const oldAvg=Math.max(0,Number(am[id])||0);S.cash=cash-cost;pm[id]=old+q;am[id]=old?((oldAvg*old)+cost)/(old+q):unitCost;log(`${a.name} ${q}${a.unit} 매수 · ${money(cost)} · 평균매수가 ${money(am[id])}`);recordInvestmentMarker(a.id,'buy',q,p);S.tradeAmount=0;S.tradePercent=0;render()}
