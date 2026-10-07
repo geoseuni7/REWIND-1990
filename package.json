@@ -1,7 +1,1 @@
-{
-  "name": "time-money-normal",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {"start": "node server.js"},
-  "engines": {"node": ">=20"}
-}
+{"name":"time-money-rebirth-1990","version":"1.2.0","private":true,"scripts":{"start":"node server.js","test":"node --check server.js && node tests/accounting.test.js && node tests/static_qa.js && node tests/server.test.js"},"engines":{"node":">=20"}}
