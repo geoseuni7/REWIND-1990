@@ -202,26 +202,44 @@ async function historicalMonthly(id,kind,ticker){
   if(got?.monthly){const v={at:Date.now(),monthly:got.monthly,source:got.source,provider:got.provider,attempts:got.attempts,confidence:got.confidence,consensusProviders:got.consensusProviders,agreement:got.agreement,overlapMonths:got.overlapMonths,maxDiff:got.maxDiff};HISTORY_CACHE.set(key,v);return v;}
   return null;
 }
+const VERIFIED_LISTING_OVERRIDES={
+  '030200':{year:1998,startMonth:12},'033640':{year:1999,startMonth:12},'007700':{year:1984,startMonth:10},
+  '034300':{year:2002,startMonth:6},'017960':{year:1995,startMonth:7},'010140':{year:1994,startMonth:1},
+  '010130':{year:1990,startMonth:7},'007310':{year:1994,startMonth:8},'000390':{year:1993,startMonth:9},
+  'BIDU':{year:2005,startMonth:8},'MDB':{year:2017,startMonth:10},'TEAM':{year:2015,startMonth:12},
+  'KHC':{year:2015,startMonth:7},'TCEHY':{year:2004,startMonth:6},'SPY':{year:1993,startMonth:1},'SBUX':{year:1992,startMonth:6}
+};
+function assetStart(a){const o=VERIFIED_LISTING_OVERRIDES[String(a?.id||'')];return o||{year:Number(a?.year)||1990,startMonth:1};}
+function assetIsListed(a,y,m){const st=assetStart(a);return y*12+m>=st.year*12+st.startMonth}
+function fallbackHistoricalPrice(a,y,m){
+  const id=String(a?.id||''), base=Math.max(0.000001,Number(a?.base)||1), sector=String(a?.kind||'general');
+  const hash=s=>{let h=2166136261;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}return (h>>>0)/4294967295*2-1};
+  const profiles={kr:[.09,.02,-.18,.17],over:[.08,.00,-.20,.20],fund:[.055,.025,-.10,.11],bonds:[.035,.03,-.04,.05],gold:[.045,.01,-.03,.08],deriv:[.09,-.02,-.18,.22],real:[.055,.015,-.16,.12],coin:[.24,-.08,-.42,.55]};
+  const pr=profiles[sector]||profiles.over, seed=(id.charCodeAt(0)||1)%31+id.length;
+  const t=(y-1990)*12+(m-1), regime=(y===1990?-.012:y===1991?.006:y===1992?-.004:y===1993?.012:y===1994?.018:y===1995?.010:.004);
+  const seasonal=.014*Math.sin((m-1)/12*Math.PI*2+seed*.29)+.007*Math.cos((m-1)/12*Math.PI*4+seed*.13);
+  const f1=pr[0]*Math.sin(t*.071+seed*.17)+pr[1]*Math.cos(t*.037+seed*.11);
+  const f2=pr[2]*Math.sin(t*.163+seed*.05)+pr[3]*Math.cos(t*.029+seed*.09);
+  const shock=(y===1992&&m>=7?-.018:0)+(y===1994&&m>=4?.012:0)+(y===1995&&m>=1?.008:0);
+  const r=Math.max(-.25,Math.min(.25,.003+regime*.35+seasonal+.12*f1+.10*f2+.025*hash(`${id}|${y}-${m}`)+shock));
+  const growth=Math.exp(r+0.004*Math.sin(t*.017+seed));
+  return Math.max(a?.kind==='coin'?0.000001:0.01,base*Math.pow(growth,Math.max(.5,Number(a?.vol||.02)*40)));
+}
 function unitPrice(a,y,m){
-  if(!a||y<a.year)return 0;
+  if(!a||!assetIsListed(a,y,m))return 0;
   const h=HISTORY_CACHE.get(`${a.kind}:${a.id}`),monthly=h?.monthly||{},key=`${y}-${String(m).padStart(2,'0')}`;
   if(monthly[key]!=null)return Number(monthly[key]);
   const keys=Object.keys(monthly).filter(k=>Number(monthly[k])>0).sort();
   if(keys.length){
-    const n=y*12+m, pts=keys.map(k=>({k,n:(Number(k.slice(0,4))*12+Number(k.slice(5,7))),v:Number(monthly[k])}));
-    let lo=pts.filter(x=>x.n<=n).at(-1),hi=pts.find(x=>x.n>=n);
+    const n=y*12+m,pts=keys.map(k=>({k,n:Number(k.slice(0,4))*12+Number(k.slice(5,7)),v:Number(monthly[k])}));
+    const lo=pts.filter(x=>x.n<=n).at(-1),hi=pts.find(x=>x.n>=n);
     if(lo&&hi){if(lo.n===hi.n)return lo.v;const t=(n-lo.n)/(hi.n-lo.n);return Math.exp(Math.log(lo.v)*(1-t)+Math.log(hi.v)*t)}
-    const base=Math.max(0.000001,Number(a.base)||1);
-    if(!lo&&hi){const start=Math.max(Number(a.year)||1990,1990)*12+1,den=Math.max(1,hi.n-start),t=Math.max(0,Math.min(1,(n-start)/den));return Math.exp(Math.log(base)*(1-t)+Math.log(hi.v)*t)}
-    if(lo&&!hi){const step=Math.max(0.2,Math.min(1.8,Number(a.vol)||0.8));const months=Math.max(0,n-lo.n);return Math.max(0.000001,lo.v*Math.pow(1+0.002*step,months))}
+    if(!lo&&hi){const st=assetStart(a),start=st.year*12+st.startMonth,t=Math.max(0,Math.min(1,(n-start)/Math.max(1,hi.n-start)));const synth=fallbackHistoricalPrice(a,y,m);const anchor=fallbackHistoricalPrice(a,Math.floor((hi.n-1)/12),((hi.n-1)%12)+1);return Math.exp(Math.log(Math.max(.000001,synth))*(1-t)+Math.log(Math.max(.000001,hi.v))*t)}
+    if(lo&&!hi){const months=Math.max(0,n-lo.n),beta=Math.max(.25,Math.min(2.2,Number(a.vol||.02)*45));return Math.max(.000001,lo.v*Math.exp(months*(.0012*beta+.0015*Math.sin((months+String(a.id).length)*.17))))}
   }
-  const base=Math.max(0.000001,Number(a.base)||1), sy=Math.max(Number(a.year)||1990,1990), macro={1990:1,1991:.96,1992:.90,1993:1.02,1994:1.12,1995:1.08,1996:1.04,1997:.72,1998:.63,1999:1.12,2000:1.02,2001:.82,2002:.78,2003:.94,2004:1.10,2005:1.16,2006:1.30,2007:1.38,2008:.72,2009:.94,2010:1.08,2011:1.02,2012:1.04,2013:1.08,2014:1.12,2015:1.06,2016:1.15,2017:1.30,2018:1.18,2019:1.24,2020:1.10,2021:1.30,2022:1.00,2023:1.12,2024:1.28,2025:1.42,2026:1.48};
-  const ref=Number(macro[sy]||1),trend=Number(macro[y]||1)/ref,phase=((y-sy)*12+(m-1));
-  const cyc=1+0.05*Math.sin(phase/12*Math.PI*2+String(a.id).length*.19);
-  const noise=1+0.025*((hash32(`${a.id}|${y}-${m}`)/4294967295)*2-1);
-  return Math.max(0.000001,base*Math.pow(Math.max(.05,trend),.75)*cyc*noise);
+  return fallbackHistoricalPrice(a,y,m);
 }
-function market(room){if(!room.marketPrices)room.marketPrices={};for(const a of ASSETS)if(a.year<=room.year)room.marketPrices[a.id]=unitPrice(a,room.year,room.month);return room.marketPrices}
+function market(room){if(!room.marketPrices)room.marketPrices={};for(const a of ASSETS)if(assetIsListed(a,room.year,room.month))room.marketPrices[a.id]=unitPrice(a,room.year,room.month);return room.marketPrices}
 function positionValue(p,room){let n=0;for(const [id,q] of Object.entries(p.positions||{})){const a=ASSET.get(id),price=Number(room.marketPrices?.[id]||0);if(a&&price)n+=Number(q)*price*(Number(a.multiplier)||1)}return Math.round(n)}
 function netWorth(p){return Math.round((Number(p.cash)||0)+(Number(p.assetValue)||0)-(Number(p.debt)||0)-(Number(p.loan)||0)-(Number(p.loanShark)||0))}
 function authoritativeNetWorth(p,room){return Math.round((Number(p.cash)||0)+positionValue(p,room)-(Number(p.loan)||0)-(Number(p.loanShark)||0))}
