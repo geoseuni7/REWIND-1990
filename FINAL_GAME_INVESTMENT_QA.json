@@ -1,0 +1,153 @@
+{
+  "totalAssets": 1025,
+  "duplicateIds": [],
+  "providerReady": 1025,
+  "missingProvider": [],
+  "providerPathMissing": [],
+  "bundledVerifiedAssets": 20,
+  "bundledRows": 166,
+  "bundledStarts": [
+    [
+      "US:UIS",
+      "1985-12",
+      "1995-12",
+      11
+    ],
+    [
+      "US:MOS",
+      "1989-12",
+      "1995-12",
+      7
+    ],
+    [
+      "US:NAII",
+      "1988-12",
+      "1995-12",
+      8
+    ],
+    [
+      "US:SOR",
+      "1988-12",
+      "1995-12",
+      8
+    ],
+    [
+      "US:GE",
+      "1993-01",
+      "1993-12",
+      12
+    ],
+    [
+      "US:IBM",
+      "1993-12",
+      "1993-12",
+      1
+    ],
+    [
+      "US:KO",
+      "1993-01",
+      "1993-12",
+      12
+    ],
+    [
+      "US:PG",
+      "1993-01",
+      "1993-12",
+      12
+    ],
+    [
+      "US:JNJ",
+      "1993-01",
+      "1993-12",
+      12
+    ],
+    [
+      "US:XOM",
+      "1993-01",
+      "1993-12",
+      12
+    ],
+    [
+      "US:CVX",
+      "1993-12",
+      "1993-12",
+      1
+    ],
+    [
+      "US:WMT",
+      "1993-01",
+      "1993-12",
+      12
+    ],
+    [
+      "US:BA",
+      "1993-12",
+      "1993-12",
+      1
+    ],
+    [
+      "US:ORCL",
+      "1993-01",
+      "1993-02",
+      2
+    ],
+    [
+      "US:INTC",
+      "1993-12",
+      "1993-12",
+      1
+    ],
+    [
+      "US:MSFT",
+      "1993-01",
+      "1993-12",
+      12
+    ],
+    [
+      "US:CSCO",
+      "1993-01",
+      "1993-06",
+      6
+    ],
+    [
+      "US:AAPL",
+      "1993-01",
+      "1993-12",
+      12
+    ],
+    [
+      "US:JPM",
+      "1993-01",
+      "1993-12",
+      12
+    ],
+    [
+      "US:BAC",
+      "1993-01",
+      "1993-12",
+      12
+    ]
+  ],
+  "kindCounts": {
+    "kr": 332,
+    "over": 493,
+    "coin": 14,
+    "fund": 86,
+    "bonds": 8,
+    "gold": 9,
+    "deriv": 33,
+    "real": 50
+  },
+  "uiChecks": {
+    "month_transition": true,
+    "general_turn_briefing": true,
+    "general_event": true,
+    "news_tab": true,
+    "event_tab": true,
+    "famous_real": true,
+    "no_synthetic_real_base": true,
+    "no_random_investment_history": true
+  },
+  "uiChecksPassed": true,
+  "allAssetsHaveProviderPath": true
+}

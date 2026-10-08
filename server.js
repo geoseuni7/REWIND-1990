@@ -22,7 +22,46 @@ function stooqSymbol(kind,ticker){
 }
 function stooqMonthly(csv){const lines=String(csv||'').trim().split(/\r?\n/);if(lines.length<2)return {};const out={};for(let i=1;i<lines.length;i++){const cols=lines[i].split(',');if(cols.length<5)continue;const date=cols[0],close=Number(cols[4]);if(!/^\d{4}-\d{2}-\d{2}$/.test(date)||!Number.isFinite(close)||close<=0)continue;const key=date.slice(0,7);out[key]=close}return out}
 async function stooqHistory(a){const symbol=stooqSymbol(a?.kind,a?.historyTicker||a?.ticker);if(!symbol)return null;const url=`https://stooq.com/q/d/l/?s=${encodeURIComponent(symbol)}&d1=19000101&d2=20261231&i=d`;const csv=await fetchText(url);const monthly=stooqMonthly(csv);if(!Object.keys(monthly).length)return null;const first=actualFirstLast(monthly);return {at:Date.now(),monthly,source:`Stooq daily observations aggregated to month-end close (${symbol})`,verifiedDataStart:first.first,verifiedDataEnd:first.last}}
-async function historicalMonthly(id,kind,ticker){const key=`${kind}:${id}`;const hit=HISTORY_CACHE.get(key);if(hit&&hit.monthly)return hit;const a=ASSET.get(String(id))||{id,ticker,historyTicker:ticker,kind};const v=bundledHistory(a);if(v){HISTORY_CACHE.set(key,v);return v}const remote=await stooqHistory(a);if(remote){HISTORY_CACHE.set(key,remote);return remote}return null;}
+async function molitAptHistory(a, startKey, endKey){
+  const key=String(process.env.MOLIT_SERVICE_KEY||'').trim();
+  if(!key||a?.kind!=='real'||!a?.lawdCode)return null;
+  const start=String(startKey||'2006-01'), end=String(endKey||'2026-12');
+  const sYear=Number(start.slice(0,4)), sMonth=Number(start.slice(5,7));
+  const eYear=Number(end.slice(0,4)), eMonth=Number(end.slice(5,7));
+  if(!sYear||!eYear)return null;
+  const out={};
+  const from=Math.max(2006,sYear), to=Math.min(2026,eYear);
+  for(let y=from;y<=to;y++){
+    const m0=y===from?sMonth:1, m1=y===to?eMonth:12;
+    for(let m=m0;m<=m1;m++){
+      const ym=String(y)+String(m).padStart(2,'0');
+      const apiPath=a.historicalKind==='molit-officetel'?'RTMSDataSvcOffiTrade/getRTMSDataSvcOffiTrade':'RTMSDataSvcAptTrade/getRTMSDataSvcAptTrade';
+      const u='https://apis.data.go.kr/1613000/'+apiPath+'?serviceKey='+encodeURIComponent(key)+'&LAWD_CD='+encodeURIComponent(a.lawdCode)+'&DEAL_YMD='+ym+'&numOfRows=1000&pageNo=1&_type=json';
+      const txt=await fetchText(u,15000); if(!txt)continue;
+      try{
+        const j=JSON.parse(txt), items=j?.response?.body?.items?.item;
+        const arr=Array.isArray(items)?items:(items?[items]:[]);
+        const field=a.historicalKind==='molit-officetel'?'단지명':'아파트';
+        const wanted=String(a.name||'').replace(/\s+/g,'').replace(/아파트$/,'');
+        const hits=arr.filter(x=>String(x[field]||'').replace(/\s+/g,'').includes(wanted));
+        if(!hits.length)continue;
+        const vals=hits.map(x=>Number(String(x.거래금액||'').replace(/,/g,''))).filter(v=>v>0);
+        if(vals.length)out[String(y)+'-'+String(m).padStart(2,'0')]=Math.round(vals.reduce((q,v)=>q+v,0)/vals.length*10000)/10000;
+      }catch(_){ }
+    }
+  }
+  if(!Object.keys(out).length)return null;
+  const meta=actualFirstLast(out);
+  return {at:Date.now(),monthly:out,source:'국토교통부 '+(a.historicalKind==='molit-officetel'?'오피스텔':'아파트')+' 실거래가 API (실제 거래금액 월평균)',verifiedDataStart:meta.first,verifiedDataEnd:meta.last};
+}
+async function historicalMonthly(id,kind,ticker){
+  const key=kind+':'+id; const hit=HISTORY_CACHE.get(key); if(hit&&hit.monthly)return hit;
+  const a=ASSET.get(String(id))||{id,ticker,historyTicker:ticker,kind};
+  const v=bundledHistory(a); if(v){HISTORY_CACHE.set(key,v);return v;}
+  if(kind==='real'){const remote=await molitAptHistory(a,'2006-01','2026-12');if(remote){HISTORY_CACHE.set(key,remote);return remote}}
+  const remote=await stooqHistory(a);if(remote){HISTORY_CACHE.set(key,remote);return remote}
+  return null;
+}
 async function ensureAssetHistory(a){
   if(!a)return null;
   const cached=HISTORY_CACHE.get(`${a.kind}:${a.id}`);
