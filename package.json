@@ -1,18 +1,1 @@
-{
-  "name": "time-money-rebirth",
-  "version": "1.5.0",
-  "type": "module",
-  "scripts": {
-    "start": "node server.js",
-    "test": "node --test tests/*.test.js",
-    "validate:data": "node scripts/validate-data.mjs",
-    "scan:1993": "python3 scripts/promote-1993-universe.py data/runtime-1993-scan",
-    "test:promotion": "python3 scripts/test-promotion-gate.py",
-    "build:candidates": "python3 scripts/build-global-candidates.py",
-    "scan:global": "python3 scripts/promote-1993-universe.py data/runtime-global-scan",
-    "test:candidates": "python3 scripts/test-global-candidate-gate.py",
-    "test:render-safe": "python3 scripts/test-render-safe-scan.py",
-    "scan:global:safe": "TM_WORKERS=4 TM_REQUEST_DELAY=0.5 TM_BATCH_SIZE=50 TM_REQUEST_TIMEOUT=8 python3 scripts/promote-1993-universe.py data/runtime-global-scan"
-  },
-  "dependencies": {}
-}
+{"name":"time-money-rebirth-1990","version":"2.0.0-strict-real-data","private":true,"scripts":{"start":"node server.js","test":"node tests/syntax.test.js && node tests/strict_historical_data.test.js && node tests/online_asset_visibility.test.js && node tests/online_turn_and_bundle.test.js && node tests/historical_bundle_build.test.js","build-data":"node scripts/fetch_historical_data.js"},"engines":{"node":">=20"}}
