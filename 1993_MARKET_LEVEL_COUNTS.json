@@ -1,0 +1,37 @@
+{
+  "Korea stock market": {
+    "1993_count": 693,
+    "status": "market_level_confirmed",
+    "source": "IMF Korea Capital Market Statistics"
+  },
+  "NASDAQ companies": {
+    "1993_count": 4611,
+    "status": "market_level_confirmed",
+    "source": "historical Nasdaq reference"
+  },
+  "Japan all exchanges": {
+    "1993_count": 2155,
+    "status": "market_level_confirmed",
+    "source": "JSDA 1993 factbook"
+  },
+  "KOSDAQ predecessor organized OTC": {
+    "1993_count": 209,
+    "status": "market_level_confirmed",
+    "source": "historical organized OTC study; formal KOSDAQ relaunch was later"
+  },
+  "US CRSP universe": {
+    "1993_count": null,
+    "status": "requires CRSP licensed query",
+    "source": "CRSP"
+  },
+  "ETF": {
+    "1993_count": null,
+    "status": "individual instrument verification required",
+    "source": "exchange/fund sponsor"
+  },
+  "Crypto": {
+    "1993_count": 0,
+    "status": "historically unavailable",
+    "source": "instrument history"
+  }
+}
