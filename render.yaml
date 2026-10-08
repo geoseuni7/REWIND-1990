@@ -1,8 +1,12 @@
 services:
   - type: web
-    name: time-money-normal
+    name: time-money
     runtime: node
-    plan: free
-    buildCommand: npm install
-    startCommand: npm start
-    healthCheckPath: /
+    plan: 1c-2g
+    buildCommand: "python3 -m pip install -r requirements-data.txt && npm install"
+    startCommand: "node server.js"
+    autoDeploy: true
+    disk:
+      name: time-money-data
+      mountPath: /opt/render/project/src/data
+      sizeGB: 20

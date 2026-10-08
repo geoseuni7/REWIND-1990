@@ -1,0 +1,28 @@
+{
+  "candidateCount": 197,
+  "categories": {
+    "futures": 27,
+    "FX": 24,
+    "index": 15,
+    "주식": 100,
+    "spot": 6,
+    "ETF": 25
+  },
+  "markets": {
+    "GLOBAL": 57,
+    "CN": 2,
+    "DE": 1,
+    "EU": 1,
+    "GB": 1,
+    "HK": 1,
+    "JP": 1,
+    "KR": 2,
+    "US": 101,
+    "KRX": 30
+  },
+  "window": [
+    "1993-01-01",
+    "2026-12-31"
+  ],
+  "dynamicDiscoveryStatus": "fdr_unavailable:ModuleNotFoundError"
+}
