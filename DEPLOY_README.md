@@ -1,15 +1,14 @@
-# TIME & MONEY 배포 파일
+# TIME & MONEY deployment
 
-GitHub에는 이 ZIP을 그대로 폴더로 올리지 말고, 압축을 풀어 **모든 파일을 같은 루트**에 올린다.
+GitHub root에 ZIP 내부 파일을 그대로 올린다. 폴더 업로드 금지.
 
-필수 런타임 파일:
-- index.html
-- server.js
-- session2_assets.json
-- monthly_prices.json
+필수 Render Environment:
+- `MOLIT_SERVICE_KEY`: 국토교통부 실거래가 서비스키. 부동산 거래 데이터를 실제로 조회할 때 필요.
+- `OPENAI_API_KEY`: AI 기능을 사용할 경우에만 필요.
 
-중요:
-- `TIME_MONEY_LIVE_CRITICAL_FIX.zip`의 index.html/server.js만 올리면 서버가 필요한 JSON을 찾지 못해 정상 부팅할 수 없다.
-- 실제 가격이 없는 월은 거래하지 않는다.
-- KRX 실시간/과거 전체 데이터는 2026-09 이후 KRX 인증 정책 때문에 별도 인증 provider가 필요할 수 있다.
-- API 키/비밀번호는 GitHub에 올리지 않는다.
+이번 빌드의 핵심 수정:
+- bundled price IDs such as `US:AAPL` are resolved against runtime IDs such as `AAPL`.
+- investment selection renders immediately before remote data loading, so mobile taps are not blocked by a slow provider request.
+- real-estate assets keep their named-property identity and never borrow REIT prices.
+- real-estate historical requests correctly route to the MOLIT provider.
+- no synthetic historical price is created.
