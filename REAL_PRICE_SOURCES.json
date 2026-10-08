@@ -1,0 +1,23 @@
+{
+  "policy": "Only actual observations. These are year-end closes; no monthly interpolation.",
+  "US:UIS": {
+    "source": "Macrotrends Unisys historical annual stock price table",
+    "url": "https://macrotrends.net/stocks/charts/UIS/unisys/stock-price-history",
+    "observations": "1985-12 through 1995-12 year-end closes"
+  },
+  "US:SOR": {
+    "source": "Macrotrends Source Capital historical annual stock price table",
+    "url": "https://macrotrends.net/stocks/charts/SOR/source-capital/stock-price-history",
+    "observations": "1988-12 through 1995-12 year-end closes"
+  },
+  "US:NAII": {
+    "source": "Macrotrends Natural Alternatives International historical annual stock price table",
+    "url": "https://macrotrends.net/stocks/charts/NAII/natural-alternatives/stock-price-history",
+    "observations": "1988-12 through 1995-12 year-end closes"
+  },
+  "US:MOS": {
+    "source": "Macrotrends Mosaic historical annual stock price table",
+    "url": "https://macrotrends.net/stocks/charts/MOS/mosaic/stock-price-history",
+    "observations": "1989-12 through 1995-12 year-end closes"
+  }
+}

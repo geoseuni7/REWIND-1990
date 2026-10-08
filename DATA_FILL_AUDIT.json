@@ -1,0 +1,30 @@
+{
+  "version": "V4",
+  "registryAssets": 1025,
+  "bundledVerifiedAssets": 20,
+  "bundledRows": 166,
+  "providerReady": 1025,
+  "missingTicker": 0,
+  "bundledIds": [
+    "US:AAPL",
+    "US:BA",
+    "US:BAC",
+    "US:CSCO",
+    "US:CVX",
+    "US:GE",
+    "US:IBM",
+    "US:INTC",
+    "US:JNJ",
+    "US:JPM",
+    "US:KO",
+    "US:MOS",
+    "US:MSFT",
+    "US:NAII",
+    "US:ORCL",
+    "US:PG",
+    "US:SOR",
+    "US:UIS",
+    "US:WMT",
+    "US:XOM"
+  ]
+}

@@ -1,0 +1,308 @@
+{
+  "version": "bulk-real-data-v3",
+  "description": "Actual observations only; monthly rows are source observations; no interpolation or forward-fill.",
+  "prices": {
+    "US:UIS": {
+      "monthly": {
+        "1985-12": 177.678,
+        "1986-12": 232.906,
+        "1987-12": 301.034,
+        "1988-12": 259.487,
+        "1989-12": 142.84,
+        "1990-12": 25.0,
+        "1991-12": 41.25,
+        "1992-12": 101.25,
+        "1993-12": 126.25,
+        "1994-12": 86.25,
+        "1995-12": 55.0
+      },
+      "verifiedDataStart": "1985-12",
+      "verifiedDataEnd": "1995-12"
+    },
+    "US:SOR": {
+      "monthly": {
+        "1988-12": 1.0591,
+        "1989-12": 1.3309,
+        "1990-12": 1.2525,
+        "1991-12": 1.6537,
+        "1992-12": 1.9305,
+        "1993-12": 1.8863,
+        "1994-12": 1.7601,
+        "1995-12": 2.1783
+      },
+      "verifiedDataStart": "1988-12",
+      "verifiedDataEnd": "1995-12"
+    },
+    "US:NAII": {
+      "monthly": {
+        "1988-12": 2.3438,
+        "1989-12": 2.3438,
+        "1990-12": 2.157,
+        "1991-12": 3.125,
+        "1992-12": 5.375,
+        "1993-12": 12.25,
+        "1994-12": 4.25,
+        "1995-12": 8.0
+      },
+      "verifiedDataStart": "1988-12",
+      "verifiedDataEnd": "1995-12"
+    },
+    "US:MOS": {
+      "monthly": {
+        "1989-12": 10.3821,
+        "1990-12": 11.0674,
+        "1991-12": 18.4343,
+        "1992-12": 14.1698,
+        "1993-12": 15.1938,
+        "1994-12": 14.6838,
+        "1995-12": 27.5627
+      },
+      "verifiedDataStart": "1989-12",
+      "verifiedDataEnd": "1995-12"
+    },
+    "US:IBM": {
+      "monthly": {
+        "1993-12": 6.5542
+      },
+      "source": "Macrotrends historical annual stock-price table (1993 year close)",
+      "verifiedDataStart": "1993-12",
+      "verifiedDataEnd": "1993-12"
+    },
+    "US:AAPL": {
+      "monthly": {
+        "1993-01": 0.44,
+        "1993-02": 0.39,
+        "1993-03": 0.38,
+        "1993-04": 0.38,
+        "1993-05": 0.42,
+        "1993-06": 0.29,
+        "1993-07": 0.2,
+        "1993-08": 0.2,
+        "1993-09": 0.17,
+        "1993-10": 0.23,
+        "1993-11": 0.23,
+        "1993-12": 0.22
+      },
+      "source": "InflationTool nominal end-of-month stock-price table",
+      "verifiedDataStart": "1993-01",
+      "verifiedDataEnd": "1993-12"
+    },
+    "US:CSCO": {
+      "monthly": {
+        "1993-01": 0.82,
+        "1993-02": 0.82,
+        "1993-03": 0.83,
+        "1993-04": 0.77,
+        "1993-05": 1.01,
+        "1993-06": 1.02
+      },
+      "source": "InflationTool nominal end-of-month stock-price table",
+      "verifiedDataStart": "1993-01",
+      "verifiedDataEnd": "1993-06"
+    },
+    "US:MSFT": {
+      "monthly": {
+        "1993-01": 2.19,
+        "1993-02": 2.11,
+        "1993-03": 2.34,
+        "1993-04": 2.17,
+        "1993-05": 2.35,
+        "1993-06": 2.23,
+        "1993-07": 1.87,
+        "1993-08": 1.9,
+        "1993-09": 2.09,
+        "1993-10": 2.03,
+        "1993-11": 2.03,
+        "1993-12": 2.04
+      },
+      "source": "InflationTool nominal end-of-month stock-price table",
+      "verifiedDataStart": "1993-01",
+      "verifiedDataEnd": "1993-12"
+    },
+    "US:ORCL": {
+      "monthly": {
+        "1993-01": 0.64,
+        "1993-02": 0.64
+      },
+      "source": "InflationTool nominal end-of-month stock-price table",
+      "verifiedDataStart": "1993-01",
+      "verifiedDataEnd": "1993-02"
+    },
+    "US:WMT": {
+      "monthly": {
+        "1993-01": 3.34,
+        "1993-02": 3.34,
+        "1993-03": 3.26,
+        "1993-04": 2.75,
+        "1993-05": 2.86,
+        "1993-06": 2.7,
+        "1993-07": 2.61,
+        "1993-08": 2.64,
+        "1993-09": 2.53,
+        "1993-10": 2.71,
+        "1993-11": 2.94,
+        "1993-12": 2.57
+      },
+      "source": "InflationTool nominal end-of-month stock-price table",
+      "verifiedDataStart": "1993-01",
+      "verifiedDataEnd": "1993-12"
+    },
+    "US:INTC": {
+      "monthly": {
+        "1993-12": 3.88
+      },
+      "source": "Devyara U.S. 1993 yearly stock performance (year close)",
+      "verifiedDataStart": "1993-12",
+      "verifiedDataEnd": "1993-12"
+    },
+    "US:CVX": {
+      "monthly": {
+        "1993-12": 21.78
+      },
+      "source": "Devyara U.S. 1993 yearly stock performance (year close)",
+      "verifiedDataStart": "1993-12",
+      "verifiedDataEnd": "1993-12"
+    },
+    "US:BA": {
+      "monthly": {
+        "1993-12": 12.7389
+      },
+      "source": "BusinessYield Boeing 30-year historical annual stock-price table (1993 year close)",
+      "verifiedDataStart": "1993-12",
+      "verifiedDataEnd": "1993-12"
+    },
+    "US:KO": {
+      "monthly": {
+        "1993-01": 4.84,
+        "1993-02": 4.88,
+        "1993-03": 4.92,
+        "1993-04": 4.78,
+        "1993-05": 4.75,
+        "1993-06": 4.92,
+        "1993-07": 4.94,
+        "1993-08": 4.96,
+        "1993-09": 4.83,
+        "1993-10": 4.96,
+        "1993-11": 4.8,
+        "1993-12": 5.11
+      },
+      "source": "InflationTool nominal end-of-month stock-price table",
+      "verifiedDataStart": "1993-01",
+      "verifiedDataEnd": "1993-12"
+    },
+    "US:GE": {
+      "monthly": {
+        "1993-01": 14.05,
+        "1993-02": 13.72,
+        "1993-03": 14.54,
+        "1993-04": 14.78,
+        "1993-05": 15.13,
+        "1993-06": 15.62,
+        "1993-07": 16.07,
+        "1993-08": 16.03,
+        "1993-09": 15.64,
+        "1993-10": 15.82,
+        "1993-11": 16.05,
+        "1993-12": 17.11
+      },
+      "source": "InflationTool nominal end-of-month stock-price table",
+      "verifiedDataStart": "1993-01",
+      "verifiedDataEnd": "1993-12"
+    },
+    "US:JNJ": {
+      "monthly": {
+        "1993-01": 5.2,
+        "1993-02": 5.02,
+        "1993-03": 5.03,
+        "1993-04": 5.15,
+        "1993-05": 5.27,
+        "1993-06": 4.9,
+        "1993-07": 4.31,
+        "1993-08": 4.81,
+        "1993-09": 4.65,
+        "1993-10": 4.97,
+        "1993-11": 5.15,
+        "1993-12": 5.3
+      },
+      "source": "InflationTool nominal end-of-month stock-price table",
+      "verifiedDataStart": "1993-01",
+      "verifiedDataEnd": "1993-12"
+    },
+    "US:XOM": {
+      "monthly": {
+        "1993-01": 5.76,
+        "1993-02": 5.99,
+        "1993-03": 6.23,
+        "1993-04": 6.22,
+        "1993-05": 6.17,
+        "1993-06": 6.23,
+        "1993-07": 6.18,
+        "1993-08": 6.16,
+        "1993-09": 6.17,
+        "1993-10": 6.16,
+        "1993-11": 5.91,
+        "1993-12": 5.94
+      },
+      "source": "InflationTool nominal end-of-month stock-price table",
+      "verifiedDataStart": "1993-01",
+      "verifiedDataEnd": "1993-12"
+    },
+    "US:PG": {
+      "monthly": {
+        "1993-01": 5.57,
+        "1993-02": 5.83,
+        "1993-03": 5.59,
+        "1993-04": 5.54,
+        "1993-05": 5.54,
+        "1993-06": 5.86,
+        "1993-07": 5.53,
+        "1993-08": 5.48,
+        "1993-09": 5.38,
+        "1993-10": 6.19,
+        "1993-11": 6.47,
+        "1993-12": 6.5
+      },
+      "source": "InflationTool nominal end-of-month stock-price table",
+      "verifiedDataStart": "1993-01",
+      "verifiedDataEnd": "1993-12"
+    },
+    "US:JPM": {
+      "monthly": {
+        "1993-01": 4.23,
+        "1993-02": 4.22,
+        "1993-03": 4.21,
+        "1993-04": 3.99,
+        "1993-05": 4.0,
+        "1993-06": 4.26,
+        "1993-07": 4.3,
+        "1993-08": 4.23,
+        "1993-09": 4.69,
+        "1993-10": 4.18,
+        "1993-11": 4.01,
+        "1993-12": 4.18
+      },
+      "source": "InflationTool nominal end-of-month stock-price table",
+      "verifiedDataStart": "1993-01",
+      "verifiedDataEnd": "1993-12"
+    },
+    "US:BAC": {
+      "monthly": {
+        "1993-01": 8.3,
+        "1993-02": 8.26,
+        "1993-03": 8.43,
+        "1993-04": 7.66,
+        "1993-05": 7.27,
+        "1993-06": 7.66,
+        "1993-07": 7.78,
+        "1993-08": 7.95,
+        "1993-09": 7.95,
+        "1993-10": 7.2,
+        "1993-11": 7.27,
+        "1993-12": 7.56
+      },
+      "source": "InflationTool nominal end-of-month stock-price table",
+      "verifiedDataStart": "1993-01",
+      "verifiedDataEnd": "1993-12"
+    }
+  }
+}

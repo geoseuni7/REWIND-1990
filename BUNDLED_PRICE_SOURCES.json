@@ -1,0 +1,9 @@
+{
+  "policy": "Actual monthly end-of-month observations only; no interpolation or forward-fill.",
+  "sources": [
+    {"provider":"InflationTool","assets":["US:AAPL","US:MSFT","US:KO","US:WMT","US:ORCL","US:CSCO","US:GE","US:JNJ","US:XOM","US:PG","US:JPM","US:BAC"],"url":"https://www.inflationtool.com/adjusted-prices","note":"Nominal column from monthly end-of-month historical tables."},
+    {"provider":"Macrotrends","assets":["US:IBM","US:UIS","US:SOR","US:NAII","US:MOS"],"note":"Historical stock-price tables; only explicitly surfaced observations are bundled."},
+    {"provider":"BusinessYield","assets":["US:BA"],"note":"Boeing historical annual stock-price table; 1993 year-end observation only."},
+    {"provider":"Devyara","assets":["US:CVX"],"url":"https://devyara.com/en-us/us-market-yearly-performance/1993/","note":"1993 year-end close used as an explicitly reported observation."}
+  ]
+}
