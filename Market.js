@@ -1,0 +1,2 @@
+import registry from '../../data/assets/registry.json' with {type:'json'};
+export class Market { constructor(){this.assets=registry.filter(a=>a.confidence==='verified'&&a.tradable)} list(category='전체'){return category==='전체'?this.assets:this.assets.filter(a=>a.category===category)} get(id){return this.assets.find(a=>a.id===id)} price(asset,month){const seed=[...asset.id].reduce((n,c)=>n+c.charCodeAt(0),0); const t=month.getUTCFullYear()*12+month.getUTCMonth(); return Math.max(.01,100*(1+Math.sin((t+seed)%97/13)*.18+Math.sin((t+seed)%211/37)*.12));} }

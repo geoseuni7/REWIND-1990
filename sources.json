@@ -1,0 +1,10 @@
+{
+  "policy":"Only source-backed observations are production data. No synthetic historical price path, interpolation, or guessed listing date is permitted.",
+  "primarySources":[
+    {"name":"CRSP US Stock Databases","role":"US securities, inactive securities, identifiers, corporate actions, delistings","url":"https://www.crsp.org/research__trashed/crsp-us-stock-databases/"},
+    {"name":"KRX","role":"Korean listed/delisted securities and market data","url":"https://global.krx.co.kr/"},
+    {"name":"CME Historical First Trade Dates","role":"Futures/options launch dates","url":"https://www.cmegroup.com/media-room/historical-first-trade-dates.html"},
+    {"name":"BIS Bilateral Exchange Rates","role":"Historical FX","url":"https://data.bis.org/topics/XRU"},
+    {"name":"FRED","role":"Macroeconomic series, rates, CPI and related data","url":"https://fred.stlouisfed.org/"}
+  ]
+}

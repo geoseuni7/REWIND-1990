@@ -1,0 +1,59 @@
+{
+  "assets": [
+    {
+      "id": "ETF:US:SPY",
+      "name": "SPDR S&P 500 ETF Trust",
+      "category": "ETF",
+      "market": "US",
+      "symbol": "SPY",
+      "verifiedInstrumentDate": "1993-01-22",
+      "instrumentDateSource": "State Street official",
+      "sourceUrl": "https://www.ssga.com/us/en/institutional/etfs/state-street-spdr-sp-500-etf-trust-spy",
+      "status": "instrument_date_confirmed_price_rows_still_required"
+    },
+    {
+      "id": "FUT:GC=F",
+      "name": "Gold Futures",
+      "category": "선물",
+      "market": "COMEX",
+      "symbol": "GC=F",
+      "verifiedInstrumentDate": "1974-12-31",
+      "instrumentDateSource": "CME Group historical first trade dates",
+      "sourceUrl": "https://www.cmegroup.com/media-room/historical-first-trade-dates.html",
+      "status": "instrument_date_confirmed_price_rows_still_required"
+    },
+    {
+      "id": "FUT:SI=F",
+      "name": "Silver Futures",
+      "category": "선물",
+      "market": "COMEX",
+      "symbol": "SI=F",
+      "verifiedInstrumentDate": "1933-07-05",
+      "instrumentDateSource": "CME Group historical first trade dates",
+      "sourceUrl": "https://www.cmegroup.com/media-room/historical-first-trade-dates.html",
+      "status": "instrument_date_confirmed_price_rows_still_required"
+    },
+    {
+      "id": "FUT:HG=F",
+      "name": "High Grade Copper Futures",
+      "category": "선물",
+      "market": "COMEX",
+      "symbol": "HG=F",
+      "verifiedInstrumentDate": "1988-07-29",
+      "instrumentDateSource": "CME Group historical first trade dates",
+      "sourceUrl": "https://www.cmegroup.com/media-room/historical-first-trade-dates.html",
+      "status": "instrument_date_confirmed_price_rows_still_required"
+    },
+    {
+      "id": "FX:GBP_USD",
+      "name": "GBP/USD",
+      "category": "FX",
+      "market": "GLOBAL",
+      "symbol": "GBPUSD",
+      "verifiedInstrumentDate": "1953-08-10",
+      "instrumentDateSource": "BIS bilateral exchange rates daily series",
+      "sourceUrl": "https://data.bis.org/topics/XRU/BIS%2CWS_XRU%2C1.0/D.GB.GBP.A",
+      "status": "instrument_date_confirmed_price_rows_still_required"
+    }
+  ]
+}

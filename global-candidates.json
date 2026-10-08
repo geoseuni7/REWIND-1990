@@ -1,0 +1,4201 @@
+{
+  "policy": "broad-discovery-then-actual-observation-gate",
+  "windowStart": "1993-01-01",
+  "windowEnd": "2026-12-31",
+  "candidateCount": 197,
+  "dynamicDiscoveryStatus": "fdr_unavailable:ModuleNotFoundError",
+  "discoveryMarkets": [
+    "KRX",
+    "KOSPI",
+    "KOSDAQ",
+    "KONEX",
+    "KRX-DELISTING",
+    "KRX-ADMINISTRATIVE",
+    "KRX-MARCAP",
+    "KRX-DESC",
+    "KOSPI-DESC",
+    "KOSDAQ-DESC",
+    "KONEX-DESC",
+    "NASDAQ",
+    "NYSE",
+    "AMEX",
+    "S&P500",
+    "HKEX",
+    "TSE",
+    "SSE",
+    "SZSE",
+    "HOSE"
+  ],
+  "etfMarkets": [
+    "ETF/KR",
+    "ETF/US",
+    "ETF/CN",
+    "ETF/HK",
+    "ETF/JP",
+    "ETF/UK",
+    "ETF/FR"
+  ],
+  "assets": [
+    {
+      "id": "FUT:BZ=F",
+      "name": "Brent Crude",
+      "category": "futures",
+      "market": "GLOBAL",
+      "symbol": "BZ=F",
+      "yahooSymbol": "BZ=F",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FUT:CC=F",
+      "name": "Cocoa",
+      "category": "futures",
+      "market": "GLOBAL",
+      "symbol": "CC=F",
+      "yahooSymbol": "CC=F",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FUT:CL=F",
+      "name": "WTI Crude Oil",
+      "category": "futures",
+      "market": "GLOBAL",
+      "symbol": "CL=F",
+      "yahooSymbol": "CL=F",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FUT:CT=F",
+      "name": "Cotton",
+      "category": "futures",
+      "market": "GLOBAL",
+      "symbol": "CT=F",
+      "yahooSymbol": "CT=F",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FUT:ES=F",
+      "name": "E-mini S&P 500",
+      "category": "futures",
+      "market": "GLOBAL",
+      "symbol": "ES=F",
+      "yahooSymbol": "ES=F",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FUT:GC=F",
+      "name": "Gold",
+      "category": "futures",
+      "market": "GLOBAL",
+      "symbol": "GC=F",
+      "yahooSymbol": "GC=F",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FUT:HE=F",
+      "name": "Lean Hogs",
+      "category": "futures",
+      "market": "GLOBAL",
+      "symbol": "HE=F",
+      "yahooSymbol": "HE=F",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FUT:HG=F",
+      "name": "Copper",
+      "category": "futures",
+      "market": "GLOBAL",
+      "symbol": "HG=F",
+      "yahooSymbol": "HG=F",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FUT:HO=F",
+      "name": "Heating Oil",
+      "category": "futures",
+      "market": "GLOBAL",
+      "symbol": "HO=F",
+      "yahooSymbol": "HO=F",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FUT:KC=F",
+      "name": "Coffee",
+      "category": "futures",
+      "market": "GLOBAL",
+      "symbol": "KC=F",
+      "yahooSymbol": "KC=F",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FUT:LE=F",
+      "name": "Live Cattle",
+      "category": "futures",
+      "market": "GLOBAL",
+      "symbol": "LE=F",
+      "yahooSymbol": "LE=F",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FUT:NG=F",
+      "name": "Natural Gas",
+      "category": "futures",
+      "market": "GLOBAL",
+      "symbol": "NG=F",
+      "yahooSymbol": "NG=F",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FUT:NQ=F",
+      "name": "E-mini Nasdaq 100",
+      "category": "futures",
+      "market": "GLOBAL",
+      "symbol": "NQ=F",
+      "yahooSymbol": "NQ=F",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FUT:PA=F",
+      "name": "Palladium",
+      "category": "futures",
+      "market": "GLOBAL",
+      "symbol": "PA=F",
+      "yahooSymbol": "PA=F",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FUT:PL=F",
+      "name": "Platinum",
+      "category": "futures",
+      "market": "GLOBAL",
+      "symbol": "PL=F",
+      "yahooSymbol": "PL=F",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FUT:RB=F",
+      "name": "Gasoline",
+      "category": "futures",
+      "market": "GLOBAL",
+      "symbol": "RB=F",
+      "yahooSymbol": "RB=F",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FUT:RTY=F",
+      "name": "E-mini Russell 2000",
+      "category": "futures",
+      "market": "GLOBAL",
+      "symbol": "RTY=F",
+      "yahooSymbol": "RTY=F",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FUT:SB=F",
+      "name": "Sugar",
+      "category": "futures",
+      "market": "GLOBAL",
+      "symbol": "SB=F",
+      "yahooSymbol": "SB=F",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FUT:SI=F",
+      "name": "Silver",
+      "category": "futures",
+      "market": "GLOBAL",
+      "symbol": "SI=F",
+      "yahooSymbol": "SI=F",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FUT:YM=F",
+      "name": "E-mini Dow",
+      "category": "futures",
+      "market": "GLOBAL",
+      "symbol": "YM=F",
+      "yahooSymbol": "YM=F",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FUT:ZB=F",
+      "name": "U.S. Treasury Bond",
+      "category": "futures",
+      "market": "GLOBAL",
+      "symbol": "ZB=F",
+      "yahooSymbol": "ZB=F",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FUT:ZC=F",
+      "name": "Corn",
+      "category": "futures",
+      "market": "GLOBAL",
+      "symbol": "ZC=F",
+      "yahooSymbol": "ZC=F",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FUT:ZF=F",
+      "name": "5-Year Treasury Note",
+      "category": "futures",
+      "market": "GLOBAL",
+      "symbol": "ZF=F",
+      "yahooSymbol": "ZF=F",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FUT:ZN=F",
+      "name": "10-Year Treasury Note",
+      "category": "futures",
+      "market": "GLOBAL",
+      "symbol": "ZN=F",
+      "yahooSymbol": "ZN=F",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FUT:ZS=F",
+      "name": "Soybeans",
+      "category": "futures",
+      "market": "GLOBAL",
+      "symbol": "ZS=F",
+      "yahooSymbol": "ZS=F",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FUT:ZT=F",
+      "name": "2-Year Treasury Note",
+      "category": "futures",
+      "market": "GLOBAL",
+      "symbol": "ZT=F",
+      "yahooSymbol": "ZT=F",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FUT:ZW=F",
+      "name": "Wheat",
+      "category": "futures",
+      "market": "GLOBAL",
+      "symbol": "ZW=F",
+      "yahooSymbol": "ZW=F",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FX:AUDUSD=X",
+      "name": "AUDUSD=X",
+      "category": "FX",
+      "market": "GLOBAL",
+      "symbol": "AUDUSD=X",
+      "yahooSymbol": "AUDUSD=X",
+      "fdrSymbol": "AUDUSD=X",
+      "currency": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FX:BRL=X",
+      "name": "BRL=X",
+      "category": "FX",
+      "market": "GLOBAL",
+      "symbol": "BRL=X",
+      "yahooSymbol": "BRL=X",
+      "fdrSymbol": "BRL=X",
+      "currency": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FX:CAD=X",
+      "name": "CAD=X",
+      "category": "FX",
+      "market": "GLOBAL",
+      "symbol": "CAD=X",
+      "yahooSymbol": "CAD=X",
+      "fdrSymbol": "CAD=X",
+      "currency": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FX:CHF=X",
+      "name": "CHF=X",
+      "category": "FX",
+      "market": "GLOBAL",
+      "symbol": "CHF=X",
+      "yahooSymbol": "CHF=X",
+      "fdrSymbol": "CHF=X",
+      "currency": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FX:CNY=X",
+      "name": "CNY=X",
+      "category": "FX",
+      "market": "GLOBAL",
+      "symbol": "CNY=X",
+      "yahooSymbol": "CNY=X",
+      "fdrSymbol": "CNY=X",
+      "currency": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FX:DKK=X",
+      "name": "DKK=X",
+      "category": "FX",
+      "market": "GLOBAL",
+      "symbol": "DKK=X",
+      "yahooSymbol": "DKK=X",
+      "fdrSymbol": "DKK=X",
+      "currency": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FX:EURUSD=X",
+      "name": "EURUSD=X",
+      "category": "FX",
+      "market": "GLOBAL",
+      "symbol": "EURUSD=X",
+      "yahooSymbol": "EURUSD=X",
+      "fdrSymbol": "EURUSD=X",
+      "currency": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FX:GBPUSD=X",
+      "name": "GBPUSD=X",
+      "category": "FX",
+      "market": "GLOBAL",
+      "symbol": "GBPUSD=X",
+      "yahooSymbol": "GBPUSD=X",
+      "fdrSymbol": "GBPUSD=X",
+      "currency": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FX:HKD=X",
+      "name": "HKD=X",
+      "category": "FX",
+      "market": "GLOBAL",
+      "symbol": "HKD=X",
+      "yahooSymbol": "HKD=X",
+      "fdrSymbol": "HKD=X",
+      "currency": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FX:IDR=X",
+      "name": "IDR=X",
+      "category": "FX",
+      "market": "GLOBAL",
+      "symbol": "IDR=X",
+      "yahooSymbol": "IDR=X",
+      "fdrSymbol": "IDR=X",
+      "currency": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FX:INR=X",
+      "name": "INR=X",
+      "category": "FX",
+      "market": "GLOBAL",
+      "symbol": "INR=X",
+      "yahooSymbol": "INR=X",
+      "fdrSymbol": "INR=X",
+      "currency": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FX:JPY=X",
+      "name": "JPY=X",
+      "category": "FX",
+      "market": "GLOBAL",
+      "symbol": "JPY=X",
+      "yahooSymbol": "JPY=X",
+      "fdrSymbol": "JPY=X",
+      "currency": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FX:KRW=X",
+      "name": "KRW=X",
+      "category": "FX",
+      "market": "GLOBAL",
+      "symbol": "KRW=X",
+      "yahooSymbol": "KRW=X",
+      "fdrSymbol": "KRW=X",
+      "currency": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FX:MXN=X",
+      "name": "MXN=X",
+      "category": "FX",
+      "market": "GLOBAL",
+      "symbol": "MXN=X",
+      "yahooSymbol": "MXN=X",
+      "fdrSymbol": "MXN=X",
+      "currency": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FX:NOK=X",
+      "name": "NOK=X",
+      "category": "FX",
+      "market": "GLOBAL",
+      "symbol": "NOK=X",
+      "yahooSymbol": "NOK=X",
+      "fdrSymbol": "NOK=X",
+      "currency": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FX:NZDUSD=X",
+      "name": "NZDUSD=X",
+      "category": "FX",
+      "market": "GLOBAL",
+      "symbol": "NZDUSD=X",
+      "yahooSymbol": "NZDUSD=X",
+      "fdrSymbol": "NZDUSD=X",
+      "currency": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FX:PLN=X",
+      "name": "PLN=X",
+      "category": "FX",
+      "market": "GLOBAL",
+      "symbol": "PLN=X",
+      "yahooSymbol": "PLN=X",
+      "fdrSymbol": "PLN=X",
+      "currency": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FX:RUB=X",
+      "name": "RUB=X",
+      "category": "FX",
+      "market": "GLOBAL",
+      "symbol": "RUB=X",
+      "yahooSymbol": "RUB=X",
+      "fdrSymbol": "RUB=X",
+      "currency": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FX:SEK=X",
+      "name": "SEK=X",
+      "category": "FX",
+      "market": "GLOBAL",
+      "symbol": "SEK=X",
+      "yahooSymbol": "SEK=X",
+      "fdrSymbol": "SEK=X",
+      "currency": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FX:SGD=X",
+      "name": "SGD=X",
+      "category": "FX",
+      "market": "GLOBAL",
+      "symbol": "SGD=X",
+      "yahooSymbol": "SGD=X",
+      "fdrSymbol": "SGD=X",
+      "currency": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FX:THB=X",
+      "name": "THB=X",
+      "category": "FX",
+      "market": "GLOBAL",
+      "symbol": "THB=X",
+      "yahooSymbol": "THB=X",
+      "fdrSymbol": "THB=X",
+      "currency": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FX:TRY=X",
+      "name": "TRY=X",
+      "category": "FX",
+      "market": "GLOBAL",
+      "symbol": "TRY=X",
+      "yahooSymbol": "TRY=X",
+      "fdrSymbol": "TRY=X",
+      "currency": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FX:TWD=X",
+      "name": "TWD=X",
+      "category": "FX",
+      "market": "GLOBAL",
+      "symbol": "TWD=X",
+      "yahooSymbol": "TWD=X",
+      "fdrSymbol": "TWD=X",
+      "currency": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "FX:ZAR=X",
+      "name": "ZAR=X",
+      "category": "FX",
+      "market": "GLOBAL",
+      "symbol": "ZAR=X",
+      "yahooSymbol": "ZAR=X",
+      "fdrSymbol": "ZAR=X",
+      "currency": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "INDEX:CN:000001.SS",
+      "name": "Shanghai Composite",
+      "category": "index",
+      "market": "CN",
+      "symbol": "000001.SS",
+      "yahooSymbol": "000001.SS",
+      "fdrSymbol": "000001.SS",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "INDEX:CN:399001.SZ",
+      "name": "Shenzhen Component",
+      "category": "index",
+      "market": "CN",
+      "symbol": "399001.SZ",
+      "yahooSymbol": "399001.SZ",
+      "fdrSymbol": "399001.SZ",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "INDEX:DE:^GDAXI",
+      "name": "DAX",
+      "category": "index",
+      "market": "DE",
+      "symbol": "^GDAXI",
+      "yahooSymbol": "^GDAXI",
+      "fdrSymbol": "^GDAXI",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "INDEX:EU:^STOXX50E",
+      "name": "Euro Stoxx 50",
+      "category": "index",
+      "market": "EU",
+      "symbol": "^STOXX50E",
+      "yahooSymbol": "^STOXX50E",
+      "fdrSymbol": "^STOXX50E",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "INDEX:GB:^FTSE",
+      "name": "FTSE 100",
+      "category": "index",
+      "market": "GB",
+      "symbol": "^FTSE",
+      "yahooSymbol": "^FTSE",
+      "fdrSymbol": "^FTSE",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "INDEX:HK:^HSI",
+      "name": "Hang Seng",
+      "category": "index",
+      "market": "HK",
+      "symbol": "^HSI",
+      "yahooSymbol": "^HSI",
+      "fdrSymbol": "^HSI",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "INDEX:JP:^N225",
+      "name": "Nikkei 225",
+      "category": "index",
+      "market": "JP",
+      "symbol": "^N225",
+      "yahooSymbol": "^N225",
+      "fdrSymbol": "^N225",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "INDEX:KR:^KQ11",
+      "name": "KOSDAQ",
+      "category": "index",
+      "market": "KR",
+      "symbol": "^KQ11",
+      "yahooSymbol": "^KQ11",
+      "fdrSymbol": "^KQ11",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "INDEX:KR:^KS11",
+      "name": "KOSPI",
+      "category": "index",
+      "market": "KR",
+      "symbol": "^KS11",
+      "yahooSymbol": "^KS11",
+      "fdrSymbol": "^KS11",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "INDEX:US:^DJI",
+      "name": "Dow Jones",
+      "category": "index",
+      "market": "US",
+      "symbol": "^DJI",
+      "yahooSymbol": "^DJI",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "INDEX:US:^GSPC",
+      "name": "S&P 500",
+      "category": "index",
+      "market": "US",
+      "symbol": "^GSPC",
+      "yahooSymbol": "^GSPC",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "INDEX:US:^IXIC",
+      "name": "Nasdaq Composite",
+      "category": "index",
+      "market": "US",
+      "symbol": "^IXIC",
+      "yahooSymbol": "^IXIC",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "INDEX:US:^NDX",
+      "name": "Nasdaq 100",
+      "category": "index",
+      "market": "US",
+      "symbol": "^NDX",
+      "yahooSymbol": "^NDX",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "INDEX:US:^RUT",
+      "name": "Russell 2000",
+      "category": "index",
+      "market": "US",
+      "symbol": "^RUT",
+      "yahooSymbol": "^RUT",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "INDEX:US:^VIX",
+      "name": "CBOE VIX",
+      "category": "index",
+      "market": "US",
+      "symbol": "^VIX",
+      "yahooSymbol": "^VIX",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "KR:000100",
+      "name": "Yuhan",
+      "category": "주식",
+      "market": "KRX",
+      "symbol": "000100",
+      "yahooSymbol": "000100.KS",
+      "fdrSymbol": "KRW",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "KR:000270",
+      "name": "Kia",
+      "category": "주식",
+      "market": "KRX",
+      "symbol": "000270",
+      "yahooSymbol": "000270.KS",
+      "fdrSymbol": "KRW",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "KR:000660",
+      "name": "SK hynix",
+      "category": "주식",
+      "market": "KRX",
+      "symbol": "000660",
+      "yahooSymbol": "000660.KS",
+      "fdrSymbol": "KRW",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "KR:000810",
+      "name": "Samsung Fire & Marine",
+      "category": "주식",
+      "market": "KRX",
+      "symbol": "000810",
+      "yahooSymbol": "000810.KS",
+      "fdrSymbol": "KRW",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "KR:001040",
+      "name": "CJ",
+      "category": "주식",
+      "market": "KRX",
+      "symbol": "001040",
+      "yahooSymbol": "001040.KS",
+      "fdrSymbol": "KRW",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "KR:003000",
+      "name": "Buksan",
+      "category": "주식",
+      "market": "KRX",
+      "symbol": "003000",
+      "yahooSymbol": "003000.KS",
+      "fdrSymbol": "KRW",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "KR:003490",
+      "name": "Korean Air",
+      "category": "주식",
+      "market": "KRX",
+      "symbol": "003490",
+      "yahooSymbol": "003490.KS",
+      "fdrSymbol": "KRW",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "KR:003550",
+      "name": "LG",
+      "category": "주식",
+      "market": "KRX",
+      "symbol": "003550",
+      "yahooSymbol": "003550.KS",
+      "fdrSymbol": "KRW",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "KR:004020",
+      "name": "Hyundai Steel",
+      "category": "주식",
+      "market": "KRX",
+      "symbol": "004020",
+      "yahooSymbol": "004020.KS",
+      "fdrSymbol": "KRW",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "KR:005380",
+      "name": "Hyundai Motor",
+      "category": "주식",
+      "market": "KRX",
+      "symbol": "005380",
+      "yahooSymbol": "005380.KS",
+      "fdrSymbol": "KRW",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "KR:005930",
+      "name": "Samsung Electronics",
+      "category": "주식",
+      "market": "KRX",
+      "symbol": "005930",
+      "yahooSymbol": "005930.KS",
+      "fdrSymbol": "KRW",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "KR:006400",
+      "name": "Samsung SDI",
+      "category": "주식",
+      "market": "KRX",
+      "symbol": "006400",
+      "yahooSymbol": "006400.KS",
+      "fdrSymbol": "KRW",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "KR:009150",
+      "name": "Samsung Electro-Mechanics",
+      "category": "주식",
+      "market": "KRX",
+      "symbol": "009150",
+      "yahooSymbol": "009150.KS",
+      "fdrSymbol": "KRW",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "KR:010130",
+      "name": "Korea Zinc",
+      "category": "주식",
+      "market": "KRX",
+      "symbol": "010130",
+      "yahooSymbol": "010130.KS",
+      "fdrSymbol": "KRW",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "KR:010950",
+      "name": "S-Oil",
+      "category": "주식",
+      "market": "KRX",
+      "symbol": "010950",
+      "yahooSymbol": "010950.KS",
+      "fdrSymbol": "KRW",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "KR:011200",
+      "name": "HMM",
+      "category": "주식",
+      "market": "KRX",
+      "symbol": "011200",
+      "yahooSymbol": "011200.KS",
+      "fdrSymbol": "KRW",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "KR:012330",
+      "name": "Hyundai Mobis",
+      "category": "주식",
+      "market": "KRX",
+      "symbol": "012330",
+      "yahooSymbol": "012330.KS",
+      "fdrSymbol": "KRW",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "KR:017670",
+      "name": "SK Telecom",
+      "category": "주식",
+      "market": "KRX",
+      "symbol": "017670",
+      "yahooSymbol": "017670.KS",
+      "fdrSymbol": "KRW",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "KR:028260",
+      "name": "Samsung C&T",
+      "category": "주식",
+      "market": "KRX",
+      "symbol": "028260",
+      "yahooSymbol": "028260.KS",
+      "fdrSymbol": "KRW",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "KR:030200",
+      "name": "KT",
+      "category": "주식",
+      "market": "KRX",
+      "symbol": "030200",
+      "yahooSymbol": "030200.KS",
+      "fdrSymbol": "KRW",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "KR:032830",
+      "name": "Samsung Life",
+      "category": "주식",
+      "market": "KRX",
+      "symbol": "032830",
+      "yahooSymbol": "032830.KS",
+      "fdrSymbol": "KRW",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "KR:034730",
+      "name": "SK",
+      "category": "주식",
+      "market": "KRX",
+      "symbol": "034730",
+      "yahooSymbol": "034730.KS",
+      "fdrSymbol": "KRW",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "KR:035420",
+      "name": "NAVER",
+      "category": "주식",
+      "market": "KRX",
+      "symbol": "035420",
+      "yahooSymbol": "035420.KS",
+      "fdrSymbol": "KRW",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "KR:035720",
+      "name": "Kakao",
+      "category": "주식",
+      "market": "KRX",
+      "symbol": "035720",
+      "yahooSymbol": "035720.KS",
+      "fdrSymbol": "KRW",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "KR:051910",
+      "name": "LG Chem",
+      "category": "주식",
+      "market": "KRX",
+      "symbol": "051910",
+      "yahooSymbol": "051910.KS",
+      "fdrSymbol": "KRW",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "KR:055550",
+      "name": "Shinhan Financial",
+      "category": "주식",
+      "market": "KRX",
+      "symbol": "055550",
+      "yahooSymbol": "055550.KS",
+      "fdrSymbol": "KRW",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "KR:066570",
+      "name": "LG Electronics",
+      "category": "주식",
+      "market": "KRX",
+      "symbol": "066570",
+      "yahooSymbol": "066570.KS",
+      "fdrSymbol": "KRW",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "KR:086790",
+      "name": "Hana Financial",
+      "category": "주식",
+      "market": "KRX",
+      "symbol": "086790",
+      "yahooSymbol": "086790.KS",
+      "fdrSymbol": "KRW",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "KR:096770",
+      "name": "SK Innovation",
+      "category": "주식",
+      "market": "KRX",
+      "symbol": "096770",
+      "yahooSymbol": "096770.KS",
+      "fdrSymbol": "KRW",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "KR:105560",
+      "name": "KB Financial",
+      "category": "주식",
+      "market": "KRX",
+      "symbol": "105560",
+      "yahooSymbol": "105560.KS",
+      "fdrSymbol": "KRW",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "SPOT:CL=F",
+      "name": "Crude oil futures proxy",
+      "category": "spot",
+      "market": "GLOBAL",
+      "symbol": "CL=F",
+      "yahooSymbol": "CL=F",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "SPOT:GC=F",
+      "name": "Gold spot/futures proxy",
+      "category": "spot",
+      "market": "GLOBAL",
+      "symbol": "GC=F",
+      "yahooSymbol": "GC=F",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "SPOT:HG=F",
+      "name": "Copper futures proxy",
+      "category": "spot",
+      "market": "GLOBAL",
+      "symbol": "HG=F",
+      "yahooSymbol": "HG=F",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "SPOT:SI=F",
+      "name": "Silver spot/futures proxy",
+      "category": "spot",
+      "market": "GLOBAL",
+      "symbol": "SI=F",
+      "yahooSymbol": "SI=F",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "SPOT:XAGUSD=X",
+      "name": "Silver/USD",
+      "category": "spot",
+      "market": "GLOBAL",
+      "symbol": "XAGUSD=X",
+      "yahooSymbol": "XAGUSD=X",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "SPOT:XAUUSD=X",
+      "name": "Gold/USD",
+      "category": "spot",
+      "market": "GLOBAL",
+      "symbol": "XAUUSD=X",
+      "yahooSymbol": "XAUUSD=X",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:AAPL",
+      "name": "Apple",
+      "category": "주식",
+      "market": "US",
+      "symbol": "AAPL",
+      "yahooSymbol": "AAPL",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:ABT",
+      "name": "Abbott",
+      "category": "주식",
+      "market": "US",
+      "symbol": "ABT",
+      "yahooSymbol": "ABT",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:ADBE",
+      "name": "Adobe",
+      "category": "주식",
+      "market": "US",
+      "symbol": "ADBE",
+      "yahooSymbol": "ADBE",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:AMD",
+      "name": "AMD",
+      "category": "주식",
+      "market": "US",
+      "symbol": "AMD",
+      "yahooSymbol": "AMD",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:AMZN",
+      "name": "Amazon",
+      "category": "주식",
+      "market": "US",
+      "symbol": "AMZN",
+      "yahooSymbol": "AMZN",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:AXP",
+      "name": "American Express",
+      "category": "주식",
+      "market": "US",
+      "symbol": "AXP",
+      "yahooSymbol": "AXP",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:BA",
+      "name": "Boeing",
+      "category": "주식",
+      "market": "US",
+      "symbol": "BA",
+      "yahooSymbol": "BA",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:BAC",
+      "name": "Bank of America",
+      "category": "주식",
+      "market": "US",
+      "symbol": "BAC",
+      "yahooSymbol": "BAC",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:BK",
+      "name": "Bank of New York Mellon",
+      "category": "주식",
+      "market": "US",
+      "symbol": "BK",
+      "yahooSymbol": "BK",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:BLK",
+      "name": "BlackRock",
+      "category": "주식",
+      "market": "US",
+      "symbol": "BLK",
+      "yahooSymbol": "BLK",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:BMY",
+      "name": "Bristol Myers Squibb",
+      "category": "주식",
+      "market": "US",
+      "symbol": "BMY",
+      "yahooSymbol": "BMY",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:C",
+      "name": "Citigroup",
+      "category": "주식",
+      "market": "US",
+      "symbol": "C",
+      "yahooSymbol": "C",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:CAT",
+      "name": "Caterpillar",
+      "category": "주식",
+      "market": "US",
+      "symbol": "CAT",
+      "yahooSymbol": "CAT",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:CL",
+      "name": "Colgate-Palmolive",
+      "category": "주식",
+      "market": "US",
+      "symbol": "CL",
+      "yahooSymbol": "CL",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:CMCSA",
+      "name": "Comcast",
+      "category": "주식",
+      "market": "US",
+      "symbol": "CMCSA",
+      "yahooSymbol": "CMCSA",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:COP",
+      "name": "ConocoPhillips",
+      "category": "주식",
+      "market": "US",
+      "symbol": "COP",
+      "yahooSymbol": "COP",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:COST",
+      "name": "Costco",
+      "category": "주식",
+      "market": "US",
+      "symbol": "COST",
+      "yahooSymbol": "COST",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:CRM",
+      "name": "Salesforce",
+      "category": "주식",
+      "market": "US",
+      "symbol": "CRM",
+      "yahooSymbol": "CRM",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:CSCO",
+      "name": "Cisco",
+      "category": "주식",
+      "market": "US",
+      "symbol": "CSCO",
+      "yahooSymbol": "CSCO",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:CVX",
+      "name": "Chevron",
+      "category": "주식",
+      "market": "US",
+      "symbol": "CVX",
+      "yahooSymbol": "CVX",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:DE",
+      "name": "Deere",
+      "category": "주식",
+      "market": "US",
+      "symbol": "DE",
+      "yahooSymbol": "DE",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:DGS",
+      "name": "WisdomTree Emerging Markets SmallCap Dividend ETF",
+      "category": "ETF",
+      "market": "US",
+      "symbol": "DGS",
+      "yahooSymbol": "DGS",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:DIA",
+      "name": "SPDR Dow Jones ETF",
+      "category": "ETF",
+      "market": "US",
+      "symbol": "DIA",
+      "yahooSymbol": "DIA",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:DIS",
+      "name": "Walt Disney",
+      "category": "주식",
+      "market": "US",
+      "symbol": "DIS",
+      "yahooSymbol": "DIS",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:EEM",
+      "name": "iShares MSCI Emerging Markets ETF",
+      "category": "ETF",
+      "market": "US",
+      "symbol": "EEM",
+      "yahooSymbol": "EEM",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:EFA",
+      "name": "iShares MSCI EAFE ETF",
+      "category": "ETF",
+      "market": "US",
+      "symbol": "EFA",
+      "yahooSymbol": "EFA",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:F",
+      "name": "Ford",
+      "category": "주식",
+      "market": "US",
+      "symbol": "F",
+      "yahooSymbol": "F",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:FDX",
+      "name": "FedEx",
+      "category": "주식",
+      "market": "US",
+      "symbol": "FDX",
+      "yahooSymbol": "FDX",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:GD",
+      "name": "General Dynamics",
+      "category": "주식",
+      "market": "US",
+      "symbol": "GD",
+      "yahooSymbol": "GD",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:GE",
+      "name": "GE",
+      "category": "주식",
+      "market": "US",
+      "symbol": "GE",
+      "yahooSymbol": "GE",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:GLD",
+      "name": "SPDR Gold Shares",
+      "category": "ETF",
+      "market": "US",
+      "symbol": "GLD",
+      "yahooSymbol": "GLD",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:GM",
+      "name": "General Motors",
+      "category": "주식",
+      "market": "US",
+      "symbol": "GM",
+      "yahooSymbol": "GM",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:GOOGL",
+      "name": "Alphabet",
+      "category": "주식",
+      "market": "US",
+      "symbol": "GOOGL",
+      "yahooSymbol": "GOOGL",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:GS",
+      "name": "Goldman Sachs",
+      "category": "주식",
+      "market": "US",
+      "symbol": "GS",
+      "yahooSymbol": "GS",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:HD",
+      "name": "Home Depot",
+      "category": "주식",
+      "market": "US",
+      "symbol": "HD",
+      "yahooSymbol": "HD",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:HON",
+      "name": "Honeywell",
+      "category": "주식",
+      "market": "US",
+      "symbol": "HON",
+      "yahooSymbol": "HON",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:HYG",
+      "name": "iShares High Yield Corporate Bond ETF",
+      "category": "ETF",
+      "market": "US",
+      "symbol": "HYG",
+      "yahooSymbol": "HYG",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:IBM",
+      "name": "IBM",
+      "category": "주식",
+      "market": "US",
+      "symbol": "IBM",
+      "yahooSymbol": "IBM",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:IEF",
+      "name": "iShares 7-10 Year Treasury Bond ETF",
+      "category": "ETF",
+      "market": "US",
+      "symbol": "IEF",
+      "yahooSymbol": "IEF",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:INTC",
+      "name": "Intel",
+      "category": "주식",
+      "market": "US",
+      "symbol": "INTC",
+      "yahooSymbol": "INTC",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:IWM",
+      "name": "iShares Russell 2000 ETF",
+      "category": "ETF",
+      "market": "US",
+      "symbol": "IWM",
+      "yahooSymbol": "IWM",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:JNJ",
+      "name": "Johnson & Johnson",
+      "category": "주식",
+      "market": "US",
+      "symbol": "JNJ",
+      "yahooSymbol": "JNJ",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:JPM",
+      "name": "JPMorgan",
+      "category": "주식",
+      "market": "US",
+      "symbol": "JPM",
+      "yahooSymbol": "JPM",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:KO",
+      "name": "Coca-Cola",
+      "category": "주식",
+      "market": "US",
+      "symbol": "KO",
+      "yahooSymbol": "KO",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:LMT",
+      "name": "Lockheed Martin",
+      "category": "주식",
+      "market": "US",
+      "symbol": "LMT",
+      "yahooSymbol": "LMT",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:LOW",
+      "name": "Lowe's",
+      "category": "주식",
+      "market": "US",
+      "symbol": "LOW",
+      "yahooSymbol": "LOW",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:LQD",
+      "name": "iShares Investment Grade Corporate Bond ETF",
+      "category": "ETF",
+      "market": "US",
+      "symbol": "LQD",
+      "yahooSymbol": "LQD",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:MCD",
+      "name": "McDonald's",
+      "category": "주식",
+      "market": "US",
+      "symbol": "MCD",
+      "yahooSymbol": "MCD",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:MDT",
+      "name": "Medtronic",
+      "category": "주식",
+      "market": "US",
+      "symbol": "MDT",
+      "yahooSymbol": "MDT",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:META",
+      "name": "Meta",
+      "category": "주식",
+      "market": "US",
+      "symbol": "META",
+      "yahooSymbol": "META",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:MMM",
+      "name": "3M",
+      "category": "주식",
+      "market": "US",
+      "symbol": "MMM",
+      "yahooSymbol": "MMM",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:MO",
+      "name": "Altria",
+      "category": "주식",
+      "market": "US",
+      "symbol": "MO",
+      "yahooSymbol": "MO",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:MRK",
+      "name": "Merck",
+      "category": "주식",
+      "market": "US",
+      "symbol": "MRK",
+      "yahooSymbol": "MRK",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:MS",
+      "name": "Morgan Stanley",
+      "category": "주식",
+      "market": "US",
+      "symbol": "MS",
+      "yahooSymbol": "MS",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:MSFT",
+      "name": "Microsoft",
+      "category": "주식",
+      "market": "US",
+      "symbol": "MSFT",
+      "yahooSymbol": "MSFT",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:MU",
+      "name": "Micron",
+      "category": "주식",
+      "market": "US",
+      "symbol": "MU",
+      "yahooSymbol": "MU",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:NFLX",
+      "name": "Netflix",
+      "category": "주식",
+      "market": "US",
+      "symbol": "NFLX",
+      "yahooSymbol": "NFLX",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:NKE",
+      "name": "Nike",
+      "category": "주식",
+      "market": "US",
+      "symbol": "NKE",
+      "yahooSymbol": "NKE",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:NSC",
+      "name": "Norfolk Southern",
+      "category": "주식",
+      "market": "US",
+      "symbol": "NSC",
+      "yahooSymbol": "NSC",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:NVDA",
+      "name": "NVIDIA",
+      "category": "주식",
+      "market": "US",
+      "symbol": "NVDA",
+      "yahooSymbol": "NVDA",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:ORCL",
+      "name": "Oracle",
+      "category": "주식",
+      "market": "US",
+      "symbol": "ORCL",
+      "yahooSymbol": "ORCL",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:PEP",
+      "name": "PepsiCo",
+      "category": "주식",
+      "market": "US",
+      "symbol": "PEP",
+      "yahooSymbol": "PEP",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:PFE",
+      "name": "Pfizer",
+      "category": "주식",
+      "market": "US",
+      "symbol": "PFE",
+      "yahooSymbol": "PFE",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:PG",
+      "name": "Procter & Gamble",
+      "category": "주식",
+      "market": "US",
+      "symbol": "PG",
+      "yahooSymbol": "PG",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:PM",
+      "name": "Philip Morris",
+      "category": "주식",
+      "market": "US",
+      "symbol": "PM",
+      "yahooSymbol": "PM",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:QCOM",
+      "name": "Qualcomm",
+      "category": "주식",
+      "market": "US",
+      "symbol": "QCOM",
+      "yahooSymbol": "QCOM",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:QQQ",
+      "name": "Invesco QQQ",
+      "category": "ETF",
+      "market": "US",
+      "symbol": "QQQ",
+      "yahooSymbol": "QQQ",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:RTX",
+      "name": "RTX",
+      "category": "주식",
+      "market": "US",
+      "symbol": "RTX",
+      "yahooSymbol": "RTX",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:SBUX",
+      "name": "Starbucks",
+      "category": "주식",
+      "market": "US",
+      "symbol": "SBUX",
+      "yahooSymbol": "SBUX",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:SLB",
+      "name": "SLB",
+      "category": "주식",
+      "market": "US",
+      "symbol": "SLB",
+      "yahooSymbol": "SLB",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:SLV",
+      "name": "iShares Silver Trust",
+      "category": "ETF",
+      "market": "US",
+      "symbol": "SLV",
+      "yahooSymbol": "SLV",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:SPY",
+      "name": "SPDR S&P 500 ETF",
+      "category": "ETF",
+      "market": "US",
+      "symbol": "SPY",
+      "yahooSymbol": "SPY",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:T",
+      "name": "AT&T",
+      "category": "주식",
+      "market": "US",
+      "symbol": "T",
+      "yahooSymbol": "T",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:TGT",
+      "name": "Target",
+      "category": "주식",
+      "market": "US",
+      "symbol": "TGT",
+      "yahooSymbol": "TGT",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:TLT",
+      "name": "iShares 20+ Year Treasury Bond ETF",
+      "category": "ETF",
+      "market": "US",
+      "symbol": "TLT",
+      "yahooSymbol": "TLT",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:TXN",
+      "name": "Texas Instruments",
+      "category": "주식",
+      "market": "US",
+      "symbol": "TXN",
+      "yahooSymbol": "TXN",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:UNP",
+      "name": "Union Pacific",
+      "category": "주식",
+      "market": "US",
+      "symbol": "UNP",
+      "yahooSymbol": "UNP",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:UPS",
+      "name": "UPS",
+      "category": "주식",
+      "market": "US",
+      "symbol": "UPS",
+      "yahooSymbol": "UPS",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:USB",
+      "name": "U.S. Bancorp",
+      "category": "주식",
+      "market": "US",
+      "symbol": "USB",
+      "yahooSymbol": "USB",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:VNQ",
+      "name": "Vanguard Real Estate ETF",
+      "category": "ETF",
+      "market": "US",
+      "symbol": "VNQ",
+      "yahooSymbol": "VNQ",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:VOO",
+      "name": "Vanguard S&P 500 ETF",
+      "category": "ETF",
+      "market": "US",
+      "symbol": "VOO",
+      "yahooSymbol": "VOO",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:VTI",
+      "name": "Vanguard Total Stock Market ETF",
+      "category": "ETF",
+      "market": "US",
+      "symbol": "VTI",
+      "yahooSymbol": "VTI",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:VZ",
+      "name": "Verizon",
+      "category": "주식",
+      "market": "US",
+      "symbol": "VZ",
+      "yahooSymbol": "VZ",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:WFC",
+      "name": "Wells Fargo",
+      "category": "주식",
+      "market": "US",
+      "symbol": "WFC",
+      "yahooSymbol": "WFC",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:WMT",
+      "name": "Walmart",
+      "category": "주식",
+      "market": "US",
+      "symbol": "WMT",
+      "yahooSymbol": "WMT",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:XLB",
+      "name": "Materials Select Sector SPDR",
+      "category": "ETF",
+      "market": "US",
+      "symbol": "XLB",
+      "yahooSymbol": "XLB",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:XLE",
+      "name": "Energy Select Sector SPDR",
+      "category": "ETF",
+      "market": "US",
+      "symbol": "XLE",
+      "yahooSymbol": "XLE",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:XLF",
+      "name": "Financial Select Sector SPDR",
+      "category": "ETF",
+      "market": "US",
+      "symbol": "XLF",
+      "yahooSymbol": "XLF",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:XLI",
+      "name": "Industrial Select Sector SPDR",
+      "category": "ETF",
+      "market": "US",
+      "symbol": "XLI",
+      "yahooSymbol": "XLI",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:XLK",
+      "name": "Technology Select Sector SPDR",
+      "category": "ETF",
+      "market": "US",
+      "symbol": "XLK",
+      "yahooSymbol": "XLK",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:XLP",
+      "name": "Consumer Staples Select Sector SPDR",
+      "category": "ETF",
+      "market": "US",
+      "symbol": "XLP",
+      "yahooSymbol": "XLP",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:XLU",
+      "name": "Utilities Select Sector SPDR",
+      "category": "ETF",
+      "market": "US",
+      "symbol": "XLU",
+      "yahooSymbol": "XLU",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:XLV",
+      "name": "Health Care Select Sector SPDR",
+      "category": "ETF",
+      "market": "US",
+      "symbol": "XLV",
+      "yahooSymbol": "XLV",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:XLY",
+      "name": "Consumer Discretionary Select Sector SPDR",
+      "category": "ETF",
+      "market": "US",
+      "symbol": "XLY",
+      "yahooSymbol": "XLY",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    },
+    {
+      "id": "US:XOM",
+      "name": "Exxon Mobil",
+      "category": "주식",
+      "market": "US",
+      "symbol": "XOM",
+      "yahooSymbol": "XOM",
+      "fdrSymbol": "USD",
+      "scanProviders": [
+        "yahoo"
+      ],
+      "verifiedDataStart": "pending",
+      "verifiedDataEnd": null,
+      "confidence": "candidate",
+      "tradable": false,
+      "priceDataStatus": "candidate_historical_scan",
+      "eligibilityWindow": [
+        "1993-01-01",
+        "2026-12-31"
+      ]
+    }
+  ]
+}

@@ -3,12 +3,14 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {ServerMarketRuntime} from './src/market/ServerMarketRuntime.js';
+import {TradingEngine} from './src/market/TradingEngine.js';
 
 const here=path.dirname(fileURLToPath(import.meta.url));
 const root=path.join(here,'public');
 const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.webp':'image/webp'};
 const runtime=new ServerMarketRuntime();
 await runtime.hydrate();
+const trading=new TradingEngine(runtime.market);
 
 function json(res,status,payload){res.writeHead(status,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'});res.end(JSON.stringify(payload));}
 async function body(req){let s='';for await(const c of req)s+=c;return s?JSON.parse(s):{};}
@@ -36,6 +38,20 @@ async function api(req,res,url){
     const result=await runtime.sync(ids,{force:Boolean(b.force)});
     const failed=result.filter(x=>x.status==='ERROR');
     return json(res,failed.length?502:200,{ok:failed.length===0,results:result});
+  }
+  if(req.method==='POST' && url.pathname==='/api/game/session'){
+    const b=await body(req);
+    if(b.resumeId){try{return json(res,200,{ok:true,state:trading.restore(b.resumeId)});}catch{}}
+    return json(res,201,{ok:true,state:trading.createSession(b.name,b.mode==='online'?'online':'general')});
+  }
+  if(req.method==='GET' && url.pathname==='/api/game/state'){
+    const id=url.searchParams.get('session'); return json(res,200,{ok:true,state:trading.state(trading.get(id))});
+  }
+  if(req.method==='POST' && url.pathname==='/api/game/order'){
+    const b=await body(req); try{return json(res,200,{ok:true,...trading.order(b.session,{assetId:b.assetId,side:b.side,qty:b.qty})});}catch(error){return json(res,409,{ok:false,error:error.message});}
+  }
+  if(req.method==='POST' && url.pathname==='/api/game/advance'){
+    const b=await body(req); try{return json(res,200,{ok:true,state:trading.advance(b.session,b.months)});}catch(error){return json(res,409,{ok:false,error:error.message});}
   }
   if(req.method==='GET' && url.pathname==='/api/data/status') return json(res,200,{ok:true,assets:runtime.status()});
   return false;
