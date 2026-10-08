@@ -1,12 +1,13 @@
 # Historical data build
 
-The deployment build runs `npm run build-data` before the server starts.
+Yahoo Finance is not used anywhere in the runtime or build pipeline.
 
-- Source: Yahoo Finance monthly historical observations for the verified manifest.
-- Bundle: `data/monthly_prices.json`.
-- Only observed monthly Close values are written.
-- No interpolation, forward-fill, back-fill, synthetic values, or estimates.
-- Assets with no available observation remain absent and are not tradable for that month.
-- The build tries the manifest ticker first, then the known market suffix fallback for Korean/crypto assets.
+Source priority:
+1. FinanceDataReader: KRX / KRX-DELISTING and supported exchange data.
+2. Tiingo: only when `TIINGO_API_TOKEN` is configured.
+3. EODHD: only when `EODHD_API_TOKEN` is configured.
+4. Alpha Vantage: only when `ALPHA_VANTAGE_API_KEY` is configured.
 
-A build with zero successfully retrieved assets fails rather than silently creating fake prices.
+The builder converts observed daily Close values to one value per month: the last actual trading observation in that month. It never interpolates, forward-fills, back-fills, estimates, or creates synthetic prices.
+
+For assets that cannot be verified by any configured source, the asset remains in the game catalog but has no tradable price for those months.

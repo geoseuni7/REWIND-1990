@@ -10,12 +10,8 @@ const BUNDLED_PRICE_FILE=path.join(__dirname,'data','monthly_prices.json');
 let BUNDLED_PRICES={};
 try{if(fs.existsSync(BUNDLED_PRICE_FILE)){const raw=JSON.parse(fs.readFileSync(BUNDLED_PRICE_FILE,'utf8'));BUNDLED_PRICES=raw&&typeof raw==='object'?(raw.prices||raw):{};}}catch(_){BUNDLED_PRICES={};}
 function bundledMonthly(a){if(!a)return null;const keys=[a.id,a.ticker,a.historyTicker].filter(Boolean).map(String);for(const k of keys){const v=BUNDLED_PRICES[k];if(v&&typeof v==='object')return v.monthly||v;}return null;}
-function yahooSymbols(id,kind,ticker){const out=[];if(ticker)out.push(String(ticker));if(kind==='kr'){out.push(id+'.KS',id+'.KQ')}else if(kind==='coin'){out.push(id+'-USD')}else if(kind==='over'||kind==='fund'){out.push(id)}return [...new Set(out.filter(Boolean))];}
-async function yahooMonthly(symbol,start='1990-01',end='2026-12'){
-  const p1=Math.floor(new Date(start+'-01T00:00:00Z').getTime()/1000),p2=Math.floor(new Date(end+'-01T00:00:00Z').getTime()/1000)+32*86400;
-  const u=`https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?period1=${p1}&period2=${p2}&interval=1mo&events=history&includeAdjustedClose=true`;
-  const ctl=new AbortController(),timer=setTimeout(()=>ctl.abort(),12000);try{const r=await fetch(u,{signal:ctl.signal,headers:{'User-Agent':'TIME-MONEY/5.0'}});if(!r.ok)return null;const j=await r.json();const res=j?.chart?.result?.[0];if(!res?.timestamp||!res?.indicators?.quote?.[0]?.close)return null;const close=res.indicators.quote[0].close,monthly={};res.timestamp.forEach((ts,i)=>{const d=new Date(ts*1000),k=`${d.getUTCFullYear()}-${String(d.getUTCMonth()+1).padStart(2,'0')}`,v=Number(close[i]);if(Number.isFinite(v)&&v>0)monthly[k]=v});return Object.keys(monthly).length?monthly:null}finally{clearTimeout(timer)}}
-async function historicalMonthly(id,kind,ticker){const key=`${kind}:${id}`;const hit=HISTORY_CACHE.get(key);if(hit&&hit.monthly&&Date.now()-hit.at<HISTORY_TTL_MS)return hit;const a=ASSET.get(String(id));const bundled=bundledMonthly(a||{id,ticker,historyTicker:ticker});if(bundled&&Object.keys(bundled).length){const v={at:Date.now(),monthly:bundled,source:'Bundled historical data'};HISTORY_CACHE.set(key,v);return v;}for(const sym of yahooSymbols(id,kind,ticker)){try{const monthly=await yahooMonthly(sym);if(monthly){const v={at:Date.now(),monthly,source:`Yahoo Finance · ${sym} · 월말 Close`};HISTORY_CACHE.set(key,v);return v}}catch(_){} }return null}
+function bundledHistory(a){const m=bundledMonthly(a);return m&&Object.keys(m).length?{at:Date.now(),monthly:m,source:'Bundled historical data'}:null;}
+async function historicalMonthly(id,kind,ticker){const key=`${kind}:${id}`;const hit=HISTORY_CACHE.get(key);if(hit&&hit.monthly)return hit;const a=ASSET.get(String(id))||{id,ticker,historyTicker:ticker};const v=bundledHistory(a);if(v){HISTORY_CACHE.set(key,v);return v}return null;}
 async function ensureAssetHistory(a){
   if(!a)return null;
   const cached=HISTORY_CACHE.get(`${a.kind}:${a.id}`);
@@ -151,15 +147,9 @@ if(req.method==='POST'&&u.pathname==='/api/data/sync'){
 }
 if(req.method==='POST'&&u.pathname==='/api/historical/verify-all'){
   let body={};try{body=await readJson(req)}catch(_){return json(res,400,{ok:false,error:'JSON이 잘못되었습니다.'},req)}
-  const list=Array.isArray(body?.assets)?body.assets:[];
+  const list=Array.isArray(body?.assets)?body.assets:ASSETS;
   if(!list.length||list.length>1000)return json(res,400,{ok:false,error:'assets는 1~1000개여야 합니다.'},req);
-  const results=[];
-  for(const a of list){
-    const id=String(a.id||'').trim(), ticker=String(a.ticker||'').trim(), kind=String(a.kind||'fund').trim();
-    if(!id||!ticker){results.push({id,ticker,ok:false,error:'id/ticker missing'});continue}
-    let monthly=null;try{monthly=await yahooMonthly(ticker)}catch(_){monthly=null}
-    results.push({id,ticker,kind,ok:!!monthly,months:monthly?Object.keys(monthly).length:0,first:monthly?Object.keys(monthly).sort()[0]:null,last:monthly?Object.keys(monthly).sort().at(-1):null});
-  }
+  const results=list.map(a=>{const id=String(a.id||''),h=bundledHistory(a);const meta=actualFirstLast(h?.monthly||{});return {id,ticker:a.ticker||null,kind:a.kind||null,ok:meta.count>0,months:meta.count,first:meta.first,last:meta.last,source:h?.source||null}});
   return json(res,200,{ok:true,count:results.length,passed:results.filter(x=>x.ok).length,failed:results.filter(x=>!x.ok).length,results},req)
 }
 if(req.method==='GET'&&u.pathname==='/api/historical'){const id=String(u.searchParams.get('id')||'').trim(),kind=String(u.searchParams.get('kind')||'').trim(),ticker=String(u.searchParams.get('ticker')||id).trim();if(!id||!kind||!ticker)return json(res,400,{error:'역사 데이터 요청값이 잘못되었습니다.'},req);const h=await historicalMonthly(id,kind,ticker);if(!h)return json(res,404,{ok:false,error:'실제 월별 데이터를 찾지 못했습니다.'},req);return json(res,200,{ok:true,id,kind,monthly:h.monthly,source:h.source},req)}

@@ -436,7 +436,7 @@ DERIV_ASSETS.forEach(x=>addInvestmentAsset(x[0],x[1],x[3],'deriv',x[4],x[5]));
 PROPERTIES.forEach(x=>addInvestmentAsset('REAL_'+x[0],x[1],1990, 'real', realHistoricalBase(x), {vol:/강남|서초|송파|용산/.test(x[2])?.012:.009,unit:'채'}));
 
 /* HISTORICAL SOURCE REPLACEMENTS
-   69 previously source-less instruments now use real Yahoo Finance historical
+   69 previously source-less instruments now use real bundled historical
    series via a one-to-one proxy ticker. The visible investment/category remains
    unchanged; only the price source is replaced with a real historical series.
 */
@@ -479,7 +479,7 @@ function ensureAllInvestmentHistory(){
   });
 }
 function historicalTicker(a){const id=String(a?.id||'');if(a?.historyTicker)return String(a.historyTicker);if(a?.ticker)return String(a.ticker);if(a?.kind==='kr')return id+'.KS';if(a?.kind==='over'||a?.kind==='fund')return id;if(a?.kind==='coin')return id+'-USD';return ''}
-async function loadRemoteHistorical(a){if(!a)return false;if(S.remoteHistory?.[a.id])return true;const ticker=historicalTicker(a);if(!ticker)return false;const sourceKind=a.historicalKind||(['kr','over','fund','coin'].includes(a.kind)?a.kind:'fund');try{const qs=new URLSearchParams({id:a.id,kind:sourceKind,ticker,start:'1993-01',end:'2026-12'});const r=await fetch('/api/historical?'+qs.toString(),{cache:'no-store'});if(!r.ok)return false;const j=await r.json();if(!j.ok||!j.monthly)return false;S.remoteHistory=S.remoteHistory||{};S.remoteHistory[a.id]=j.monthly;S.remoteHistorySource=S.remoteHistorySource||{};S.remoteHistorySource[a.id]=j.source||'Yahoo Finance monthly close';delete SECURITY_HISTORY[a.id];const cur=remoteHistoricalValue(a.id,S.year,S.month);if(cur!=null)S.prices[a.id]=cur;ensureAllInvestmentHistory();return true}catch(_){return false}}
+async function loadRemoteHistorical(a){if(!a)return false;if(S.remoteHistory?.[a.id])return true;const ticker=historicalTicker(a);if(!ticker)return false;const sourceKind=a.historicalKind||(['kr','over','fund','coin'].includes(a.kind)?a.kind:'fund');try{const qs=new URLSearchParams({id:a.id,kind:sourceKind,ticker,start:'1993-01',end:'2026-12'});const r=await fetch('/api/historical?'+qs.toString(),{cache:'no-store'});if(!r.ok)return false;const j=await r.json();if(!j.ok||!j.monthly)return false;S.remoteHistory=S.remoteHistory||{};S.remoteHistory[a.id]=j.monthly;S.remoteHistorySource=S.remoteHistorySource||{};S.remoteHistorySource[a.id]=j.source||'Bundled historical data monthly close';delete SECURITY_HISTORY[a.id];const cur=remoteHistoricalValue(a.id,S.year,S.month);if(cur!=null)S.prices[a.id]=cur;ensureAllInvestmentHistory();return true}catch(_){return false}}
 function investmentInit(a){
   if(!S.investHistory)S.investHistory={};
   if(!S.investHistory[a.id])S.investHistory[a.id]=[];

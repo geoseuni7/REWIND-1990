@@ -3,6 +3,6 @@ services:
     name: time-money-normal
     runtime: node
     plan: free
-    buildCommand: npm install && npm run build-data && npm test
+    buildCommand: python3 -m pip install --disable-pip-version-check -r requirements.txt && npm install && npm run build-data && npm test
     startCommand: npm start
     healthCheckPath: /
